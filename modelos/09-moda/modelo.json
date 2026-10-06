@@ -1,0 +1,16 @@
+{
+  "id": "moda",
+  "numero": "09",
+  "nome": "Trama",
+  "nicho": "Moda autoral",
+  "promessa": "Peça em pequena tiragem, tecido de verdade.",
+  "preco": 1500,
+  "pacote": "Sob medida",
+  "paleta": ["#FFFFFF", "#0D0D0D", "#8E2F3C", "#B9AE9C"],
+  "tipografia": "Franklin Gothic Medium · Lato",
+  "mundo": "Lookbook de ateliê: branco de estúdio, preto de passarela, um vinho para o que está esgotando e areia para o tecido.",
+  "destaque": "Grade de produtos com tamanhos, tecido e aviso honesto de última peça.",
+  "arquivo": "modelos/09-moda/index.html",
+  "melhorPara": ["Marca de roupa autoral", "Joalheria e acessórios", "Design de produto autoral"],
+  "secoes": ["Coleção", "Peças e tamanhos", "Ateliê e tecidos", "Cuidados com a peça", "Comprar"]
+}

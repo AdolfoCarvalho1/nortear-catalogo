@@ -1,0 +1,16 @@
+{
+  "id": "restaurante",
+  "numero": "02",
+  "nome": "Mesa 12",
+  "nicho": "Restaurante autoral",
+  "promessa": "Menu que muda com a estação. A casa não muda.",
+  "preco": 900,
+  "pacote": "Profissional",
+  "paleta": ["#F4EDE2", "#1C1A15", "#B4552A", "#6E7A4A"],
+  "tipografia": "Georgia · Lato",
+  "mundo": "Papel de menu impresso: creme quente, tinta preta, um barro queimado para o preço e verde-oliva para a estação.",
+  "destaque": "Menu degustação que abre prato por prato, com harmonização e preço por pessoa.",
+  "arquivo": "modelos/02-restaurante/index.html",
+  "melhorPara": ["Restaurante com menu próprio", "Bistrô de bairro", "Cafeteria de especialidade"],
+  "secoes": ["Menu da estação", "Reserva com data e horário", "A casa e o chef", "Adega", "Onde ficamos"]
+}

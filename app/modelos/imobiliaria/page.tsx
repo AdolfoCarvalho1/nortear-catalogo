@@ -1,0 +1,965 @@
+import Interacoes from './Interacoes';
+
+/**
+ * 07-imobiliaria — markup convertido do modelo estático.
+ *
+ * As classes e a estrutura são as originais: o desenho não mudou na migração
+ * para Next. O CSS do modelo é importado no layout da rota.
+ */
+export default function PaginaCostaVilela() {
+  return (
+    <>
+      <Interacoes />
+      <a className="pular" href="#buscar">Pular para a busca de imóveis</a>
+
+      {/* ============================================================ PRANCHAS: as quatro plantas do modelo, desenhadas uma vez e usadas por referência (as fichas, o painel e a abertura). Parede = traço 2px; vão de porta = lacuna no traço; mobiliário = traço fino; escala gráfica dentro do desenho, para ela ser sempre proporcional ao que está sendo mostrado. ============================================================ */}
+      <svg className="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+
+        {/* PLANTA A · apartamento 3 quartos, 118 m² (1 unidade = 5 cm) */}
+        <symbol id="planta-a" viewBox="0 0 340 256">
+          <g fill="none" stroke="#565B60" strokeWidth="1.9" strokeLinecap="square" style={{ stroke: "var(--tinta-70)" }}>
+            <line x1="20" y1="20" x2="28" y2="20" /><line x1="52" y1="20" x2="106" y2="20" /><line x1="146" y1="20" x2="200" y2="20" /><line x1="244" y1="20" x2="280" y2="20" />
+            <line x1="20" y1="20" x2="20" y2="140" /><line x1="20" y1="172" x2="20" y2="196" />
+            <line x1="280" y1="20" x2="280" y2="104" /><line x1="280" y1="128" x2="280" y2="196" />
+            <line x1="20" y1="96" x2="76" y2="96" /><line x1="96" y1="96" x2="130" y2="96" /><line x1="150" y1="96" x2="206" y2="96" /><line x1="226" y1="96" x2="280" y2="96" />
+            <line x1="58" y1="20" x2="58" y2="36" /><line x1="58" y1="52" x2="58" y2="58" /><line x1="20" y1="58" x2="58" y2="58" />
+            <line x1="100" y1="20" x2="100" y2="96" /><line x1="190" y1="20" x2="190" y2="96" />
+            <line x1="20" y1="128" x2="92" y2="128" /><line x1="112" y1="128" x2="190" y2="128" />
+            <line x1="72" y1="96" x2="72" y2="104" /><line x1="72" y1="122" x2="72" y2="128" />
+            <line x1="64" y1="128" x2="64" y2="150" /><line x1="64" y1="168" x2="64" y2="196" />
+            <line x1="140" y1="128" x2="140" y2="138" /><line x1="140" y1="176" x2="140" y2="196" />
+            <line x1="20" y1="196" x2="150" y2="196" /><line x1="250" y1="196" x2="280" y2="196" />
+            <rect x="292" y="96" width="38" height="44" />
+            <line x1="292" y1="96" x2="330" y2="140" /><line x1="330" y1="96" x2="292" y2="140" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <line x1="28" y1="20" x2="52" y2="20" /><line x1="28" y1="17.5" x2="28" y2="22.5" /><line x1="52" y1="17.5" x2="52" y2="22.5" />
+            <line x1="106" y1="20" x2="146" y2="20" /><line x1="106" y1="17.5" x2="106" y2="22.5" /><line x1="146" y1="17.5" x2="146" y2="22.5" />
+            <line x1="200" y1="20" x2="244" y2="20" /><line x1="200" y1="17.5" x2="200" y2="22.5" /><line x1="244" y1="17.5" x2="244" y2="22.5" />
+            <line x1="20" y1="140" x2="20" y2="172" /><line x1="17.5" y1="140" x2="22.5" y2="140" /><line x1="17.5" y1="172" x2="22.5" y2="172" />
+            <line x1="96" y1="96" x2="96" y2="76" /><path d="M76 96A20 20 0 0 1 96 76" />
+            <line x1="130" y1="96" x2="130" y2="76" /><path d="M150 96A20 20 0 0 0 130 76" />
+            <line x1="226" y1="96" x2="226" y2="76" /><path d="M206 96A20 20 0 0 1 226 76" />
+            <line x1="72" y1="122" x2="54" y2="122" /><path d="M72 104A18 18 0 0 0 54 122" />
+            <line x1="92" y1="128" x2="92" y2="148" /><path d="M112 128A20 20 0 0 1 92 148" />
+            <line x1="64" y1="150" x2="46" y2="150" /><path d="M64 168A18 18 0 0 1 46 150" />
+            <line x1="280" y1="104" x2="256" y2="104" /><path d="M280 128A24 24 0 0 1 256 104" />
+            <line x1="150" y1="193" x2="202" y2="193" /><line x1="198" y1="199" x2="250" y2="199" />
+            <line x1="20" y1="196" x2="20" y2="230" /><line x1="280" y1="196" x2="280" y2="230" /><line x1="20" y1="230" x2="280" y2="230" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" opacity=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="26" y="64" width="44" height="30" /><line x1="26" y1="72" x2="70" y2="72" /><rect x="78" y="22" width="20" height="34" />
+            <rect x="22" y="22" width="20" height="18" /><line x1="22" y1="22" x2="42" y2="40" /><circle cx="48" cy="30" r="4.5" />
+            <rect x="118" y="58" width="28" height="32" /><line x1="118" y1="66" x2="146" y2="66" /><rect x="152" y="22" width="34" height="9" />
+            <rect x="208" y="58" width="28" height="32" /><line x1="208" y1="66" x2="236" y2="66" /><rect x="246" y="22" width="30" height="14" />
+            <rect x="22" y="98" width="20" height="18" /><line x1="22" y1="98" x2="42" y2="116" /><circle cx="52" cy="104" r="4.5" /><rect x="50" y="118" width="10" height="9" />
+            <rect x="66" y="132" width="70" height="14" /><circle cx="120" cy="139" r="4" />
+            <circle cx="80" cy="136" r="2.2" /><circle cx="88" cy="136" r="2.2" /><circle cx="80" cy="144" r="2.2" /><circle cx="88" cy="144" r="2.2" />
+            <rect x="66" y="170" width="18" height="22" />
+            <rect x="24" y="132" width="18" height="14" /><circle cx="38" cy="172" r="9" />
+            <rect x="150" y="168" width="52" height="18" /><line x1="150" y1="176" x2="202" y2="176" /><rect x="216" y="146" width="44" height="26" />
+            <circle cx="60" cy="212" r="6" /><circle cx="80" cy="212" r="6" /><circle cx="70" cy="204" r="5" />
+            <rect x="210" y="206" width="40" height="18" /><circle cx="26" cy="214" r="7" /><line x1="26" y1="207" x2="26" y2="221" /><line x1="19" y1="214" x2="33" y2="214" />
+          </g>
+          <g fill="#22262B" opacity=".68" fontSize="10" textAnchor="middle" letterSpacing=".3" style={{ fill: "var(--tinta)", fontFamily: "var(--f-texto)" }}>
+            <text x="79" y="61">SUÍTE</text><text x="145" y="52">QUARTO 2</text><text x="235" y="52">QUARTO 3</text>
+            <text x="110" y="188">COZINHA</text><text x="42" y="190" fontSize="9">SERVIÇO</text>
+            <text x="210" y="138">ESTAR E JANTAR</text><text x="120" y="220">VARANDA</text>
+            <text x="160" y="114" fontSize="9">CIRCULAÇÃO</text><text x="311" y="124" fontSize="6.5">ELEV.</text>
+            <text x="39" y="54" fontSize="9">BANHO</text><text x="34" y="124" fontSize="9">BANHO</text>
+          </g>
+          <g fill="#8B8F93" fontSize="6.5" textAnchor="middle" style={{ fill: "var(--tinta-45)", fontFamily: "var(--f-texto)" }}>
+            <text x="20" y="252">0</text><text x="120" y="252">5 m</text>
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="20" y="238" width="100" height="4" />
+            <rect x="20" y="238" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="60" y="238" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="100" y="238" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+          </g>
+        </symbol>
+
+        {/* PLANTA B · cobertura duplex, 246 m², dois pavimentos lado a lado */}
+        <symbol id="planta-b" viewBox="0 0 600 276">
+          <g fill="none" stroke="#565B60" strokeWidth="1.9" strokeLinecap="square" style={{ stroke: "var(--tinta-70)" }}>
+            <line x1="20" y1="20" x2="40" y2="20" /><line x1="80" y1="20" x2="280" y2="20" />
+            <line x1="20" y1="20" x2="20" y2="44" /><line x1="20" y1="84" x2="20" y2="200" />
+            <line x1="280" y1="20" x2="280" y2="78" /><line x1="280" y1="98" x2="280" y2="120" /><line x1="280" y1="170" x2="280" y2="200" />
+            <line x1="20" y1="100" x2="40" y2="100" /><line x1="80" y1="100" x2="150" y2="100" /><line x1="190" y1="100" x2="280" y2="100" />
+            <line x1="20" y1="200" x2="120" y2="200" /><line x1="230" y1="200" x2="280" y2="200" />
+            <line x1="96" y1="20" x2="96" y2="100" /><line x1="140" y1="20" x2="140" y2="30" /><line x1="140" y1="48" x2="140" y2="76" /><line x1="140" y1="94" x2="140" y2="100" />
+            <line x1="96" y1="64" x2="140" y2="64" />
+            <line x1="200" y1="20" x2="200" y2="76" />
+            <line x1="320" y1="20" x2="388" y2="20" /><line x1="420" y1="20" x2="452" y2="20" /><line x1="488" y1="20" x2="520" y2="20" /><line x1="560" y1="20" x2="580" y2="20" />
+            <line x1="320" y1="20" x2="320" y2="106" /><line x1="320" y1="130" x2="320" y2="160" /><line x1="320" y1="200" x2="320" y2="220" />
+            <line x1="580" y1="20" x2="580" y2="140" />
+            <line x1="320" y1="100" x2="400" y2="100" /><line x1="424" y1="100" x2="456" y2="100" /><line x1="476" y1="100" x2="516" y2="100" /><line x1="536" y1="100" x2="580" y2="100" />
+            <line x1="320" y1="140" x2="400" y2="140" /><line x1="436" y1="140" x2="520" y2="140" /><line x1="550" y1="140" x2="580" y2="140" />
+            <line x1="320" y1="220" x2="340" y2="220" /><line x1="400" y1="220" x2="440" y2="220" />
+            <line x1="372" y1="20" x2="372" y2="36" /><line x1="372" y1="54" x2="372" y2="76" /><line x1="372" y1="96" x2="372" y2="116" /><line x1="372" y1="134" x2="372" y2="140" />
+            <line x1="320" y1="72" x2="372" y2="72" />
+            <line x1="440" y1="20" x2="440" y2="100" /><line x1="500" y1="20" x2="500" y2="100" />
+            <line x1="440" y1="140" x2="440" y2="170" /><line x1="440" y1="190" x2="440" y2="220" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <line x1="40" y1="20" x2="80" y2="20" /><line x1="40" y1="17.5" x2="40" y2="22.5" /><line x1="80" y1="17.5" x2="80" y2="22.5" />
+            <line x1="20" y1="44" x2="20" y2="84" /><line x1="17.5" y1="44" x2="22.5" y2="44" /><line x1="17.5" y1="84" x2="22.5" y2="84" />
+            <line x1="280" y1="120" x2="280" y2="170" /><line x1="277.5" y1="120" x2="282.5" y2="120" /><line x1="277.5" y1="170" x2="282.5" y2="170" />
+            <line x1="280" y1="98" x2="260" y2="98" /><path d="M280 78A20 20 0 0 0 260 98" />
+            <line x1="140" y1="48" x2="122" y2="48" /><path d="M140 30A18 18 0 0 0 122 48" />
+            <line x1="140" y1="94" x2="122" y2="94" /><path d="M140 76A18 18 0 0 0 122 94" />
+            <line x1="214" y1="76" x2="280" y2="76" />
+            <path d="M218 70L276 26" /><path d="M266 26h10v10" />
+            <line x1="120" y1="193" x2="172" y2="193" /><line x1="168" y1="199" x2="230" y2="199" />
+            <line x1="20" y1="200" x2="20" y2="240" /><line x1="280" y1="200" x2="280" y2="240" /><line x1="20" y1="240" x2="280" y2="240" />
+            <line x1="388" y1="20" x2="420" y2="20" /><line x1="388" y1="17.5" x2="388" y2="22.5" /><line x1="420" y1="17.5" x2="420" y2="22.5" />
+            <line x1="452" y1="20" x2="488" y2="20" /><line x1="452" y1="17.5" x2="452" y2="22.5" /><line x1="488" y1="17.5" x2="488" y2="22.5" />
+            <line x1="520" y1="20" x2="560" y2="20" /><line x1="520" y1="17.5" x2="520" y2="22.5" /><line x1="560" y1="17.5" x2="560" y2="22.5" />
+            <line x1="320" y1="106" x2="320" y2="130" /><line x1="317.5" y1="106" x2="322.5" y2="106" /><line x1="317.5" y1="130" x2="322.5" y2="130" />
+            <line x1="340" y1="220" x2="400" y2="220" /><line x1="340" y1="217.5" x2="340" y2="222.5" /><line x1="400" y1="217.5" x2="400" y2="222.5" />
+            <line x1="424" y1="100" x2="424" y2="76" /><path d="M400 100A24 24 0 0 1 424 76" />
+            <line x1="456" y1="100" x2="456" y2="80" /><path d="M476 100A20 20 0 0 0 456 80" />
+            <line x1="536" y1="100" x2="536" y2="80" /><path d="M516 100A20 20 0 0 1 536 80" />
+            <line x1="372" y1="54" x2="354" y2="54" /><path d="M372 36A18 18 0 0 0 354 54" />
+            <line x1="372" y1="96" x2="352" y2="96" /><path d="M372 76A20 20 0 0 0 352 96" />
+            <line x1="372" y1="116" x2="354" y2="116" /><path d="M372 134A18 18 0 0 1 354 116" />
+            <line x1="550" y1="140" x2="550" y2="170" /><path d="M520 140A30 30 0 0 0 550 170" />
+            <line x1="440" y1="190" x2="420" y2="190" /><path d="M440 170A20 20 0 0 0 420 190" />
+            <line x1="440" y1="140" x2="440" y2="220" /><line x1="440" y1="220" x2="580" y2="220" /><line x1="580" y1="140" x2="580" y2="220" />
+            <line x1="508" y1="104" x2="508" y2="136" /><line x1="518" y1="104" x2="518" y2="136" /><line x1="528" y1="104" x2="528" y2="136" />
+            <line x1="538" y1="104" x2="538" y2="136" /><line x1="548" y1="104" x2="548" y2="136" /><line x1="558" y1="104" x2="558" y2="136" /><line x1="568" y1="104" x2="568" y2="136" />
+            <path d="M572 134L512 106" /><path d="M512 116v-10h10" />
+            <line x1="300" y1="20" x2="300" y2="240" strokeDasharray="5 5" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" opacity=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="24" y="24" width="68" height="14" /><rect x="24" y="38" width="14" height="58" />
+            <circle cx="48" cy="31" r="2.2" /><circle cx="56" cy="31" r="2.2" /><circle cx="48" cy="35" r="2.2" /><circle cx="56" cy="35" r="2.2" /><circle cx="80" cy="31" r="4" />
+            <circle cx="106" cy="32" r="4.5" /><rect x="126" y="28" width="10" height="10" />
+            <line x1="100" y1="70" x2="136" y2="70" /><line x1="100" y1="78" x2="136" y2="78" /><line x1="100" y1="86" x2="136" y2="86" />
+            <rect x="36" y="168" width="64" height="22" /><line x1="36" y1="176" x2="100" y2="176" /><rect x="160" y="140" width="60" height="34" /><rect x="196" y="106" width="60" height="8" />
+            <circle cx="40" cy="220" r="6" /><circle cx="60" cy="220" r="6" /><circle cx="50" cy="212" r="5" />
+            <circle cx="330" cy="30" r="4.5" /><rect x="352" y="26" width="10" height="10" />
+            <rect x="234" y="26" width="20" height="18" /><line x1="234" y1="26" x2="254" y2="44" />
+            <rect x="376" y="56" width="44" height="34" /><line x1="376" y1="64" x2="420" y2="64" /><rect x="374" y="26" width="10" height="26" />
+            <rect x="462" y="54" width="28" height="36" /><line x1="462" y1="62" x2="490" y2="62" /><rect x="442" y="26" width="42" height="9" />
+            <rect x="548" y="54" width="28" height="36" /><line x1="548" y1="62" x2="576" y2="62" /><rect x="552" y="26" width="24" height="12" />
+            <circle cx="330" cy="112" r="4.5" /><rect x="330" y="126" width="10" height="9" /><rect x="324" y="104" width="18" height="14" />
+            <rect x="336" y="168" width="64" height="22" /><line x1="336" y1="176" x2="400" y2="176" /><rect x="336" y="200" width="52" height="12" />
+            <line x1="452" y1="146" x2="452" y2="176" /><line x1="468" y1="146" x2="468" y2="176" /><line x1="484" y1="146" x2="484" y2="176" /><line x1="500" y1="146" x2="500" y2="176" /><line x1="516" y1="146" x2="516" y2="176" />
+            <rect x="528" y="148" width="36" height="14" /><rect x="528" y="170" width="36" height="14" />
+            <circle cx="566" cy="206" r="7" /><line x1="566" y1="199" x2="566" y2="213" /><line x1="559" y1="206" x2="573" y2="206" />
+          </g>
+          <g fill="#22262B" opacity=".68" fontSize="10" textAnchor="middle" letterSpacing=".3" style={{ fill: "var(--tinta)", fontFamily: "var(--f-texto)" }}>
+            <text x="62" y="74">COZINHA</text><text x="118" y="50" fontSize="8.5">LAVABO</text><text x="118" y="94" fontSize="8">DESPENSA</text>
+            <text x="170" y="58" fontSize="8">CIRCULAÇÃO</text><text x="240" y="90" fontSize="9">ESCADA</text>
+            <text x="150" y="124">ESTAR E JANTAR</text><text x="120" y="222">VARANDA</text>
+            <text x="406" y="46">SUÍTE</text><text x="346" y="50" fontSize="8.5">BANHO</text><text x="346" y="90" fontSize="8">CLOSET</text>
+            <text x="470" y="40">QUARTO 2</text><text x="540" y="40">QUARTO 3</text>
+            <text x="346" y="124" fontSize="8.5">BANHO</text><text x="436" y="124" fontSize="8">CIRCULAÇÃO</text>
+            <text x="372" y="208">SALA ÍNTIMA</text><text x="505" y="212">TERRAÇO</text>
+            <text x="20" y="13" fontSize="9" textAnchor="start" letterSpacing=".6" opacity=".85">PAVIMENTO INFERIOR · 143 m²</text>
+            <text x="320" y="13" fontSize="9" textAnchor="start" letterSpacing=".6" opacity=".85">PAVIMENTO SUPERIOR · 130 m²</text>
+          </g>
+          <g fill="#8B8F93" fontSize="6.5" textAnchor="middle" style={{ fill: "var(--tinta-45)", fontFamily: "var(--f-texto)" }}>
+            <text x="20" y="272">0</text><text x="120" y="272">5 m</text>
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="20" y="258" width="100" height="4" />
+            <rect x="20" y="258" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="60" y="258" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="100" y="258" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+          </g>
+        </symbol>
+
+        {/* PLANTA C · casa de condomínio, térreo de 162 m² com terreno, deck e piscina */}
+        <symbol id="planta-c" viewBox="0 0 450 362">
+          <g fill="none" stroke="#565B60" strokeWidth="1.9" strokeLinecap="square" style={{ stroke: "var(--tinta-70)" }}>
+            <line x1="40" y1="40" x2="56" y2="40" /><line x1="92" y1="40" x2="140" y2="40" /><line x1="200" y1="40" x2="292" y2="40" /><line x1="330" y1="40" x2="340" y2="40" />
+            <line x1="40" y1="40" x2="40" y2="70" /><line x1="40" y1="100" x2="40" y2="200" /><line x1="40" y1="232" x2="40" y2="240" />
+            <line x1="340" y1="40" x2="340" y2="160" /><line x1="340" y1="184" x2="340" y2="240" />
+            <line x1="40" y1="240" x2="120" y2="240" /><line x1="260" y1="240" x2="340" y2="240" />
+            <line x1="130" y1="40" x2="130" y2="80" /><line x1="130" y1="100" x2="130" y2="122" /><line x1="130" y1="142" x2="130" y2="150" />
+            <line x1="130" y1="75" x2="186" y2="75" /><line x1="208" y1="75" x2="220" y2="75" />
+            <line x1="130" y1="110" x2="150" y2="110" /><line x1="172" y1="110" x2="220" y2="110" />
+            <line x1="220" y1="40" x2="220" y2="150" />
+            <line x1="280" y1="40" x2="280" y2="58" /><line x1="280" y1="78" x2="280" y2="150" />
+            <line x1="280" y1="110" x2="300" y2="110" /><line x1="322" y1="110" x2="340" y2="110" />
+            <line x1="40" y1="150" x2="100" y2="150" /><line x1="140" y1="150" x2="230" y2="150" /><line x1="270" y1="150" x2="340" y2="150" />
+            <line x1="95" y1="150" x2="95" y2="166" /><line x1="95" y1="184" x2="95" y2="195" />
+            <line x1="40" y1="195" x2="95" y2="195" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <line x1="56" y1="40" x2="92" y2="40" /><line x1="56" y1="37.5" x2="56" y2="42.5" /><line x1="92" y1="37.5" x2="92" y2="42.5" />
+            <line x1="140" y1="40" x2="200" y2="40" /><line x1="140" y1="37.5" x2="140" y2="42.5" /><line x1="200" y1="37.5" x2="200" y2="42.5" />
+            <line x1="292" y1="40" x2="330" y2="40" /><line x1="292" y1="37.5" x2="292" y2="42.5" /><line x1="330" y1="37.5" x2="330" y2="42.5" />
+            <line x1="40" y1="70" x2="40" y2="100" /><line x1="37.5" y1="70" x2="42.5" y2="70" /><line x1="37.5" y1="100" x2="42.5" y2="100" />
+            <line x1="40" y1="200" x2="40" y2="232" /><line x1="37.5" y1="200" x2="42.5" y2="200" /><line x1="37.5" y1="232" x2="42.5" y2="232" />
+            <line x1="130" y1="100" x2="110" y2="100" /><path d="M130 80A20 20 0 0 0 110 100" />
+            <line x1="186" y1="75" x2="186" y2="53" /><path d="M208 75A22 22 0 0 0 186 53" />
+            <line x1="150" y1="110" x2="150" y2="88" /><path d="M172 110A22 22 0 0 0 150 88" />
+            <line x1="130" y1="142" x2="150" y2="142" /><path d="M130 122A20 20 0 0 1 150 142" />
+            <line x1="280" y1="78" x2="300" y2="78" /><path d="M280 58A20 20 0 0 1 300 78" />
+            <line x1="322" y1="110" x2="322" y2="132" /><path d="M300 110A22 22 0 0 0 322 132" />
+            <line x1="340" y1="184" x2="316" y2="184" /><path d="M340 160A24 24 0 0 0 316 184" />
+            <line x1="95" y1="184" x2="77" y2="184" /><path d="M95 166A18 18 0 0 0 77 184" />
+            <line x1="120" y1="233" x2="172" y2="233" /><line x1="168" y1="239" x2="260" y2="239" />
+            <line x1="40" y1="240" x2="40" y2="300" /><line x1="40" y1="300" x2="160" y2="300" /><line x1="160" y1="240" x2="160" y2="300" />
+            <line x1="172" y1="242" x2="338" y2="242" strokeDasharray="6 5" /><line x1="338" y1="242" x2="338" y2="313" strokeDasharray="6 5" /><line x1="338" y1="313" x2="172" y2="313" strokeDasharray="6 5" /><line x1="172" y1="313" x2="172" y2="242" strokeDasharray="6 5" />
+            <rect x="180" y="250" width="150" height="55" />
+            <rect x="188" y="258" width="134" height="39" />
+            <line x1="196" y1="284" x2="314" y2="284" /><line x1="196" y1="292" x2="314" y2="292" /><line x1="196" y1="300" x2="314" y2="300" />
+            <line x1="20" y1="20" x2="348" y2="20" strokeDasharray="7 6" /><line x1="396" y1="20" x2="420" y2="20" strokeDasharray="7 6" />
+            <line x1="420" y1="20" x2="420" y2="320" strokeDasharray="7 6" /><line x1="20" y1="320" x2="420" y2="320" strokeDasharray="7 6" /><line x1="20" y1="20" x2="20" y2="320" strokeDasharray="7 6" />
+            <line x1="348" y1="20" x2="348" y2="66" /><line x1="396" y1="20" x2="396" y2="66" />
+            <rect x="344" y="66" width="56" height="192" strokeDasharray="6 5" />
+            <circle cx="405" cy="300" r="9" /><circle cx="405" cy="300" r="4" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" opacity=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="44" y="44" width="82" height="14" /><rect x="44" y="58" width="14" height="50" /><rect x="60" y="92" width="50" height="26" />
+            <circle cx="80" cy="51" r="2.2" /><circle cx="88" cy="51" r="2.2" /><circle cx="80" cy="55" r="2.2" /><circle cx="88" cy="55" r="2.2" /><circle cx="112" cy="51" r="4" />
+            <line x1="136" y1="48" x2="214" y2="48" /><line x1="136" y1="58" x2="214" y2="58" /><line x1="136" y1="68" x2="214" y2="68" />
+            <rect x="136" y="80" width="22" height="14" /><circle cx="180" cy="92" r="8" />
+            <line x1="222" y1="48" x2="278" y2="48" /><line x1="222" y1="56" x2="278" y2="56" /><line x1="222" y1="64" x2="278" y2="64" /><line x1="222" y1="72" x2="278" y2="72" />
+            <line x1="222" y1="80" x2="278" y2="80" /><line x1="222" y1="88" x2="278" y2="88" /><line x1="222" y1="96" x2="278" y2="96" /><line x1="222" y1="104" x2="278" y2="104" />
+            <path d="M226 112L274 44" /><path d="M264 44h10v10" />
+            <rect x="296" y="66" width="32" height="40" /><line x1="296" y1="74" x2="328" y2="74" />
+            <rect x="284" y="114" width="20" height="20" /><line x1="284" y1="114" x2="304" y2="134" /><circle cx="316" cy="120" r="4" /><rect x="286" y="138" width="10" height="9" />
+            <circle cx="52" cy="162" r="4.5" /><rect x="52" y="180" width="10" height="9" />
+            <rect x="110" y="196" width="72" height="22" /><line x1="110" y1="204" x2="182" y2="204" /><rect x="230" y="180" width="64" height="34" />
+            <rect x="44" y="244" width="32" height="22" /><line x1="44" y1="244" x2="156" y2="244" /><rect x="92" y="254" width="52" height="20" />
+            <rect x="348" y="74" width="44" height="84" rx="6" /><line x1="352" y1="96" x2="388" y2="96" />
+            <rect x="348" y="166" width="44" height="84" rx="6" /><line x1="352" y1="188" x2="388" y2="188" />
+          </g>
+          <g fill="#22262B" opacity=".68" fontSize="10" textAnchor="middle" letterSpacing=".3" style={{ fill: "var(--tinta)", fontFamily: "var(--f-texto)" }}>
+            <text x="85" y="134">COZINHA</text><text x="175" y="62" fontSize="8.5">DESPENSA</text><text x="178" y="104" fontSize="8">SERVIÇO</text>
+            <text x="250" y="132" fontSize="9">HALL</text><text x="310" y="56" fontSize="9.5">SUÍTE</text><text x="318" y="143" fontSize="8">BANHO</text>
+            <text x="70" y="172" fontSize="8">LAVABO</text><text x="200" y="170">ESTAR E JANTAR</text>
+            <text x="100" y="290" fontSize="9">GOURMET</text><text x="255" y="260">PISCINA</text>
+            <text x="372" y="272" fontSize="8">2 VAGAS</text><text x="372" y="281" fontSize="7.5">COBERTAS</text>
+          </g>
+          <g fill="#8B8F93" fontSize="6.5" textAnchor="middle" style={{ fill: "var(--tinta-45)", fontFamily: "var(--f-texto)" }}>
+            <text x="20" y="354">0</text><text x="120" y="354">5 m</text>
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="20" y="340" width="100" height="4" />
+            <rect x="20" y="340" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="60" y="340" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="100" y="340" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+          </g>
+        </symbol>
+
+        {/* PLANTA D · casa térrea em Setiba, 180 m², com varanda gourmet e piscina */}
+        <symbol id="planta-d" viewBox="0 0 380 344">
+          <g fill="none" stroke="#565B60" strokeWidth="1.9" strokeLinecap="square" style={{ stroke: "var(--tinta-70)" }}>
+            <line x1="20" y1="20" x2="80" y2="20" /><line x1="120" y1="20" x2="170" y2="20" /><line x1="210" y1="20" x2="300" y2="20" /><line x1="330" y1="20" x2="340" y2="20" />
+            <line x1="20" y1="20" x2="20" y2="132" /><line x1="20" y1="154" x2="20" y2="230" />
+            <line x1="340" y1="20" x2="340" y2="60" /><line x1="340" y1="96" x2="340" y2="160" /><line x1="340" y1="200" x2="340" y2="230" />
+            <line x1="20" y1="230" x2="60" y2="230" /><line x1="190" y1="230" x2="340" y2="230" />
+            <line x1="20" y1="100" x2="84" y2="100" /><line x1="104" y1="100" x2="170" y2="100" /><line x1="190" y1="100" x2="290" y2="100" /><line x1="310" y1="100" x2="340" y2="100" />
+            <line x1="70" y1="20" x2="70" y2="40" /><line x1="70" y1="58" x2="70" y2="72" /><line x1="70" y1="96" x2="70" y2="100" />
+            <line x1="20" y1="62" x2="70" y2="62" />
+            <line x1="140" y1="20" x2="140" y2="100" /><line x1="230" y1="20" x2="230" y2="62" />
+            <line x1="280" y1="20" x2="280" y2="62" /><line x1="230" y1="62" x2="250" y2="62" /><line x1="268" y1="62" x2="280" y2="62" />
+            <line x1="210" y1="100" x2="210" y2="110" /><line x1="210" y1="130" x2="210" y2="160" /><line x1="210" y1="200" x2="210" y2="230" />
+            <line x1="210" y1="145" x2="262" y2="145" /><line x1="262" y1="100" x2="262" y2="145" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <line x1="80" y1="20" x2="120" y2="20" /><line x1="80" y1="17.5" x2="80" y2="22.5" /><line x1="120" y1="17.5" x2="120" y2="22.5" />
+            <line x1="170" y1="20" x2="210" y2="20" /><line x1="170" y1="17.5" x2="170" y2="22.5" /><line x1="210" y1="17.5" x2="210" y2="22.5" />
+            <line x1="300" y1="20" x2="330" y2="20" /><line x1="300" y1="17.5" x2="300" y2="22.5" /><line x1="330" y1="17.5" x2="330" y2="22.5" />
+            <line x1="340" y1="60" x2="340" y2="96" /><line x1="337.5" y1="60" x2="342.5" y2="60" /><line x1="337.5" y1="96" x2="342.5" y2="96" />
+            <line x1="340" y1="160" x2="340" y2="200" /><line x1="337.5" y1="160" x2="342.5" y2="160" /><line x1="337.5" y1="200" x2="342.5" y2="200" />
+            <line x1="20" y1="154" x2="42" y2="154" /><path d="M20 132A22 22 0 0 1 42 154" />
+            <path d="M4 143h14" /><path d="M14 139l4 4-4 4" />
+            <line x1="84" y1="100" x2="84" y2="80" /><path d="M104 100A20 20 0 0 0 84 80" />
+            <line x1="170" y1="100" x2="170" y2="80" /><path d="M190 100A20 20 0 0 0 170 80" />
+            <line x1="290" y1="100" x2="290" y2="80" /><path d="M310 100A20 20 0 0 0 290 80" />
+            <line x1="70" y1="40" x2="52" y2="40" /><path d="M70 58A18 18 0 0 0 52 40" />
+            <line x1="70" y1="96" x2="50" y2="96" /><path d="M70 76A20 20 0 0 0 50 96" />
+            <line x1="250" y1="62" x2="250" y2="80" /><path d="M268 62A18 18 0 0 1 250 80" />
+            <line x1="210" y1="130" x2="190" y2="130" /><path d="M210 110A20 20 0 0 0 190 130" />
+            <line x1="62" y1="223" x2="112" y2="223" /><line x1="108" y1="229" x2="188" y2="229" />
+            <line x1="20" y1="230" x2="20" y2="300" /><line x1="20" y1="300" x2="340" y2="300" /><line x1="340" y1="230" x2="340" y2="300" />
+            <line x1="26" y1="236" x2="190" y2="236" />
+            <rect x="216" y="242" width="114" height="50" /><rect x="224" y="250" width="98" height="34" />
+            <line x1="232" y1="268" x2="314" y2="268" /><line x1="232" y1="276" x2="314" y2="276" /><line x1="232" y1="284" x2="314" y2="284" />
+            <line x1="330" y1="304" x2="350" y2="326" strokeDasharray="5 4" /><path d="M344 318l6 8-8 0z" />
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" opacity=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="86" y="58" width="44" height="30" /><line x1="86" y1="66" x2="130" y2="66" />
+            <rect x="24" y="24" width="20" height="18" /><line x1="24" y1="24" x2="44" y2="42" /><circle cx="48" cy="30" r="4.5" /><rect x="46" y="44" width="10" height="9" />
+            <line x1="24" y1="66" x2="48" y2="66" /><line x1="24" y1="74" x2="48" y2="74" />
+            <rect x="160" y="40" width="60" height="24" /><circle cx="190" cy="76" r="6" />
+            <rect x="286" y="24" width="28" height="38" /><line x1="286" y1="32" x2="314" y2="32" /><rect x="234" y="66" width="40" height="10" />
+            <rect x="234" y="24" width="20" height="18" /><line x1="234" y1="24" x2="254" y2="42" /><circle cx="262" cy="30" r="4" /><rect x="256" y="46" width="10" height="9" />
+            <rect x="214" y="104" width="20" height="18" /><line x1="214" y1="104" x2="234" y2="122" /><circle cx="244" cy="112" r="4.5" /><rect x="248" y="132" width="10" height="9" />
+            <rect x="30" y="106" width="70" height="6" /><rect x="40" y="182" width="84" height="22" /><line x1="40" y1="190" x2="124" y2="190" /><rect x="140" y="180" width="58" height="30" />
+            <rect x="306" y="150" width="30" height="62" /><circle cx="321" cy="166" r="4" /><rect x="238" y="180" width="64" height="24" />
+            <circle cx="252" cy="188" r="2.2" /><circle cx="260" cy="188" r="2.2" /><circle cx="252" cy="196" r="2.2" /><circle cx="260" cy="196" r="2.2" />
+            <rect x="266" y="104" width="20" height="14" /><circle cx="296" cy="116" r="8" />
+            <rect x="26" y="236" width="34" height="22" /><rect x="84" y="250" width="72" height="20" />
+          </g>
+          <g fill="#22262B" opacity=".68" fontSize="10" textAnchor="middle" letterSpacing=".3" style={{ fill: "var(--tinta)", fontFamily: "var(--f-texto)" }}>
+            <text x="105" y="38">SUÍTE 1</text><text x="34" y="57" fontSize="8">BANHO</text><text x="45" y="92" fontSize="8">CLOSET</text>
+            <text x="185" y="90">ESCRITÓRIO</text><text x="300" y="88">SUÍTE 2</text><text x="240" y="56" fontSize="7">BANHO</text>
+            <text x="112" y="150">ESTAR E JANTAR</text><text x="232" y="142" fontSize="8">BANHO</text>
+            <text x="272" y="222">COZINHA</text><text x="300" y="136" fontSize="7.5">SERVIÇO</text>
+            <text x="110" y="288">VARANDA</text><text x="273" y="260">PISCINA</text>
+            <text x="348" y="338" fontSize="7" textAnchor="end" letterSpacing=".3">MAR · 380 m</text>
+          </g>
+          <g fill="#8B8F93" fontSize="6.5" textAnchor="middle" style={{ fill: "var(--tinta-45)", fontFamily: "var(--f-texto)" }}>
+            <text x="20" y="336">0</text><text x="120" y="336">5 m</text>
+          </g>
+          <g fill="none" stroke="#8B8F93" strokeWidth=".9" style={{ stroke: "var(--tinta-45)" }}>
+            <rect x="20" y="322" width="100" height="4" />
+            <rect x="20" y="322" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="60" y="322" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+            <rect x="100" y="322" width="20" height="4" fill="#8B8F93" style={{ fill: "var(--tinta-45)" }} />
+          </g>
+        </symbol>
+
+        {/* Ícones: traço 1.8, sem preenchimento */}
+        <symbol id="ico-seta" viewBox="0 0 24 24"><path d="M4 12h15" /><path d="M13 6l6 6-6 6" /></symbol>
+        <symbol id="ico-x" viewBox="0 0 24 24"><path d="M6 6l12 12" /><path d="M18 6L6 18" /></symbol>
+        <symbol id="ico-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" /></symbol>
+      </svg>
+
+      <header className="cabecalho">
+        <div className="tela cabecalho__interno">
+          <a className="marca" href="#topo">
+            <svg className="marca__planta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 3h18v18H3z" /><path d="M3 14h8" /><path d="M11 14v7" /><path d="M15 3v5h6" /></svg>
+            <b>Costa & Vilela</b><span>imobiliária · Vitória/ES</span>
+          </a>
+          <nav className="nav" aria-label="Navegação principal">
+            <a href="#buscar">Buscar imóveis</a>
+            <a href="#carteira">Carteira</a>
+            <a href="#visita">Como conduzimos a visita</a>
+            <a href="#quem-somos">Quem somos</a>
+            <a href="#duvidas">Dúvidas</a>
+          </nav>
+          <a className="botao botao--pequeno" href="#avaliar">Avaliar meu imóvel</a>
+        </div>
+      </header>
+
+      <main id="topo">
+
+        {/* ================= ABERTURA: a prancha antes da promessa ================= */}
+        <section className="abertura">
+          <div className="tela abertura__grade">
+            <div className="abertura__texto">
+              <h1>Poucos imóveis. Todos <mark>visitáveis hoje</mark>.</h1>
+              <p className="abertura__linha">Trabalhamos com uma carteira pequena e visitamos cada imóvel antes de anunciar.</p>
+              <p>São 38 imóveis na Grande Vitória e no litoral do Espírito Santo. Nenhum entra no site sem que um dos sócios tenha entrado, medido e conferido a matrícula. Você não perde o sábado visitando o que não serve — e vê a planta antes de sair de casa.</p>
+              <div className="abertura__acoes">
+                <a className="botao" href="#buscar">Buscar imóveis</a>
+                <a className="botao botao--vazio" href="#avaliar">Avaliar meu imóvel</a>
+              </div>
+              <ul className="abertura__prova">
+                <li>Dossiê com matrícula e certidões antes da visita</li>
+                <li>Visita acompanhada por quem já esteve no imóvel</li>
+                <li>Avaliação por escrito em até 3 dias úteis</li>
+              </ul>
+            </div>
+
+            <div className="abertura__prancha">
+              <figure className="prancha prancha--hero">
+                <div className="prancha__topo">
+                  <span className="codigo">CV-131</span>
+                  <span className="selo-latao">Exclusividade Costa & Vilela</span>
+                </div>
+                <div className="prancha__desenho">
+                  <svg className="planta" viewBox="0 0 600 276" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-b" xlinkHref="#planta-b" /></svg>
+                </div>
+                <figcaption className="prancha__pe">
+                  <span>Cobertura duplex · Ilha do Boi · 246 m² · R$ 6.400.000</span>
+                  <span>Escala gráfica de 5 m</span>
+                </figcaption>
+              </figure>
+              <p className="abertura__nota">Toda ficha começa pela planta que o corretor desenha na visita técnica — não por uma foto de banco de imagens.</p>
+              <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-131">Ver a ficha do CV-131</button>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= NÚMEROS ================= */}
+        <section className="numeros" aria-label="A carteira em números">
+          <div className="tela numeros__grade">
+            <div className="numero"><b>38</b><span>imóveis na carteira hoje, todos visitados por um dos sócios antes de entrar no site</span></div>
+            <div className="numero"><b>2 dias</b><span>entre o primeiro contato e a visita marcada, na média dos últimos 12 meses</span></div>
+            <div className="numero"><b>12 anos</b><span>atendendo a Grande Vitória e o litoral do Espírito Santo, de Setiba a Guarapari</span></div>
+            <div className="numero"><b>R$ 1,2 bi</b><span>em imóveis negociados desde 2014, entre venda direta e intermediação</span></div>
+          </div>
+        </section>
+
+        {/* ================= BUSCAR IMÓVEIS: o instrumento ================= */}
+        <section className="secao" id="buscar">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Filtre a carteira e veja a ficha de cada imóvel.</h2>
+              <p>O índice abaixo é o mesmo da prateleira: bairro, tipo, faixa de preço, quartos e exclusividade. Cada linha abre a ficha completa, com a planta e o que o corretor viu na visita. A carteira inteira está logo abaixo, ficha por ficha.</p>
+            </div>
+
+            <div className="filtros" role="group" aria-label="Filtros da busca de imóveis">
+              <div className="campo">
+                <label htmlFor="f-bairro">Bairro</label>
+                <select id="f-bairro">
+                  <option value="">Todos os bairros</option>
+                  <option value="Praia da Costa">Praia da Costa · Vila Velha</option>
+                  <option value="Jardim Camburi">Jardim Camburi · Vitória</option>
+                  <option value="Mata da Praia">Mata da Praia · Vitória</option>
+                  <option value="Ilha do Boi">Ilha do Boi · Vitória</option>
+                  <option value="Praia do Canto">Praia do Canto · Vitória</option>
+                  <option value="Itapoã">Itapoã · Vila Velha</option>
+                  <option value="Enseada do Suá">Enseada do Suá · Vitória</option>
+                  <option value="Setiba">Setiba · Guarapari</option>
+                </select>
+              </div>
+              <div className="campo">
+                <label htmlFor="f-tipo">Tipo</label>
+                <select id="f-tipo">
+                  <option value="">Todos os tipos</option>
+                  <option value="apartamento">Apartamento</option>
+                  <option value="casa">Casa</option>
+                  <option value="cobertura">Cobertura</option>
+                  <option value="casa de condomínio">Casa de condomínio</option>
+                </select>
+              </div>
+              <div className="campo">
+                <label htmlFor="f-faixa">Faixa de preço</label>
+                <select id="f-faixa">
+                  <option value="">Qualquer preço</option>
+                  <option value="0-1000000">Até R$ 1 milhão</option>
+                  <option value="1000000-2000000">R$ 1 milhão a R$ 2 milhões</option>
+                  <option value="2000000-4000000">R$ 2 milhões a R$ 4 milhões</option>
+                  <option value="4000000-99000000">Acima de R$ 4 milhões</option>
+                </select>
+              </div>
+              <div className="campo">
+                <label htmlFor="f-quartos">Quartos</label>
+                <select id="f-quartos">
+                  <option value="">Qualquer número</option>
+                  <option value="2">2 ou mais</option>
+                  <option value="3">3 ou mais</option>
+                  <option value="4">4 ou mais</option>
+                </select>
+              </div>
+              <div className="campo">
+                <label htmlFor="f-ordem">Ordenar por</label>
+                <select id="f-ordem">
+                  <option value="recente">Mais recentes na carteira</option>
+                  <option value="preco-asc">Preço, do menor ao maior</option>
+                  <option value="preco-desc">Preço, do maior ao menor</option>
+                  <option value="area-desc">Área, da maior para a menor</option>
+                </select>
+              </div>
+              <div className="campo campo--check">
+                <input type="checkbox" id="f-exclusivo" />
+                <label htmlFor="f-exclusivo">Só imóveis com exclusividade</label>
+              </div>
+              <button className="botao botao--vazio botao--pequeno" type="button" id="limpar" disabled>Limpar filtros</button>
+            </div>
+
+            <div className="busca__barra">
+              <p className="contagem" id="contagem" aria-live="polite">8 de 8 imóveis</p>
+              <p className="busca__ativos" id="ativos">Carteira inteira, na ordem em que chegou.</p>
+            </div>
+
+            <div className="indice">
+              <div className="indice__cabeca" aria-hidden="true">
+                <span>Código</span><span>Imóvel</span><span>Área</span><span>Dorm · suíte · vaga</span><span>Preço</span><span></span>
+              </div>
+              <ul className="indice__lista" id="indice-lista"></ul>
+            </div>
+
+            <div className="vazio" id="vazio" hidden>
+              <h3>Nenhum imóvel com esses filtros na carteira de hoje.</h3>
+              <p>Deixe seu contato e avisamos quando entrar um parecido — a carteira muda toda semana e metade dos imóveis não chega a ser anunciada.</p>
+              <p className="vazio__resumo" id="vazio-resumo"></p>
+              <button className="botao" type="button" id="vazio-contato">Deixar meu contato para um imóvel parecido</button>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CARTEIRA EM DESTAQUE: as fichas ================= */}
+        <section className="secao secao--carteira" id="carteira">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>A carteira em destaque, ficha por ficha.</h2>
+              <p>Oito imóveis com ficha completa nesta página. Em cada uma: a planta desenhada na visita técnica, os números exatos de condomínio e IPTU, e uma linha honesta sobre o estado do imóvel — inclusive o que precisa de obra.</p>
+            </div>
+
+            <div className="carteira">
+
+              {/* CV-104 */}
+              <article className="ficha" id="ficha-cv-104" data-codigo="CV-104" data-tipo="apartamento" data-tipo-nome="Apartamento" data-bairro="Praia do Canto" data-cidade="Vitória" data-endereco="Rua Aleixo Netto, 1.240 — 9º andar, Praia do Canto, Vitória/ES" data-area="118" data-quartos="3" data-suites="1" data-vagas="2" data-andar="9º andar, duas vagas cobertas" data-preco="1480000" data-condominio="1180" data-iptu="4260" data-exclusivo="false" data-selo="" data-chegada="2026-01-26" data-planta="a" data-planta-nome="Planta tipo · 3 quartos" data-registro="1º Ofício de Registro de Imóveis de Vitória, matrícula 41.882" data-vistoria="14/01/2026" data-docs="Memorial da reforma de 2024, com as notas fiscais dos serviços;Ata da assembleia de janeiro de 2026, com o rateio da fachada já pago">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-104</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 340 256" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-a" xlinkHref="#planta-a" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>118 m² privativos · 9º andar</span><span>Planta tipo</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-104">Apartamento na Praia do Canto<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 1.480.000</b><span>condomínio R$ 1.180/mês · IPTU R$ 4.260/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área privativa</dt><dd>118 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>3 · 1 suíte</dd></div>
+                  <div><dt>Vagas</dt><dd>2 cobertas</dd></div>
+                  <div><dt>Andar</dt><dd>9º de 12</dd></div>
+                  <div><dt>Vista</dt><dd>Baía de Vitória</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>26/01/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Reforma concluída em 2024 — elétrica, hidráulica e esquadrias refeitas, piso em madeira natural. A pintura da fachada do edifício está contratada para março, com o rateio já pago pelo proprietário.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-104">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-104">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-118 */}
+              <article className="ficha" id="ficha-cv-118" data-codigo="CV-118" data-tipo="apartamento" data-tipo-nome="Apartamento" data-bairro="Jardim Camburi" data-cidade="Vitória" data-endereco="Rua Carlos Martins, 385 — 4º andar, Jardim Camburi, Vitória/ES" data-area="118" data-quartos="3" data-suites="1" data-vagas="2" data-andar="4º andar, duas vagas cobertas" data-preco="890000" data-condominio="780" data-iptu="3100" data-exclusivo="false" data-selo="" data-chegada="2026-02-09" data-planta="a" data-planta-nome="Planta tipo · 3 quartos" data-registro="2º Ofício de Registro de Imóveis de Vitória, matrícula 33.107" data-vistoria="05/02/2026" data-docs="Orçamento de reforma da cozinha e dos banheiros, feito por empreiteiro indicado pelo proprietário (R$ 62 mil);Chaves disponíveis na imobiliária — visita no mesmo dia">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-118</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 340 256" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-a" xlinkHref="#planta-a" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>118 m² privativos · 4º andar</span><span>Planta tipo</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-118">Apartamento em Jardim Camburi<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 890.000</b><span>condomínio R$ 780/mês · IPTU R$ 3.100/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área privativa</dt><dd>118 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>3 · 1 suíte</dd></div>
+                  <div><dt>Vagas</dt><dd>2 cobertas</dd></div>
+                  <div><dt>Andar</dt><dd>4º de 8</dd></div>
+                  <div><dt>Vista</dt><dd>Rua arborizada</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>09/02/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Precisa de atualização na cozinha e nos dois banheiros. Fora isso está habitável e desocupado — a chave fica com a gente e a visita sai no mesmo dia do contato.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-118">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-118">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-127 */}
+              <article className="ficha" id="ficha-cv-127" data-codigo="CV-127" data-tipo="apartamento" data-tipo-nome="Apartamento" data-bairro="Enseada do Suá" data-cidade="Vitória" data-endereco="Rua José Alexandre Buaiz, 200 — 12º andar, Enseada do Suá, Vitória/ES" data-area="118" data-quartos="3" data-suites="2" data-vagas="2" data-andar="12º andar, duas vagas cobertas" data-preco="1750000" data-condominio="1450" data-iptu="5900" data-exclusivo="false" data-selo="Recém-chegado" data-chegada="2026-02-12" data-planta="a" data-planta-nome="Planta tipo · 3 quartos" data-registro="1º Ofício de Registro de Imóveis de Vitória, matrícula 52.349" data-vistoria="11/02/2026" data-docs="Projeto da cozinha planejada de 2023, com o contato do marceneiro;Certidão negativa de débitos condominiais do exercício de 2025">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-127</span><span className="selo-latao">Recém-chegado</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 340 256" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-a" xlinkHref="#planta-a" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>118 m² privativos · 12º andar</span><span>Planta tipo</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-127">Apartamento na Enseada do Suá<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 1.750.000</b><span>condomínio R$ 1.450/mês · IPTU R$ 5.900/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área privativa</dt><dd>118 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>3 · 2 suítes</dd></div>
+                  <div><dt>Vagas</dt><dd>2 cobertas</dd></div>
+                  <div><dt>Andar</dt><dd>12º de 14</dd></div>
+                  <div><dt>Vista</dt><dd>Baía e Terceira Ponte</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>12/02/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Andar alto e sem vizinho de frente: a vista para a baía é aberta dos dois lados da sala. A cozinha planejada de 2023 fica no imóvel; os móveis soltos, não.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-127">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-127">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-131 */}
+              <article className="ficha ficha--larga" id="ficha-cv-131" data-codigo="CV-131" data-tipo="cobertura" data-tipo-nome="Cobertura duplex" data-bairro="Ilha do Boi" data-cidade="Vitória" data-endereco="Alameda das Gaivotas, 62 — Ilha do Boi, Vitória/ES" data-area="246" data-quartos="3" data-suites="2" data-vagas="4" data-andar="Cobertura duplex, quatro vagas" data-preco="6400000" data-condominio="2750" data-iptu="14800" data-exclusivo="true" data-selo="Exclusividade Costa & Vilela" data-chegada="2026-02-11" data-planta="b" data-planta-nome="Dois pavimentos · 246 m²" data-registro="1º Ofício de Registro de Imóveis de Vitória, matrícula 12.404" data-vistoria="09/02/2026" data-docs="Laudo de impermeabilização do terraço, com garantia até novembro de 2030;Escritura anterior e certidão de quitação do financiamento;Certidão da área tombada à frente do edifício">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-131</span><span className="selo-latao">Exclusividade</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 600 276" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-b" xlinkHref="#planta-b" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>246 m² em dois pavimentos · Ilha do Boi</span><span>Dois pavimentos</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-131">Cobertura duplex na Ilha do Boi<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 6.400.000</b><span>condomínio R$ 2.750/mês · IPTU R$ 14.800/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área</dt><dd>246 m² + terraço de 28 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>3 · 2 suítes no pavimento superior</dd></div>
+                  <div><dt>Vagas</dt><dd>4 cobertas</dd></div>
+                  <div><dt>Pavimentos</dt><dd>2, com escada interna</dd></div>
+                  <div><dt>Vista</dt><dd>Baía de Vitória, definitiva</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>11/02/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Vista definitiva para a baía: a área à frente é tombada e não recebe gabarito. A impermeabilização do terraço foi refeita em novembro de 2025, com garantia de cinco anos transferida ao comprador.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-131">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-131">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-142 */}
+              <article className="ficha ficha--larga" id="ficha-cv-142" data-codigo="CV-142" data-tipo="cobertura" data-tipo-nome="Cobertura duplex" data-bairro="Praia da Costa" data-cidade="Vila Velha" data-endereco="Rua Antônio Ataíde, 1.510 — Praia da Costa, Vila Velha/ES" data-area="246" data-quartos="3" data-suites="2" data-vagas="3" data-andar="Cobertura duplex, três vagas" data-preco="3450000" data-condominio="1980" data-iptu="9400" data-exclusivo="true" data-selo="Exclusividade Costa & Vilela" data-chegada="2026-02-06" data-planta="b" data-planta-nome="Dois pavimentos · 246 m²" data-registro="2º Ofício de Registro de Imóveis de Vila Velha, matrícula 57.219" data-vistoria="03/02/2026" data-docs="Laudo de estanqueidade do banho da suíte principal, de dezembro de 2025;Planta do pavimento superior com as medidas conferidas na visita;Convenção do condomínio com a regra de uso do terraço">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-142</span><span className="selo-latao">Exclusividade</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 600 276" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-b" xlinkHref="#planta-b" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>246 m² em dois pavimentos · Praia da Costa</span><span>Dois pavimentos</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-142">Cobertura duplex na Praia da Costa<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 3.450.000</b><span>condomínio R$ 1.980/mês · IPTU R$ 9.400/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área</dt><dd>246 m² em dois pavimentos</dd></div>
+                  <div><dt>Quartos</dt><dd>3 · 2 suítes</dd></div>
+                  <div><dt>Vagas</dt><dd>3 cobertas</dd></div>
+                  <div><dt>Terraço</dt><dd>Descoberto, com churrasqueira</dd></div>
+                  <div><dt>Vista</dt><dd>Mar, do terraço</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>06/02/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Uma infiltração antiga no banho da suíte principal já foi tratada antes de o imóvel entrar na carteira — o laudo, com a data do reparo, está no dossiê. O piso de madeira do pavimento superior é de 2019 e está em bom estado.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-142">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-142">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-156 */}
+              <article className="ficha" id="ficha-cv-156" data-codigo="CV-156" data-tipo="casa de condomínio" data-tipo-nome="Casa de condomínio" data-bairro="Mata da Praia" data-cidade="Vitória" data-endereco="Rua das Acácias, 88 — Condomínio Villa Mar, Mata da Praia, Vitória/ES" data-area="320" data-quartos="4" data-suites="2" data-vagas="4" data-andar="Casa em dois pavimentos, terreno de 480 m²" data-preco="2780000" data-condominio="1350" data-iptu="7900" data-exclusivo="false" data-selo="" data-chegada="2026-01-30" data-planta="c" data-planta-nome="Térreo · implantação no terreno" data-registro="1º Ofício de Registro de Imóveis de Vitória, matrícula 61.055" data-vistoria="28/01/2026" data-docs="Orçamento e nota do instalador de piso do pavimento superior (R$ 38.400);Convenção do condomínio e ata da última assembleia, com o fundo de obras em dia;Projeto aprovado na Prefeitura de Vitória, com a taxa de ocupação conferida">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-156</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 450 362" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-c" xlinkHref="#planta-c" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>320 m² construídos · terreno de 480 m²</span><span>Térreo e implantação</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-156">Casa de condomínio na Mata da Praia<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 2.780.000</b><span>condomínio R$ 1.350/mês · IPTU R$ 7.900/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área construída</dt><dd>320 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>4 · 2 suítes</dd></div>
+                  <div><dt>Vagas</dt><dd>4, duas cobertas</dd></div>
+                  <div><dt>Terreno</dt><dd>480 m², casa de esquina</dd></div>
+                  <div><dt>Piscina</dt><dd>7,5 × 2,75 m, aquecida</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>30/01/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>O térreo está pronto para morar. O pavimento superior precisa de piso novo nos três quartos — orçamento de R$ 38 mil com a nota do instalador no dossiê, para você não negociar no escuro.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-156">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-156">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-163 */}
+              <article className="ficha" id="ficha-cv-163" data-codigo="CV-163" data-tipo="casa de condomínio" data-tipo-nome="Casa de condomínio" data-bairro="Itapoã" data-cidade="Vila Velha" data-endereco="Rua Guaranis, 275 — Condomínio Praia de Itapoã, Itapoã, Vila Velha/ES" data-area="320" data-quartos="4" data-suites="2" data-vagas="3" data-andar="Casa em dois pavimentos, terreno de 420 m²" data-preco="2150000" data-condominio="1100" data-iptu="6400" data-exclusivo="true" data-selo="Exclusividade · não anunciada em portais" data-chegada="2026-02-02" data-planta="c" data-planta-nome="Térreo · implantação no terreno" data-registro="2º Ofício de Registro de Imóveis de Vila Velha, matrícula 44.910" data-vistoria="30/01/2026" data-docs="Contrato de locação vigente, com término em 20/12/2026;Recibos de aluguel dos últimos doze meses;Termo de vistoria assinado pelo inquilino, autorizando visitas com 48 horas de aviso">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-163</span><span className="selo-latao">Não anunciada</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 450 362" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-c" xlinkHref="#planta-c" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>320 m² construídos · terreno de 420 m²</span><span>Térreo e implantação</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-163">Casa de condomínio no Itapoã<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita, com 48 h de aviso</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 2.150.000</b><span>condomínio R$ 1.100/mês · IPTU R$ 6.400/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área construída</dt><dd>320 m²</dd></div>
+                  <div><dt>Quartos</dt><dd>4 · 2 suítes</dd></div>
+                  <div><dt>Vagas</dt><dd>3, duas cobertas</dd></div>
+                  <div><dt>Terreno</dt><dd>420 m²</dd></div>
+                  <div><dt>Situação</dt><dd>Alugada até 20/12/2026</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>02/02/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>Está alugada até dezembro de 2026 — visite com 48 horas de aviso e com o inquilino presente. O contrato de locação inteiro vai no dossiê: leia antes de marcar, para não perder a viagem.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-163">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-163">Agendar visita</button>
+                </div>
+              </article>
+
+              {/* CV-195 */}
+              <article className="ficha" id="ficha-cv-195" data-codigo="CV-195" data-tipo="casa" data-tipo-nome="Casa" data-bairro="Setiba" data-cidade="Guarapari" data-endereco="Rua das Tartarugas, 41 — Setiba, Guarapari/ES" data-area="180" data-quartos="2" data-suites="2" data-vagas="3" data-andar="Casa térrea, terreno de 600 m²" data-preco="3200000" data-condominio="0" data-iptu="5100" data-exclusivo="true" data-selo="Não anunciada em portais" data-chegada="2026-01-22" data-planta="d" data-planta-nome="Térrea · 2 suítes e escritório" data-registro="Ofício de Registro de Imóveis de Guarapari, matrícula 28.336" data-vistoria="19/01/2026" data-docs="Inventário do mobiliário incluído na venda, item a item;Projeto da piscina e nota fiscal do trocador de calor (2023);Certidão de inexistência de débitos junto à Prefeitura de Guarapari">
+                <figure className="prancha">
+                  <div className="prancha__topo"><span className="codigo">CV-195</span><span className="selo-latao">Não anunciada</span></div>
+                  <div className="prancha__desenho">
+                    <svg className="planta" viewBox="0 0 380 344" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><use href="#planta-d" xlinkHref="#planta-d" /></svg>
+                  </div>
+                  <figcaption className="prancha__pe"><span>180 m² · 380 m da areia de Setiba</span><span>Térrea</span></figcaption>
+                </figure>
+                <div className="ficha__cabeca">
+                  <h3><button className="ficha__abrir" type="button" data-abrir="CV-195">Casa em Setiba, Guarapari<svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-seta" xlinkHref="#ico-seta" /></svg></button></h3>
+                  <p className="disp"><i aria-hidden="true"></i>Disponível para visita</p>
+                </div>
+                <p className="ficha__preco"><b>R$ 3.200.000</b><span>sem condomínio · IPTU R$ 5.100/ano</span></p>
+                <dl className="dados">
+                  <div><dt>Área</dt><dd>180 m² em um pavimento</dd></div>
+                  <div><dt>Quartos</dt><dd>2 · 2 suítes, mais escritório</dd></div>
+                  <div><dt>Vagas</dt><dd>3, uma coberta</dd></div>
+                  <div><dt>Terreno</dt><dd>600 m²</dd></div>
+                  <div><dt>Piscina</dt><dd>Aquecida por trocador de calor</dd></div>
+                  <div><dt>Na carteira desde</dt><dd>22/01/2026</dd></div>
+                </dl>
+                <p className="estado"><span>Estado do imóvel</span>A 380 metros da areia de Setiba, com varanda gourmet e piscina aquecida. Está mobiliada e a venda inclui o mobiliário — o inventário item a item está no dossiê, para você saber exatamente o que fica.</p>
+                <div className="ficha__acoes">
+                  <button className="botao botao--vazio botao--pequeno" type="button" data-abrir="CV-195">Ver ficha completa</button>
+                  <button className="botao--texto" type="button" data-agendar="CV-195">Agendar visita</button>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ================= COMO CONDUZIMOS A VISITA: a régua ================= */}
+        <section className="faixa-escura" id="visita">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Como conduzimos a visita, do primeiro contato à escritura.</h2>
+              <p>Cinco etapas, com prazo e com o que você recebe em cada uma. Nenhuma delas é uma ligação de corretor tentando vender alguma coisa: cada etapa termina com um documento na sua mão.</p>
+            </div>
+
+            <ol className="regua">
+              <li className="etapa">
+                <span className="etapa__marca" aria-hidden="true">1</span>
+                <h3>Contato e alinhamento</h3>
+                <p className="etapa__prazo">30 minutos, por telefone ou vídeo</p>
+                <p>Antes de mostrar qualquer imóvel, entendemos o que você procura: bairro, metragem, se aceita reforma, quanto quer pagar de condomínio.</p>
+                <p className="etapa__ganho">Você recebe: uma lista curta de 3 a 5 imóveis que fazem sentido, com a razão de cada um estar ali.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__marca" aria-hidden="true">2</span>
+                <h3>Dossiê do imóvel</h3>
+                <p className="etapa__prazo">Em até 24 horas</p>
+                <p>Matrícula atualizada, certidões, IPTU, convenção e ata do condomínio, planta aprovada e o laudo do que o corretor viu na visita técnica.</p>
+                <p className="etapa__ganho">Você recebe: um PDF por imóvel, antes de marcar a visita — para descartar o que não serve sem sair de casa.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__marca" aria-hidden="true">3</span>
+                <h3>Visita acompanhada</h3>
+                <p className="etapa__prazo">1 hora, com o corretor que conhece o imóvel</p>
+                <p>Abrimos armários, medimos o que você quiser medir, testamos o que tem que funcionar e apontamos o que precisa de obra.</p>
+                <p className="etapa__ganho">Você recebe: uma nota de visita com as medidas conferidas e o croqui do que a reforma exigiria.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__marca" aria-hidden="true">4</span>
+                <h3>Análise de valor de mercado</h3>
+                <p className="etapa__prazo">2 dias úteis</p>
+                <p>Comparamos com os fechamentos reais da região nos últimos doze meses — não com o preço pedido nos anúncios, que é outra coisa.</p>
+                <p className="etapa__ganho">Você recebe: uma faixa de valor justo, com a lista de comparáveis e o que sustenta cada número.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__marca" aria-hidden="true">5</span>
+                <h3>Proposta e negociação</h3>
+                <p className="etapa__prazo">3 dias, em média</p>
+                <p>Conduzimos a proposta, conferimos a documentação do vendedor, acompanhamos o financiamento e vamos até a escritura.</p>
+                <p className="etapa__ganho">Você recebe: o controle de cada prazo por escrito, até a entrega das chaves.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* ================= QUEM SOMOS ================= */}
+        <section className="secao" id="quem-somos">
+          <div className="tela quem">
+            <div>
+              <div className="secao__cabeca">
+                <h2>Dois sócios, uma carteira que a gente defende.</h2>
+                <p>A Costa & Vilela é uma imobiliária boutique: não temos equipe de plantão nem meta de anúncio. Quem atende o telefone é quem visita o imóvel e quem assina a avaliação.</p>
+              </div>
+              <div className="socios">
+                <article className="socio">
+                  <h3>Helena Costa</h3>
+                  <p className="socio__creci">CRECI-ES 3.482-J · sócia desde 2014</p>
+                  <p>Corretora desde 2011 e perita judicial em avaliação de imóveis pela Justiça Federal no Espírito Santo. É quem assina a análise de valor de mercado e quem recusa imóvel com preço fora da realidade — inclusive de cliente antigo.</p>
+                </article>
+                <article className="socio">
+                  <h3>Rodrigo Vilela</h3>
+                  <p className="socio__creci">CRECI-ES 4.107-J · sócio desde 2016</p>
+                  <p>Doze anos vendendo na Grande Vitória, com passagem por incorporadora em Jardim Camburi. Responde pelas visitas técnicas: é ele quem mede, fotografa a fachada e escreve o laudo que vira o dossiê do imóvel.</p>
+                </article>
+              </div>
+            </div>
+
+            <aside className="selecao" aria-label="Como a carteira é escolhida">
+              <h3>Recusamos 7 de cada 10 imóveis que nos procuram.</h3>
+              <div className="selecao__marcas" role="img" aria-label="Dez imóveis avaliados: três entraram na carteira, sete foram recusados.">
+                <span className="marca-cheia"></span><span className="marca-cheia"></span><span className="marca-cheia"></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p className="selecao__legenda"><span className="ponto-latao" aria-hidden="true"></span>3 entraram · 7 recusados, nos últimos 12 meses</p>
+              <ul className="selecao__lista">
+                <li><svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-check" xlinkHref="#ico-check" /></svg><span><b>Só entra o que foi visitado.</b> Um dos sócios entra no imóvel, mede e confere a planta antes de publicar.</span></li>
+                <li><svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-check" xlinkHref="#ico-check" /></svg><span><b>Só entra com documentação conferida.</b> Matrícula, ônus, IPTU e condomínio — se falta papel, o anúncio espera.</span></li>
+                <li><svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-check" xlinkHref="#ico-check" /></svg><span><b>Preço acima do mercado não entra.</b> Aceitamos discutir valor com o proprietário; não aceitamos anunciar o que não vende.</span></li>
+                <li><svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-check" xlinkHref="#ico-check" /></svg><span><b>Problema grave só entra com laudo.</b> Infiltração, estrutura ou obra irregular viram uma linha no anúncio, não uma surpresa na visita.</span></li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        {/* ================= DÚVIDAS ================= */}
+        <section className="secao" id="duvidas">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>O que perguntam antes de marcar a primeira visita.</h2>
+            </div>
+            <div className="perguntas">
+              <details className="pergunta" open>
+                <summary>Por que só 38 imóveis na carteira?<span className="sinal" aria-hidden="true"></span></summary>
+                <p>Porque cada um foi visitado por um dos sócios antes de entrar no site, e só entra o que tem documentação conferida. Preferimos 38 imóveis que conseguimos defender — com planta, laudo e comparáveis — a 300 anúncios que não conhecemos. Quando um imóvel sai da carteira, ele sai daqui também, no mesmo dia.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Vocês cobram para avaliar meu imóvel?<span className="sinal" aria-hidden="true"></span></summary>
+                <p>Não. A avaliação é gratuita, vem por escrito em até três dias úteis e traz os fechamentos comparáveis dos últimos doze meses na sua região. Se o número não fizer sentido para você, não trabalhamos juntos e não há custo nenhum — nem para você, nem para o comprador.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Atendem quem está fora do Espírito Santo?<span className="sinal" aria-hidden="true"></span></summary>
+                <p>Sim, e boa parte dos nossos compradores vem de São Paulo, Minas e Brasília. A primeira conversa é por vídeo, o dossiê vai por e-mail e organizamos as visitas em um único dia ou em um fim de semana, com o roteiro fechado antes de você embarcar.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Qual é a comissão de vocês?<span className="sinal" aria-hidden="true"></span></summary>
+                <p>6% sobre o valor de venda, pagos pelo vendedor na escritura. Não cobramos taxa de anúncio, de planta, de foto nem de visita, e o comprador não paga nada pela intermediação. Se a venda não acontece, não há honorário.</p>
+              </details>
+              <details className="pergunta">
+                <summary>E quando o imóvel está alugado?<span className="sinal" aria-hidden="true"></span></summary>
+                <p>Avisamos o inquilino com 48 horas de antecedência e acompanhamos a visita inteira, com autorização por escrito no dossiê. É o caso do CV-163, no Itapoã: o contrato de locação e os recibos vão junto com a matrícula, para você saber o que está comprando antes de entrar.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= AVALIAR MEU IMÓVEL ================= */}
+        <section className="secao fecho" id="avaliar">
+          <div className="tela fecho__grade">
+            <div>
+              <h2>Quanto vale o seu imóvel na Grande Vitória hoje?</h2>
+              <p>Avaliação por escrito, com os comparáveis dos últimos doze meses e a faixa em que acreditamos que o imóvel vende. Sem custo e sem compromisso de exclusividade — mas se você quiser anunciar com a gente, a carteira é pequena e a conversa é a mesma.</p>
+              <dl className="honorarios">
+                <div><dt>Avaliação por escrito</dt><dd>R$ 0</dd></div>
+                <div><dt>Planta, dossiê, anúncio e visitas</dt><dd>R$ 0</dd></div>
+                <div><dt>Comissão na venda</dt><dd>6% do valor de venda, pagos pelo vendedor na escritura</dd></div>
+              </dl>
+              <p className="miudo">A avaliação chega por e-mail, assinada por Helena Costa (CRECI-ES 3.482-J), em até 3 dias úteis.</p>
+            </div>
+
+            <div className="fecho__form">
+              <div className="recado-ok" id="recado-ok" hidden role="status"></div>
+              <form id="form-avaliar" noValidate>
+                <div className="linha">
+                  <div className="campo" data-campo="nome">
+                    <label htmlFor="nome">Seu nome completo</label>
+                    <input id="nome" name="nome" type="text" autoComplete="name" placeholder="Marina Bittencourt" required />
+                    <span className="campo__erro" data-erro="nome"></span>
+                  </div>
+                  <div className="campo" data-campo="telefone">
+                    <label htmlFor="telefone">Telefone com DDD</label>
+                    <input id="telefone" name="telefone" type="tel" autoComplete="tel" placeholder="(27) 99245-0180" required />
+                    <span className="campo__erro" data-erro="telefone"></span>
+                  </div>
+                </div>
+                <div className="campo" data-campo="email">
+                  <label htmlFor="email">E-mail</label>
+                  <input id="email" name="email" type="email" autoComplete="email" placeholder="marina@exemplo.com.br" required />
+                  <span className="campo__erro" data-erro="email"></span>
+                </div>
+                <div className="linha">
+                  <div className="campo" data-campo="bairro">
+                    <label htmlFor="bairro">Bairro do imóvel</label>
+                    <input id="bairro" name="bairro" type="text" placeholder="Praia do Canto" required />
+                    <span className="campo__erro" data-erro="bairro"></span>
+                  </div>
+                  <div className="campo" data-campo="tipo">
+                    <label htmlFor="tipo">Tipo de imóvel</label>
+                    <select id="tipo" name="tipo" required>
+                      <option value="">Escolha o tipo</option>
+                      <option value="apartamento">Apartamento</option>
+                      <option value="casa">Casa</option>
+                      <option value="casa de condomínio">Casa de condomínio</option>
+                      <option value="cobertura">Cobertura</option>
+                      <option value="terreno">Terreno</option>
+                    </select>
+                    <span className="campo__erro" data-erro="tipo"></span>
+                  </div>
+                </div>
+                <div className="campo" data-campo="area">
+                  <label htmlFor="area">Área aproximada, em m²</label>
+                  <input id="area" name="area" type="text" inputMode="numeric" placeholder="118" required />
+                  <span className="campo__erro" data-erro="area"></span>
+                </div>
+                <div className="campo" data-campo="interesse">
+                  <label htmlFor="interesse">Imóvel da carteira que você quer visitar</label>
+                  <select id="interesse" name="interesse">
+                    <option value="">Nenhum por enquanto — quero indicação</option>
+                  </select>
+                  <span className="campo__erro" data-erro="interesse"></span>
+                </div>
+                <div className="campo" data-campo="mensagem">
+                  <label htmlFor="mensagem">O que mais importa para você</label>
+                  <textarea id="mensagem" name="mensagem" rows={4} placeholder="Ex.: quero algo com vista, aceito reforma na cozinha, preciso de duas vagas."></textarea>
+                  <span className="campo__erro" data-erro="mensagem"></span>
+                </div>
+                <button className="botao" type="submit" id="btn-avaliar">Pedir avaliação do meu imóvel</button>
+                <p className="miudo">Ao enviar, você concorda em receber o contato de um dos sócios sobre esta avaliação. Nada é compartilhado com terceiros, e nenhum dado sai do seu navegador nesta demonstração.</p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="rodape">
+        <div className="tela rodape__grade">
+          <div className="rodape__bloco">
+            <p><strong>Costa & Vilela Imóveis</strong> · CRECI-ES 2.184-J</p>
+            <p>Rua Aleixo Netto, 1.240 — sala 12, Praia do Canto, Vitória/ES · CEP 29055-250</p>
+            <p>(27) 99245-0180 · contato@costaevilela.com.br</p>
+          </div>
+          <nav className="rodape__nav" aria-label="Seções desta página">
+            <a href="#buscar">Buscar imóveis</a>
+            <a href="#carteira">Carteira em destaque</a>
+            <a href="#visita">Como conduzimos a visita</a>
+            <a href="#quem-somos">Quem somos</a>
+            <a href="#duvidas">Perguntas frequentes</a>
+            <a href="#avaliar">Avaliar meu imóvel</a>
+          </nav>
+          <div className="rodape__bloco">
+            <p>Demonstração de catálogo. Nome, preços e textos são fictícios.</p>
+            <p>Os números desta página — 38 imóveis na carteira, 2 dias até a visita, 12 anos de atuação e R$ 1,2 bi negociados desde 2014 — são de demonstração, assim como CRECI, endereço e imóveis.</p>
+            <p><a href="/">Voltar ao catálogo de modelos</a></p>
+          </div>
+        </div>
+      </footer>
+
+      {/* ================= PAINEL LATERAL: a ficha completa ================= */}
+      <div className="veu" id="veu" hidden></div>
+      <aside className="painel" id="painel" role="dialog" aria-modal="true" aria-labelledby="painel-titulo" hidden>
+        <div className="painel__topo">
+          <div>
+            <p className="codigo" id="painel-codigo">CV-000</p>
+            <h2 id="painel-titulo">Ficha do imóvel</h2>
+          </div>
+          <button className="painel__fechar" type="button" id="painel-fechar" aria-label="Fechar a ficha do imóvel">
+            <svg className="ico" aria-hidden="true" focusable="false"><use href="#ico-x" xlinkHref="#ico-x" /></svg>
+          </button>
+        </div>
+        <div className="painel__corpo" id="painel-corpo"></div>
+      </aside>
+    </>
+  );
+}
+

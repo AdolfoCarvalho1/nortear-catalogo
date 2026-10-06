@@ -1,0 +1,16 @@
+{
+  "id": "arquitetura",
+  "numero": "04",
+  "nome": "Ateliê Horizonte",
+  "nicho": "Arquitetura e interiores",
+  "promessa": "Projeto começa no terreno, não no estilo.",
+  "preco": 1500,
+  "pacote": "Sob medida",
+  "paleta": ["#EDEAE4", "#16181A", "#B0563A", "#8C8B84"],
+  "tipografia": "Constantia · Corbel",
+  "mundo": "Prancheta de obra: papel cinza-claro, traço grafite, um telha queimada para o que está em execução.",
+  "destaque": "Projetos em prancha: cada obra abre com ficha técnica, área, ano e estágio.",
+  "arquivo": "modelos/04-arquitetura/index.html",
+  "melhorPara": ["Arquitetura e urbanismo", "Design de interiores", "Paisagismo e construção"],
+  "secoes": ["Projetos", "Processo em 4 etapas", "Escritório", "Publicações", "Falar sobre um terreno"]
+}

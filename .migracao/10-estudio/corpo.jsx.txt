@@ -1,0 +1,500 @@
+<a className="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header className="cabecalho">
+  <div className="tela cabecalho__interno">
+    <a className="marca" href="#conteudo">
+      <svg className="marca__simbolo" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3z" /><path className="marca__fita" d="M3 14h18v4H3z" /></svg>
+      <b>ruído</b><span>estúdio de identidade</span>
+    </a>
+    <a className="botao botao--pequeno cabecalho__acao" href="#contato">Chamar para um projeto</a>
+    {/* No celular a navegação vira uma fita rolável: cinco âncoras continuam ao alcance do polegar. */}
+    <nav className="nav" id="nav" aria-label="Navegação principal">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  {/* ================= ABERTURA: o cartaz ================= */}
+  <section className="cartaz" aria-labelledby="titulo-cartaz">
+    <div className="tela">
+      <h1 className="cartaz__titulo" id="titulo-cartaz">
+        <span className="cartaz__nome">Ruído</span>
+        <span className="cartaz__fio" aria-hidden="true"></span>
+        <span className="cartaz__categoria">Botafogo, Rio de Janeiro</span>
+        <span className="cartaz__promessa">Marca não se explica. Se reconhece.</span>
+      </h1>
+
+      <div className="cartaz__grade">
+        <div className="cartaz__principal">
+          <p className="cartaz__linha">Fazemos identidade para quem já sabe o que é e ainda não sabe como parecer.</p>
+          <div className="cartaz__acoes">
+            <a className="botao" href="#projetos">Ver projetos</a>
+            <a className="botao botao--vazio" href="#contato">Chamar para um projeto</a>
+          </div>
+        </div>
+
+        <aside className="cartaz__ficha" aria-label="Ficha do estúdio">
+          <p><b>Direção de criação</b><span>Diogo Amaral, sócio principal</span></p>
+          <p><b>Endereço</b><span>Rua São Clemente, 145 — Botafogo, Rio de Janeiro</span></p>
+          <p><b>Coordenadas</b><span className="num">22°57′ S · 43°11′ O</span></p>
+          <p><b>Time</b><span>6 pessoas, todas na sala de desenho</span></p>
+        </aside>
+      </div>
+
+      {/* O sistema do estúdio mostrado como ele é: três tintas e um par tipográfico. */}
+      <ul className="amostra" aria-label="Sistema visual do estúdio: três tintas e duas famílias">
+        <li className="amostra__peca amostra__peca--preto"><b>preto</b><span className="num">#0A0A0A</span></li>
+        <li className="amostra__peca amostra__peca--papel"><b>papel</b><span className="num">#F2F0EB</span></li>
+        <li className="amostra__peca amostra__peca--laranja"><b>laranja</b><span className="num">#E8541F</span></li>
+        <li className="amostra__peca amostra__peca--tipo"><b>Arial Black</b><span>Segoe UI</span></li>
+      </ul>
+
+      <p className="cartaz__rodape">Rio de Janeiro · desde 2016 · 6 pessoas · 74 marcas</p>
+    </div>
+  </section>
+
+  {/* ================= MANIFESTO: monta palavra por palavra ================= */}
+  <section className="manifesto" id="manifesto" aria-labelledby="manifesto-frase">
+    <div className="tela">
+      <h2 className="manifesto__frase" id="manifesto-frase">Marca não é logo. É o que sobra na cabeça de alguém depois que a aba fecha. Não desenhamos para agradar em reunião: desenhamos para ser reconhecido no rótulo, no caminhão, no aplicativo, na camisa. Se precisa de legenda, não funcionou. Por isso recusamos metade dos projetos que chegam — e é isso que faz a outra metade valer.</h2>
+      <p className="manifesto__assinatura">Diogo Amaral, direção de criação · Botafogo, fevereiro de 2026</p>
+    </div>
+  </section>
+
+  {/* ================= FITA DE NÚMEROS ================= */}
+  <section aria-label="O estúdio em números">
+    <div className="tela fita__grade">
+      <p className="fita__item"><b>74</b> marcas entregues desde 2016, a maioria ainda com a gente</p>
+      <p className="fita__item"><b>11</b> semanas é o prazo médio de uma identidade completa</p>
+      <p className="fita__item"><b>1 em 2</b> projetos que chegam são recusados no primeiro mês</p>
+      <p className="fita__item"><b>3</b> pessoas assinam cada entrega: nada sai sem duas revisões</p>
+    </div>
+  </section>
+
+  {/* ================= PROJETOS ================= */}
+  <section className="secao" id="projetos" aria-labelledby="titulo-projetos">
+    <div className="tela">
+      <div className="cabeca">
+        <h2 id="titulo-projetos">Seis marcas que passaram por aqui.</h2>
+        <p>O que interessa não é a capa: é a decisão que segurou o sistema inteiro. Cada projeto abaixo diz qual foi. O símbolo é o desenho que saiu dela.</p>
+      </div>
+
+      <div className="projetos__lista">
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <p className="capa__fita">o que a gente mostra primeiro</p>
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M20 40h160M20 60h112M20 84h160M20 104h96M20 126h150M20 146h108M20 168h160" />
+            </svg>
+            <p className="capa__nome">Cervejaria Maré</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Cervejaria Maré</h3>
+            <p className="projeto__meta">Bebidas · Rio de Janeiro · <span className="num">2025</span></p>
+            <p className="projeto__feito">Identidade, rótulos e sistema de embalagem</p>
+            <p className="projeto__decisao">O mar entrou como sistema de linhas, não como desenho de onda: sete espessuras que viram rótulo, luva de garrafa e assinatura no copo. Nenhuma delas é decorativa: cada uma marca uma linha da casa.</p>
+          </div>
+        </article>
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M24 24h68v68H24zM108 24h68v68h-68zM24 108h68v68H24zM108 142a34 34 0 1 0 68 0 34 34 0 1 0-68 0z" />
+            </svg>
+            <p className="capa__nome">Clínica Sereno</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Clínica Sereno</h3>
+            <p className="projeto__meta">Saúde · Niterói · <span className="num">2025</span></p>
+            <p className="projeto__feito">Identidade e sistema de sinalização</p>
+            <p className="projeto__decisao">Uma grelha de quatro módulos resolve tudo, da fachada ao aplicativo: três quadrados e um círculo, porque a clínica não é uma caixa. Nada é desenhado fora da grelha, nem a placa da recepção, nem o recibo.</p>
+          </div>
+        </article>
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M24 24h76v76h76v76H24zM110 24h66v66h-66z" />
+            </svg>
+            <p className="capa__nome">Móveis Cardoso</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Móveis Cardoso</h3>
+            <p className="projeto__meta">Mobiliário · Bento Gonçalves · <span className="num">2024</span></p>
+            <p className="projeto__feito">Identidade e catálogo de linha</p>
+            <p className="projeto__decisao">O encaixe da madeira virou o símbolo: duas peças que só funcionam juntas, com a junta à mostra. O catálogo passou a ser impresso em uma tinta só, porque a madeira é a única cor da página.</p>
+          </div>
+        </article>
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M42 84a60 60 0 0 1 116 0M42 116a60 60 0 0 0 116 0" />
+            </svg>
+            <p className="capa__nome">Ateliê Cora</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Ateliê Cora</h3>
+            <p className="projeto__meta">Moda autoral · São Paulo · <span className="num">2024</span></p>
+            <p className="projeto__feito">Identidade e embalagem</p>
+            <p className="projeto__decisao">A etiqueta virou o símbolo: um círculo cortado por uma faixa, o mesmo desenho no botão, na sacola e no selo de cera. A faixa é sempre a mesma altura, e é ela que dá escala para tudo o resto.</p>
+          </div>
+        </article>
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M32 40h136M20 168h160M56 168V40M100 168V84M144 168V40" />
+            </svg>
+            <p className="capa__nome">Construtora Pilar</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Construtora Pilar</h3>
+            <p className="projeto__meta">Construção · Belo Horizonte · <span className="num">2023</span></p>
+            <p className="projeto__feito">Identidade e sistema para canteiro</p>
+            <p className="projeto__decisao">O corte estrutural virou o desenho do sistema: uma viga apoiada em dois pilares, com o vão no meio. Tudo se apoia nela: a placa de obra, o capacete, o contrato, o anúncio do lançamento.</p>
+          </div>
+        </article>
+
+        <article className="projeto">
+          <div className="projeto__capa" aria-hidden="true">
+            <svg className="capa__simbolo" viewBox="0 0 200 200">
+              <path data-traco pathLength="100" d="M20 20h160v160H20V60h120v80H60v-40h40" />
+            </svg>
+            <p className="capa__nome">Rádio Guanabara</p>
+          </div>
+          <div className="projeto__ficha">
+            <h3>Rádio Guanabara</h3>
+            <p className="projeto__meta">Mídia · Rio de Janeiro · <span className="num">2023</span></p>
+            <p className="projeto__feito">Identidade e vinheta de marca</p>
+            <p className="projeto__decisao">O sinal é uma linha só, que se enrola até virar centro. O mesmo traço aparece no logo, na vinheta de quatro segundos e no prefixo de cada programa. É por isso que a rádio é reconhecida antes de o locutor falar.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  {/* ================= COMO TRABALHAMOS: o corte de superfície ================= */}
+  <section className="claro" id="processo" aria-labelledby="titulo-processo">
+    <div className="tela">
+      <div className="cabeca">
+        <h2 id="titulo-processo">Quatro etapas, onze semanas, nenhuma surpresa.</h2>
+        <p>O cronograma é fechado no primeiro dia e cada etapa termina com uma coisa na sua mão, não com uma apresentação bonita e uma promessa.</p>
+      </div>
+
+      <ol className="etapas">
+        <li className="etapa">
+          <span className="etapa__n" aria-hidden="true">01</span>
+          <div className="etapa__texto">
+            <h3>Imersão</h3>
+            <p>Duas semanas dentro da empresa: de 8 a 12 entrevistas, uma visita à fábrica ou à loja, leitura de tudo que vocês já publicaram. Ninguém desenha nada ainda: nessa etapa a gente só escuta e anota.</p>
+            <p className="etapa__recebe"><b>Você recebe</b> um diagnóstico de 20 páginas com o problema escrito em uma frase. A frase costuma doer.</p>
+          </div>
+          <p className="etapa__prazo num">2 semanas</p>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n" aria-hidden="true">02</span>
+          <div className="etapa__texto">
+            <h3>Território e hipóteses</h3>
+            <p>Três territórios desenhados, cada um com o argumento, a referência e o risco que ele assume. A escolha é sua, na sala, olhando para a parede: os outros dois morrem na hora e ficam registrados por escrito.</p>
+            <p className="etapa__recebe"><b>Você recebe</b> três cartazes A1 impressos, o argumento de cada território e o registro do que foi descartado e por quê.</p>
+          </div>
+          <p className="etapa__prazo num">3 semanas</p>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n" aria-hidden="true">03</span>
+          <div className="etapa__texto">
+            <h3>Desenho e teste em contexto real</h3>
+            <p>O sistema é aplicado antes de ser aprovado: rótulo impresso na gráfica, faixa na parede, tela do aplicativo, adesivo do caminhão, camisa do time. Depois, 20 pessoas que nunca viram a marca dizem o que entenderam.</p>
+            <p className="etapa__recebe"><b>Você recebe</b> as aplicações em tamanho real, o relatório do teste e as correções que ele obrigou.</p>
+          </div>
+          <p className="etapa__prazo num">4 semanas</p>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n" aria-hidden="true">04</span>
+          <div className="etapa__texto">
+            <h3>Sistema, manual e entrega</h3>
+            <p>Fechamos as regras: o que pode, o que não pode e o que fazer quando aparecer uma peça que ninguém previu. O manual é escrito para quem não é designer, porque o time de marketing precisa conseguir usar sozinho.</p>
+            <p className="etapa__recebe"><b>Você recebe</b> manual de 60 a 90 páginas, arquivos abertos por aplicação, fontes licenciadas no seu nome e uma sessão de 3 horas com quem vai usar.</p>
+          </div>
+          <p className="etapa__prazo num">2 semanas</p>
+        </li>
+      </ol>
+
+      <p className="claro__total">Onze semanas do primeiro café à marca na rua. Se passar disso por nossa causa, o custo é nosso, e está escrito no contrato.</p>
+    </div>
+  </section>
+
+  {/* ================= SERVIÇOS E PRAZOS ================= */}
+  <section className="secao" id="servicos" aria-labelledby="titulo-servicos">
+    <div className="tela">
+      <div className="cabeca">
+        <h2 id="titulo-servicos">Serviços e prazos, com o preço na frente.</h2>
+        <p>Faixas de partida praticadas em 2026. O que define o topo não é o tamanho da empresa: é quantas aplicações a marca precisa sustentar.</p>
+      </div>
+
+      <ul className="servicos">
+        <li className="servico">
+          <div className="servico__topo">
+            <h3>Identidade completa</h3>
+            <p className="servico__preco num">a partir de R$ 38.000</p>
+          </div>
+          <p className="servico__feito">Naming, verificação de registro, logo, sistema completo e manual de marca</p>
+          <p className="servico__prazo num">8 a 12 semanas</p>
+        </li>
+        <li className="servico">
+          <div className="servico__topo">
+            <h3>Identidade visual</h3>
+            <p className="servico__preco num">a partir de R$ 22.000</p>
+          </div>
+          <p className="servico__feito">Logo e sistema de aplicações, sem naming, para quem já tem nome e não tem marca</p>
+          <p className="servico__prazo num">5 a 8 semanas</p>
+        </li>
+        <li className="servico">
+          <div className="servico__topo">
+            <h3>Embalagem</h3>
+            <p className="servico__preco num">a partir de R$ 16.000</p>
+          </div>
+          <p className="servico__feito">Linha de 3 a 8 SKUs, com prova de impressão acompanhada na gráfica</p>
+          <p className="servico__prazo num">4 a 6 semanas</p>
+        </li>
+        <li className="servico">
+          <div className="servico__topo">
+            <h3>Motion e vinheta de marca</h3>
+            <p className="servico__preco num">a partir de R$ 9.000</p>
+          </div>
+          <p className="servico__feito">Vinheta de 4 segundos, assinatura animada e 6 peças verticais para redes</p>
+          <p className="servico__prazo num">3 semanas</p>
+        </li>
+        <li className="servico">
+          <div className="servico__topo">
+            <h3>Consultoria de sistema de marca</h3>
+            <p className="servico__preco num">R$ 6.500</p>
+          </div>
+          <p className="servico__feito">Diagnóstico do que você já tem e 2 sessões de 3 horas com o time. Produto separado, entra sozinho</p>
+          <p className="servico__prazo num">2 semanas</p>
+        </li>
+      </ul>
+
+      <div className="naofazemos">
+        <h3>O que a gente não faz</h3>
+        <dl>
+          <dt>Logo avulso</dt>
+          <dd>Um logo sem sistema é um desenho que ninguém sabe aplicar. Quando ele sai da nossa mão sem regra, vira seis versões erradas em três meses.</dd>
+          <dt>Site</dt>
+          <dd>A gente entrega o sistema e o manual; a página é montada pelo seu time ou por um parceiro. Se precisar, indicamos dois que trabalham bem.</dd>
+          <dt>Hora</dt>
+          <dd>Hora se cobra quando o escopo é incerto, e o nosso não é. Você paga por entrega, não por presença na sala.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= ORÇAMENTADOR ================= */}
+  <section className="secao orcamento" id="orcamento" aria-labelledby="titulo-orcamento">
+    <div className="tela">
+      <div className="cabeca">
+        <h2 id="titulo-orcamento">Monte o escopo. A faixa aparece embaixo.</h2>
+        <p>Os valores saem da tabela acima, item por item, com a conta à mostra. Isto não é proposta: é a faixa que a gente pratica todos os dias. A proposta fecha depois de uma conversa de 40 minutos.</p>
+      </div>
+
+      <div className="orcamento__grade">
+        <form className="orcamento__form" id="form-orcamento" noValidate>
+          <fieldset className="grupo">
+            <legend className="rotulo">1. O que você precisa</legend>
+            <div className="escolhas">
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="naming" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Naming</b><small>nomes, verificação de registro e arquitetura</small></span>
+              </label>
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="identidade" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Identidade visual</b><small>logo e sistema de aplicações</small></span>
+              </label>
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="sistema" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Sistema e manual</b><small>manual de 60 a 90 páginas e arquivos abertos</small></span>
+              </label>
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="embalagem" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Embalagem</b><small>linha de 3 a 8 SKUs, com prova na gráfica</small></span>
+              </label>
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="motion" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Motion e vinheta</b><small>vinheta de marca e 6 peças verticais</small></span>
+              </label>
+              <label className="escolha">
+                <input type="checkbox" name="escopo" value="consultoria" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Consultoria de sistema</b><small>diagnóstico e 2 sessões — produto separado</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset className="grupo">
+            <legend className="rotulo">2. Prazo desejado</legend>
+            <div className="escolhas escolhas--linha">
+              <label className="escolha escolha--radio">
+                <input type="radio" name="prazo" value="3m" defaultChecked />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Tenho 3 meses</b></span>
+              </label>
+              <label className="escolha escolha--radio">
+                <input type="radio" name="prazo" value="2m" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Tenho 2 meses</b></span>
+              </label>
+              <label className="escolha escolha--radio">
+                <input type="radio" name="prazo" value="1m" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Preciso em 1 mês</b></span>
+              </label>
+              <label className="escolha escolha--radio">
+                <input type="radio" name="prazo" value="sem" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Sem pressa</b></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset className="grupo">
+            <legend className="rotulo">3. Porte da empresa</legend>
+            <div className="escolhas escolhas--linha">
+              <label className="escolha escolha--radio">
+                <input type="radio" name="porte" value="p30" defaultChecked />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>30 a 100 pessoas</b></span>
+              </label>
+              <label className="escolha escolha--radio">
+                <input type="radio" name="porte" value="p100" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>100 a 500 pessoas</b></span>
+              </label>
+              <label className="escolha escolha--radio">
+                <input type="radio" name="porte" value="p500" />
+                <span className="escolha__caixa" aria-hidden="true"></span>
+                <span className="escolha__texto"><b>Mais de 500 pessoas</b></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button className="botao botao--largo" type="submit" id="btn-calcular">Calcular faixa de investimento</button>
+        </form>
+
+        <div className="orcamento__saida" id="orcamento-saida" tabIndex={-1} aria-live="polite" aria-busy="false">
+          <p className="rotulo">Faixa de investimento</p>
+          <p className="saida__vazio">Nenhum item marcado ainda. Marque o que você precisa ao lado e a faixa aparece aqui, com a conta linha por linha.</p>
+          <ul className="saida__dica">
+            <li>Identidade completa: a partir de R$ 38.000, em 8 a 12 semanas</li>
+            <li>Embalagem depende da identidade: rótulo é aplicação de sistema</li>
+            <li>Consultoria de sistema: R$ 6.500, sozinha, em 2 semanas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= DÚVIDAS ================= */}
+  <section className="secao" id="duvidas" aria-labelledby="titulo-duvidas">
+    <div className="tela">
+      <div className="cabeca">
+        <h2 id="titulo-duvidas">O que perguntam antes de fechar.</h2>
+      </div>
+      <div className="perguntas">
+        <details className="pergunta" open>
+          <summary>Por que tão caro?</summary>
+          <p>Uma identidade nossa ocupa de 380 a 520 horas de quatro pessoas, direção de criação incluída e nada repassado para freelancer. R$ 38.000 divididos por 24 meses de uso dão R$ 1.583 por mês, menos do que custa um designer júnior por mês. O que sai caro de verdade é refazer a marca em dois anos.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Quanto tempo leva?</summary>
+          <p>De 8 a 12 semanas para identidade completa, contando as duas semanas de imersão. Embalagem soma de 4 a 6 semanas e roda em paralelo. O que atrasa de verdade não é o desenho: é a decisão. Quando uma aprovação passa de uma semana, o cronograma anda uma semana.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Vocês trabalham remoto?</summary>
+          <p>Trabalhamos, e a maior parte do projeto é remota. Duas coisas acontecem com vocês na sala: a imersão e a apresentação dos territórios, porque as duas dependem de ver a reação das pessoas. Já entregamos marcas em Recife, Curitiba e Porto Alegre sem nenhuma reunião presencial além dessas duas.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Fazem só o logo?</summary>
+          <p>Não. Logo avulso vira seis versões erradas em três meses, e a culpa cai no desenho. Se o que você precisa é organizar o que já existe, a consultoria de sistema de marca resolve por R$ 6.500, em duas sessões.</p>
+        </details>
+        <details className="pergunta">
+          <summary>O que vocês precisam de mim?</summary>
+          <p>De três horas na imersão, de alguém com a palavra final em quatro momentos de decisão e de resposta em até 48 horas. Sem isso o projeto não acontece. E a gente prefere dizer isso agora, na primeira conversa, e não na semana nove.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= CHAMAR PARA UM PROJETO ================= */}
+  <section className="fecho" id="contato" aria-labelledby="titulo-contato">
+    <div className="tela fecho__grade">
+      <div className="fecho__texto">
+        <h2 id="titulo-contato">Chamar para um projeto.</h2>
+        <p>Conte o que você precisa em duas ou três frases. A gente responde em até dois dias úteis, com uma faixa, um prazo e o nome de quem vai conduzir o projeto.</p>
+        <ul className="fecho__lista">
+          <li><b>Endereço</b><span>Rua São Clemente, 145 — Botafogo, Rio de Janeiro, CEP 22260-000</span></li>
+          <li><b>Telefone</b><span className="num">(21) 90000-0000</span></li>
+          <li><b>E-mail</b><span>projeto@ruido.com.br</span></li>
+          <li><b>Quem responde</b><span>Diogo Amaral, direção de criação</span></li>
+        </ul>
+      </div>
+
+      <div className="fecho__caixa">
+        <div className="recado-ok" id="recado-ok" role="status" hidden></div>
+
+        <div className="escopo-anexado" id="escopo-anexado" hidden>
+          <p><b>Escopo anexado</b><span id="escopo-resumo"></span></p>
+          <button className="botao botao--vazio botao--pequeno" type="button" id="btn-remover-escopo">Remover escopo</button>
+        </div>
+
+        <form id="form-contato" noValidate>
+          <div className="dupla">
+            <div className="campo" data-campo="nome">
+              <label htmlFor="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" autoComplete="name" placeholder="Marina Bastos" required />
+              <span className="campo__erro" data-erro="nome"></span>
+            </div>
+            <div className="campo" data-campo="empresa">
+              <label htmlFor="empresa">Empresa</label>
+              <input id="empresa" name="empresa" type="text" autoComplete="organization" placeholder="Cervejaria Maré" required />
+              <span className="campo__erro" data-erro="empresa"></span>
+            </div>
+          </div>
+          <div className="campo" data-campo="email">
+            <label htmlFor="email">E-mail</label>
+            <input id="email" name="email" type="email" autoComplete="email" placeholder="marina@cervejariamare.com.br" required />
+            <span className="campo__erro" data-erro="email"></span>
+          </div>
+          <div className="campo" data-campo="mensagem">
+            <label htmlFor="mensagem">O que você precisa</label>
+            <textarea id="mensagem" name="mensagem" rows={4} placeholder="Somos 60 pessoas, o nome já existe, a marca não. Precisamos de identidade e rótulo novo para a linha de 5 produtos." required></textarea>
+            <span className="campo__erro" data-erro="mensagem"></span>
+          </div>
+          <button className="botao botao--largo" type="submit" id="btn-contato">Chamar para um projeto</button>
+          <p className="miudo">Ao enviar, você concorda em receber a resposta no e-mail acima. Nada é compartilhado com terceiros e nada é gravado neste navegador.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer className="rodape">
+  <div className="tela rodape__grade">
+    <p><strong>ruído</strong> · estúdio de identidade · Rua São Clemente, 145, Botafogo, Rio de Janeiro</p>
+    <p>Demonstração de catálogo. Nome, preços e textos são fictícios.</p>
+    <p><a href="../index.html">Voltar ao catálogo de modelos</a></p>
+  </div>
+</footer>

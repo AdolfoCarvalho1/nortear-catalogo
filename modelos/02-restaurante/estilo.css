@@ -1,0 +1,618 @@
+/* ============================================================
+   02 · MESA 12 — restaurante autoral
+   Mundo: papel de menu impresso. Creme quente carrega a página
+   inteira, a tinta preta faz o texto, o barro queimado só
+   aparece em preço, ação e estado ativo, e o verde-oliva marca
+   apenas o que é da estação. Sem raio, sem foto: a imagem é
+   tipográfica — três ingredientes e uma linha de origem.
+   ============================================================ */
+
+:root {
+  /* --- Papéis e superfícies --- */
+  --papel: #F4EDE2;      /* fundo da página */
+  --papel-2: #EBE2D3;    /* faixa alternada (ficha e passagem quieta) */
+  --branco: #FFFDF9;     /* cartão de prato, comanda, recibo */
+
+  /* --- Tintas --- */
+  --tinta: #1C1A15;      /* texto */
+  --tinta-70: #4A463D;   /* texto secundário, tingido de papel */
+  --tinta-35: #A9A296;   /* só filetes e traço de ícone — nunca texto */
+
+  /* --- Filetes --- */
+  --filete: #D9CFBE;
+
+  /* --- Cores com papel definido --- */
+  --barro: #B4552A;      /* ação, preço, estado ativo */
+  --oliva: #6E7A4A;      /* estação */
+  --vinho: #6B2A2E;      /* só o rótulo de harmonização de vinho */
+
+  /* --- Vozes --- */
+  --f-display: Georgia, "Sitka Text", "Times New Roman", serif;
+  --f-leitura: "Lato", "Segoe UI", Calibri, Arial, sans-serif;
+
+  /* --- Medidas --- */
+  --leitura: 68ch;
+
+  /* --- Ritmo: degraus repetidos, não medidas soltas --- */
+  --e1: 0.5rem;
+  --e2: 1rem;
+  --e3: 1.5rem;
+  --e4: 2.5rem;
+  --e5: 4rem;
+
+  --curva: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+  caret-color: var(--barro);
+  scrollbar-color: var(--filete) var(--papel);
+  accent-color: var(--barro);
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--f-leitura);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* As superfícies do navegador também são impressas neste mundo. */
+::selection { background: var(--tinta); color: var(--papel); }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--papel); }
+::-webkit-scrollbar-thumb { background: var(--filete); border: 3px solid var(--papel); }
+::-webkit-scrollbar-thumb:hover { background: var(--tinta-35); }
+:focus-visible { outline: 2px solid var(--barro); outline-offset: 2px; }
+
+h1, h2, h3 { margin: 0; font-family: var(--f-display); font-weight: 400; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+ul, ol, dl { margin: 0; padding: 0; list-style: none; }
+svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+a { color: inherit; }
+
+.tela { width: 100%; max-width: 76.5rem; margin-inline: auto; padding: 0.5rem 1.25rem; }
+
+/* Pular navegação: fixo, nunca posicionado para fora da caixa do body. */
+.pular {
+  position: absolute; top: 0; left: 0; z-index: 90;
+  width: 1px; height: 1px; overflow: hidden; white-space: nowrap;
+  background: var(--tinta); color: var(--papel);
+  text-decoration: none;
+}
+.pular:focus { width: auto; height: auto; padding: 0.85rem 1.25rem; }
+
+/* Rótulo de campo e de coluna: Lato, caixa alta, entreletra aberta.
+   Em --tinta-70, porque --tinta-35 não passa em contraste de texto. */
+.rotulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tinta-70);
+}
+.rotulo--vinho { color: var(--vinho); }
+.miudo { font-size: 0.8125rem; color: var(--tinta-70); line-height: 1.55; }
+
+/* ---------------- Cabeçalho ---------------- */
+.cabecalho {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--papel) 91%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--filete);
+}
+.cabecalho__interno { display: flex; align-items: center; gap: 1.25rem; min-height: 4.5rem; }
+.marca { display: flex; align-items: baseline; gap: 0.6rem; margin-right: auto; text-decoration: none; }
+.marca svg { width: 1.15rem; height: 1.15rem; align-self: center; fill: none; stroke: var(--tinta); stroke-width: 1.6; }
+.marca b { font-family: var(--f-display); font-size: 1.25rem; font-weight: 400; letter-spacing: -0.01em; }
+.marca span { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-70); }
+/* Em tela estreita o cabeçalho carrega só a marca e a ação. */
+@media (max-width: 30rem) { .marca span { display: none; } }
+
+.nav { display: none; }
+@media (min-width: 62rem) {
+  .nav { display: flex; gap: 1.6rem; font-size: 0.9375rem; }
+}
+.nav a {
+  color: var(--tinta-70);
+  text-decoration: none;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav a:hover { color: var(--tinta); border-bottom-color: var(--barro); }
+
+/* ---------------- Botões e links ---------------- */
+.botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 2.85rem; padding: 0.7rem 1.4rem;
+  background: var(--barro); color: var(--branco);
+  border: 1px solid var(--barro);
+  border-radius: 0;
+  font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.01em;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.2s var(--curva), border-color 0.2s var(--curva), transform 0.12s var(--curva);
+}
+.botao:hover { background: color-mix(in srgb, var(--barro) 84%, var(--tinta)); border-color: color-mix(in srgb, var(--barro) 84%, var(--tinta)); }
+.botao:active { transform: translateY(1px); }
+.botao--vazio { background: transparent; color: var(--tinta); border-color: var(--tinta-70); font-weight: 400; }
+.botao--vazio:hover { background: color-mix(in srgb, var(--tinta) 6%, transparent); border-color: var(--tinta); }
+/* Alvo de toque nunca abaixo de 44px, inclusive no botão pequeno. */
+.botao--pequeno { min-height: 2.75rem; padding: 0.5rem 1rem; font-size: 0.875rem; }
+.botao--largo { width: 100%; }
+.botao[disabled] {
+  background: var(--papel-2); color: var(--tinta-70);
+  border-color: var(--filete); cursor: progress; transform: none;
+}
+.botao--vazio[disabled] { background: var(--papel-2); color: var(--tinta-70); }
+
+.link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 2.85rem;
+  font-size: 1rem; color: var(--tinta);
+  text-decoration: underline; text-decoration-thickness: 1px;
+  text-decoration-color: var(--barro); text-underline-offset: 0.3em;
+}
+.link svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--barro); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s var(--curva); }
+.link:hover svg { transform: translateX(3px); }
+
+/* Ícone de abrir/fechar: dois traços desenhados, nunca um "+" de texto. */
+.mais { display: inline-flex; color: var(--tinta-70); }
+.mais svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.mais__v { transform-origin: 12px 12px; transition: transform 0.24s var(--curva); }
+details[open] > summary .mais__v { transform: scaleY(0); }
+details[open] > summary .mais { color: var(--barro); }
+
+/* ---------------- Abertura ---------------- */
+.abertura { padding: 2.5rem 0; }
+@media (min-width: 48rem) { .abertura { padding: 4.5rem 0 4rem; } }
+.abertura__grade { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+@media (min-width: 60rem) {
+  .abertura__grade { grid-template-columns: minmax(0, 1.05fr) minmax(0, 25rem); }
+}
+.abertura h1 {
+  font-size: clamp(2.9rem, 6.6vw, 4.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.abertura__promessa {
+  margin-top: var(--e3);
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  line-height: 1.3;
+  max-width: 32ch;
+}
+.abertura__meta { margin-top: var(--e3); max-width: 46ch; color: var(--tinta-70); }
+.abertura__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.75rem; margin-top: var(--e4); }
+.abertura__nota { margin-top: var(--e4); padding-top: 1.25rem; border-top: 1px solid var(--filete); font-size: 0.875rem; color: var(--tinta-70); max-width: 44ch; }
+
+/* A carta: uma folha branca com o preço e o que está no auge — papel não flutua. */
+.carta {
+  background: var(--branco);
+  border: 1px solid var(--filete);
+  padding: 1.35rem;
+}
+@media (min-width: 48rem) { .carta { padding: 2rem; } }
+.carta__titulo { font-family: var(--f-display); font-size: 1.25rem; }
+.carta__preco {
+  margin-top: var(--e2);
+  font-size: 2.35rem; font-weight: 700; line-height: 1;
+  color: var(--barro); font-variant-numeric: tabular-nums;
+}
+.carta__preco small { font-size: 0.875rem; font-weight: 400; color: var(--tinta-70); letter-spacing: 0; }
+.carta__linhas { margin-top: var(--e3); }
+.carta__linhas > div { display: flex; justify-content: space-between; gap: var(--e2); padding: 1.25rem 0; border-top: 1px solid var(--filete); }
+.carta__linhas dt { font-size: 0.9375rem; color: var(--tinta-70); }
+.carta__linhas dd { margin: 0; font-size: 0.9375rem; font-weight: 700; color: var(--barro); font-variant-numeric: tabular-nums; }
+.carta__auge { margin-top: var(--e3); }
+.carta__rotulo { display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--oliva); }
+.carta__rotulo svg { width: 0.95rem; height: 0.95rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
+.carta__lista { margin-top: 0.6rem; }
+.carta__lista li { font-family: var(--f-display); font-size: 1.0625rem; color: var(--oliva); padding-block: 0.2rem; }
+.carta__rodape { margin-top: var(--e3); padding-top: 1.25rem; border-top: 1px solid var(--filete); font-size: 0.8125rem; color: var(--tinta-70); }
+
+/* ---------------- Ficha da casa ---------------- */
+.ficha { background: var(--papel-2); border-block: 1px solid var(--filete); padding: 1.5rem 0; }
+@media (min-width: 48rem) { .ficha { padding: 2.25rem 0; } }
+.ficha__grade { display: grid; gap: var(--e4) var(--e4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.ficha__item { border-top: 1px solid var(--tinta-35); padding-top: 1.25rem; }
+.ficha__item b { display: block; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.ficha__item span { display: block; margin-top: 0.4rem; font-size: 0.875rem; line-height: 1.55; color: var(--tinta-70); }
+
+/* ---------------- Seções ----------------
+   Padding em degraus literais, não em clamp: o valor precisa ser
+   legível por qualquer leitor de CSS, inclusive os de auditoria. */
+.secao { padding: 3.5rem 0; }
+@media (min-width: 48rem) { .secao { padding: 5rem 0; } }
+@media (min-width: 75rem) { .secao { padding: 6.5rem 0; } }
+.secao__cabeca { display: grid; gap: var(--e3); margin-bottom: var(--e4); }
+.secao__cabeca h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; max-width: 30ch; }
+.secao__cabeca p { color: var(--tinta-70); max-width: var(--leitura); }
+.secao--reserva, .secao--duvidas, .secao--onde { border-top: 1px solid var(--filete); }
+
+/* ---------------- Menu da estação ---------------- */
+.servico {
+  display: grid; gap: var(--e2) var(--e3);
+  align-items: center;
+  padding: 1.5rem 0;
+  border-block: 1px solid var(--filete);
+  margin-bottom: var(--e4);
+}
+@media (min-width: 62rem) { .servico { grid-template-columns: minmax(0, 1fr) auto; } }
+.servico__contador { font-size: 1rem; font-weight: 700; }
+.servico__praca { margin-top: 0.35rem; font-size: 0.875rem; color: var(--tinta-70); max-width: 62ch; }
+.servico__acoes { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.tempos { display: grid; gap: var(--e3); }
+
+/* O cartão de prato: folha branca sobre o papel, sem raio — é impresso. */
+.tempo {
+  --margem: 14rem;    /* coluna estreita da direita: origem e harmonização */
+  position: relative;
+  background: var(--branco); border: 1px solid var(--filete);
+  transition: border-color 0.2s var(--curva);
+}
+.tempo summary {
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr) 1.6rem;
+  grid-template-areas:
+    "numero principal mais"
+    "numero margem    margem";
+  gap: 0.7rem 0.9rem;
+  padding: 1.5rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.tempo summary::-webkit-details-marker { display: none; }
+/* Hover desenhado com filete e marca de lápis, não com fundo: qualquer
+   tinta escureceria a folha e derrubaria o oliva da estação abaixo de 4,5:1. */
+.tempo:hover { border-color: var(--tinta-35); }
+.tempo summary:hover .tempo__nome { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--filete); text-underline-offset: 0.22em; }
+.tempo summary:hover .mais { color: var(--barro); }
+.tempo summary:focus-visible { outline-offset: -3px; }
+.tempo[open] { border-color: var(--tinta-35); }
+
+.tempo__numero { grid-area: numero; font-family: var(--f-display); font-size: 1.5rem; line-height: 1; color: var(--tinta-70); font-variant-numeric: tabular-nums; }
+.tempo[open] .tempo__numero { color: var(--barro); }
+.tempo__principal { grid-area: principal; display: grid; gap: 0.4rem; align-content: start; }
+.tempo__nome { font-family: var(--f-display); font-size: 1.3125rem; line-height: 1.3; letter-spacing: -0.005em; }
+.tempo__ingredientes { font-size: 0.9375rem; color: var(--tinta-70); }
+.tempo__estacao { font-size: 0.9375rem; color: var(--oliva); }
+.tempo__margem { grid-area: margem; display: grid; gap: 0.5rem; align-content: start; position: relative; padding-top: 1.5rem; }
+.tempo__margem::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--filete); }
+.tempo__origem { font-family: var(--f-display); font-style: italic; font-size: 0.9375rem; line-height: 1.45; color: var(--tinta-70); }
+.tempo__aviso { font-size: 0.875rem; font-weight: 700; color: var(--barro); }
+.tempo summary .mais { grid-area: mais; align-self: start; justify-self: end; }
+
+.tempo__detalhe { position: relative; display: grid; gap: var(--e3); padding: 1.5rem 1.25rem 1.75rem; }
+.tempo__bloco { display: grid; gap: 0.45rem; align-content: start; }
+.tempo__bloco p { font-size: 0.9375rem; color: var(--tinta-70); max-width: 62ch; }
+.tempo__bloco:first-child p:not(.rotulo) { color: var(--tinta); }
+.tempo__bloco--margem { position: relative; padding-top: 1.5rem; }
+.tempo__bloco--margem::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--filete); }
+
+/* A margem do prato: origem e harmonização na mesma coluna estreita da direita. */
+@media (min-width: 62rem) {
+  .tempo summary {
+    grid-template-columns: 2.5rem minmax(0, 1fr) var(--margem) 1.6rem;
+    grid-template-areas: "numero principal margem mais";
+    gap: 0 1.5rem;
+    padding: 1.5rem;
+  }
+  .tempo__margem { padding-top: 0; padding-left: 1.75rem; }
+  .tempo__margem::before { top: 0; bottom: 0; right: auto; width: 1px; height: auto; }
+  .tempo__detalhe { grid-template-columns: 2.5rem minmax(0, 1fr) var(--margem) 1.6rem; gap: var(--e3); padding: 1.5rem 1.5rem 1.75rem; }
+  .tempo__bloco { grid-column: 2; }
+  .tempo__bloco--margem { grid-column: 3; padding-top: 0; padding-left: 1.75rem; }
+  .tempo__bloco--margem::before { top: 0; bottom: 0; right: auto; width: 1px; height: auto; }
+  .troca { grid-column: 2 / 4; }
+  .tempo__detalhe::before { left: 1.5rem; right: 1.5rem; }
+}
+
+/* Hoje o prato mudou: aviso destacado, dentro do próprio cartão. */
+.troca {
+  display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); gap: 0.7rem;
+  padding: 0.9rem 1rem;
+  background: color-mix(in srgb, var(--barro) 8%, var(--branco));
+  font-size: 0.9375rem; color: var(--tinta);
+}
+.troca svg { width: 1.2rem; height: 1.2rem; margin-top: 0.15rem; fill: none; stroke: var(--barro); stroke-width: 1.6; stroke-linecap: round; }
+.troca b { font-weight: 700; }
+
+/* O momento autoral: o tempo que chega à mesa. */
+@keyframes servir {
+  from { opacity: 0; transform: translateY(-7px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes esticar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.tempo__detalhe::before {
+  content: ""; position: absolute; top: 0; left: 1.25rem; right: 1.25rem; height: 1px;
+  background: var(--filete); transform-origin: left center;
+}
+.tempo[open] .tempo__detalhe::before { animation: esticar 0.5s var(--curva) backwards; animation-delay: var(--atraso, 0ms); }
+.tempo[open] .tempo__detalhe > * { animation: servir 0.45s var(--curva) backwards; }
+.tempo[open] .tempo__detalhe > *:nth-child(1) { animation-delay: calc(var(--atraso, 0ms) + 60ms); }
+.tempo[open] .tempo__detalhe > *:nth-child(2) { animation-delay: calc(var(--atraso, 0ms) + 130ms); }
+.tempo[open] .tempo__detalhe > *:nth-child(3) { animation-delay: calc(var(--atraso, 0ms) + 200ms); }
+.tempo[open] .tempo__detalhe > *:nth-child(4) { animation-delay: calc(var(--atraso, 0ms) + 270ms); }
+
+/* A comanda de preços: superfície branca, preço em barro. */
+.comanda { margin-top: var(--e5); background: var(--branco); border: 1px solid var(--filete); padding: 1.5rem; }
+@media (min-width: 48rem) { .comanda { padding: 2rem; } }
+.comanda__linha {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.25rem 1.5rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--filete);
+}
+.comanda__nome { font-family: var(--f-display); font-size: 1.1875rem; }
+.comanda__obs { grid-column: 1; font-size: 0.875rem; color: var(--tinta-70); }
+.comanda__preco { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-size: 1.35rem; color: var(--barro); font-variant-numeric: tabular-nums; }
+.comanda__nota { margin-top: var(--e3); padding-top: 1.25rem; border-top: 1px solid var(--filete); font-size: 0.875rem; color: var(--tinta-70); max-width: var(--leitura); }
+
+/* ---------------- Reserva ---------------- */
+.reserva__grade { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+@media (min-width: 62rem) { .reserva__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 27rem); } }
+.reserva__texto h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; max-width: 28ch; }
+.reserva__texto > p { margin-top: var(--e3); color: var(--tinta-70); max-width: 56ch; }
+.fatos { display: grid; gap: var(--e2); margin-top: var(--e4); max-width: 56ch; }
+.fatos li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.75rem; padding: 1.25rem 0 0; border-top: 1px solid var(--filete); font-size: 0.9375rem; color: var(--tinta-70); }
+.fatos svg { width: 1.25rem; height: 1.25rem; margin-top: 0.15rem; fill: none; stroke: var(--barro); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.fatos b { color: var(--tinta); font-weight: 700; }
+
+.reserva__painel { background: var(--branco); border: 1px solid var(--filete); padding: 1.35rem; }
+@media (min-width: 48rem) { .reserva__painel { padding: 1.85rem; } }
+.formulario { display: grid; gap: var(--e2); }
+.campo__par { display: grid; gap: var(--e2); }
+@media (min-width: 34rem) { .campo__par { grid-template-columns: 1fr 1fr; } }
+.campo { display: grid; gap: 0.35rem; align-content: start; }
+.campo label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tinta-70); }
+.campo input, .campo select {
+  width: 100%; min-height: 2.9rem; padding: 0.7rem 0.85rem;
+  background: var(--branco); color: var(--tinta);
+  border: 1px solid var(--tinta-70);
+  border-radius: 0;
+  font: inherit; font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.campo select {
+  appearance: none;
+  padding-right: 2.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A463D' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9.5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 1.1rem;
+}
+.campo input::placeholder { color: var(--tinta-70); font-style: italic; }
+.campo input:hover, .campo select:hover { border-color: var(--tinta); }
+.campo input:focus-visible, .campo select:focus-visible { outline: 2px solid var(--barro); outline-offset: 1px; border-color: var(--barro); }
+/* O input[type=date] nativo não marca :focus-visible em todo caminho de
+   teclado. O :focus marca sempre, então ele garante o indicador; o anel
+   continua vindo do :focus-visible quando ele dispara. */
+.campo input:focus, .campo select:focus { border-color: var(--barro); }
+.campo__dica { font-size: 0.8125rem; color: var(--tinta-70); }
+.campo__erro { min-height: 1.15rem; font-size: 0.8125rem; line-height: 1.45; color: var(--barro); }
+.campo--erro input, .campo--erro select { border-color: var(--barro); background: color-mix(in srgb, var(--barro) 5%, var(--branco)); }
+.campo--erro label { color: var(--barro); }
+
+/* Aviso não é erro: é uma nota da casa, na mesma folha. */
+.aviso {
+  display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); gap: 0.7rem;
+  padding: 0.85rem;
+  border-block: 1px solid var(--barro);
+  background: color-mix(in srgb, var(--barro) 7%, var(--branco));
+  font-size: 0.875rem; line-height: 1.55; color: var(--tinta);
+}
+.aviso svg { width: 1.2rem; height: 1.2rem; margin-top: 0.1rem; fill: none; stroke: var(--barro); stroke-width: 1.6; stroke-linecap: round; }
+.aviso b { font-weight: 700; }
+
+/* O recibo: mesma folha, agora com a mesa pedida. */
+.recibo { margin-top: var(--e2); }
+.recibo:focus-visible { outline: 2px solid var(--barro); outline-offset: 3px; }
+.recibo__vazio { font-size: 0.9375rem; color: var(--tinta-70); padding-top: 1.25rem; border-top: 1px solid var(--filete); }
+.recibo__selo { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--barro); }
+.recibo__titulo { margin-top: 0.5rem; font-family: var(--f-display); font-size: 1.35rem; line-height: 1.3; }
+.recibo__dados { margin-top: var(--e2); }
+.recibo__dados > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--filete); font-size: 0.9375rem; }
+@media (max-width: 30rem) { .recibo__dados > div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; } }
+.recibo__dados dt { color: var(--tinta-70); }
+.recibo__dados dd { margin: 0; font-variant-numeric: tabular-nums; }
+.recibo__nota { margin-top: var(--e2); font-size: 0.875rem; color: var(--tinta-70); }
+.recibo .botao { margin-top: var(--e3); }
+
+/* ---------------- A casa e o chef: passagem quieta ---------------- */
+.secao--casa { background: var(--papel-2); border-block: 1px solid var(--filete); }
+.casa__grade { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+@media (min-width: 62rem) { .casa__grade { grid-template-columns: minmax(0, 1.35fr) minmax(0, 20rem); } }
+.casa__texto h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; max-width: 28ch; }
+.casa__texto p { margin-top: var(--e3); max-width: var(--leitura); color: var(--tinta-70); }
+.casa__texto p.casa__abre { color: var(--tinta); }
+/* Capitular: recurso de página impressa, não enfeite. */
+.casa__abre::first-letter {
+  float: left;
+  font-family: var(--f-display);
+  font-size: 3.4em;
+  line-height: 0.8;
+  padding: 0.06em 0.14em 0 0;
+  color: var(--tinta);
+}
+.noite { border-top: 1px solid var(--tinta-35); padding-top: 1.25rem; }
+.noite__titulo { font-family: var(--f-display); font-size: 1.25rem; }
+.noite__lista { margin-top: var(--e2); }
+.noite__lista li { display: grid; grid-template-columns: 4.25rem minmax(0, 1fr); gap: 0.75rem; padding: 1.1rem 0; border-top: 1px solid var(--filete); font-size: 0.875rem; color: var(--tinta-70); }
+.noite__lista li:first-child { border-top: 0; }
+.noite__lista b { color: var(--tinta); font-variant-numeric: tabular-nums; }
+.noite__nota { margin-top: var(--e2); font-family: var(--f-display); font-style: italic; font-size: 0.9375rem; color: var(--tinta-70); }
+
+/* ---------------- Adega ---------------- */
+.vinhos { display: grid; }
+.vinho__topo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1.5rem; }
+.vinhos li { padding: 1.75rem 0; border-top: 1px solid var(--filete); }
+.vinhos li:first-child { border-top: 1px solid var(--tinta-35); }
+.vinhos h3 { font-size: 1.25rem; line-height: 1.3; }
+.vinho__preco { font-size: 1.5625rem; color: var(--barro); font-variant-numeric: tabular-nums; }
+.vinho__ficha { margin-top: 0.35rem; font-size: 0.8125rem; letter-spacing: 0.02em; color: var(--tinta-70); }
+.vinho__razao { margin-top: 0.6rem; max-width: 68ch; font-size: 0.9375rem; color: var(--tinta-70); }
+.adega__nota { margin-top: var(--e4); padding-top: 1.25rem; border-top: 1px solid var(--filete); font-size: 0.875rem; color: var(--tinta-70); max-width: var(--leitura); }
+
+/* ---------------- Perguntas ---------------- */
+/* O filete fica no primeiro item, não no wrapper: assim todo contêiner
+   com borda carrega o próprio inset. */
+.pergunta { border-bottom: 1px solid var(--filete); padding: 1.1rem 0; }
+.pergunta:first-child { border-top: 1px solid var(--tinta-35); }
+.pergunta summary {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--e3);
+  padding-block: 0.75rem;
+  cursor: pointer; list-style: none;
+  font-family: var(--f-display); font-size: 1.1875rem; line-height: 1.3;
+}
+.pergunta summary::-webkit-details-marker { display: none; }
+/* Hover sem barro em texto pequeno: o estado aparece no fundo e no ícone. */
+.pergunta summary:hover { background: color-mix(in srgb, var(--barro) 6%, transparent); }
+.pergunta summary:hover .mais { color: var(--barro); }
+.pergunta p { padding-bottom: 0.85rem; max-width: var(--leitura); color: var(--tinta-70); }
+
+/* ---------------- Onde ficamos ---------------- */
+.onde__grade { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+@media (min-width: 62rem) { .onde__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); } }
+.onde__texto h2 { font-size: clamp(1.6rem, 2.8vw, 2.25rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 30ch; }
+.onde__lead { margin-top: var(--e3); max-width: 52ch; color: var(--tinta-70); }
+.onde__dados { margin-top: var(--e4); }
+.onde__dados > div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.35rem 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--filete); }
+.onde__dados > div:first-child { border-top: 1px solid var(--tinta-35); }
+.onde__dados dt { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tinta-70); padding-top: 0.2rem; }
+.onde__dados dd { margin: 0; font-size: 0.9375rem; max-width: 60ch; }
+@media (max-width: 40rem) { .onde__dados > div { grid-template-columns: minmax(0, 1fr); } }
+.onde__dados a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--barro); text-underline-offset: 0.28em; }
+
+.mapa { width: min(100%, 26rem); margin-top: var(--e4); }
+.mapa__rua { fill: none; stroke: var(--tinta-35); stroke-width: 1.6; stroke-linecap: round; }
+.mapa__rua--principal { stroke: var(--tinta-70); stroke-width: 2; }
+.mapa__quadra { fill: none; stroke: var(--filete); stroke-width: 1.6; }
+.mapa__casa { fill: var(--barro); }
+.mapa__estacionamento { fill: none; stroke: var(--tinta-35); stroke-width: 1.6; }
+.mapa__escala { fill: none; stroke: var(--tinta-35); stroke-width: 1.6; }
+.mapa__rotulo { fill: var(--tinta-70); font-family: var(--f-leitura); font-size: 12.5px; letter-spacing: 0.02em; }
+.mapa__rotulo--forte { fill: var(--tinta); font-size: 13.5px; font-weight: 700; }
+
+.aviso-menu { background: var(--branco); border: 1px solid var(--filete); padding: 1.35rem; }
+@media (min-width: 48rem) { .aviso-menu { padding: 1.85rem; } }
+.aviso-menu__titulo { font-family: var(--f-display); font-size: 1.35rem; line-height: 1.3; }
+.aviso-menu__texto { margin-top: 0.75rem; font-size: 0.9375rem; color: var(--tinta-70); }
+.aviso-menu .formulario { margin-top: var(--e3); }
+.recado { min-height: 1.15rem; font-size: 0.875rem; color: var(--oliva); }
+.recado:empty { display: none; }
+
+/* ---------------- Rodapé ---------------- */
+.rodape { border-top: 1px solid var(--filete); padding-block: var(--e4); font-size: 0.8125rem; color: var(--tinta-70); }
+.rodape__grade { display: flex; flex-wrap: wrap; gap: 0.75rem 2.5rem; justify-content: space-between; align-items: baseline; }
+.rodape strong { color: var(--tinta); font-family: var(--f-display); font-weight: 400; font-size: 0.9375rem; }
+.rodape a { color: var(--tinta); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--barro); text-underline-offset: 0.28em; padding-block: 0.85rem; display: inline-block; }
+
+/* ---------------- [hidden] explícito ----------------
+   As regras de display do autor vencem a folha do navegador:
+   sem estas linhas, o atributo hidden não esconderia nada. */
+.campo[hidden],
+.campo__dica[hidden],
+.tempo__aviso[hidden],
+.troca[hidden],
+.aviso[hidden],
+#form-reserva[hidden] { display: none; }
+
+/* ---------------- Movimento reduzido ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms; animation-delay: 0ms; transition-duration: 0.001ms; }
+  .tempo[open] .tempo__detalhe > * { animation: none; }
+  .tempo[open] .tempo__detalhe::before { animation: none; }
+  .link:hover svg { transform: none; }
+}
+
+/* >>> piso de área de toque (gerado de assets/toque.css) >>> */
+/* Em telas pequenas, todo alvo interativo tem 44px de altura. Gerado de
+   assets/toque.css por scripts/aplicar-toque.mjs — não edite aqui. */
+@media (max-width: 40rem) {
+  .botao,
+  .botao--pequeno,
+  .botao--vazio,
+  .botao--texto,
+  button:not(.sem-alvo),
+  a.botao,
+  summary,
+  select,
+  input[type='submit'],
+  input[type='button'],
+  input[type='radio'],
+  input[type='checkbox'] { min-height: 2.75rem; }
+  /* Botão que vive dentro de um painel de altura fixa precisa de um pouco
+     mais: a borda e o respiro do contentor comem parte dos 44px. */
+  .console__rodape .botao,
+  .painel .botao,
+  .quadro .botao { min-height: 2.9rem; }
+
+  /* Link solto de navegação e de rodapé: ganha altura sem mexer no tamanho
+     do texto. A área cresce, o desenho não. */
+  .nav a,
+  .rodape a,
+  .rodape__volta a,
+  a.link,
+  .link-volta { display: inline-flex; align-items: center; min-height: 2.75rem; }
+
+  /* A marca é link para o topo. Nove modelos chamam o link de .marca; o 08
+     chama de .grife.
+     O seletor precisa ser `a.` e não `.`: no modelo 07 o SVG de dentro do link
+     também carrega a classe .marca, e um seletor de classe casaria nos dois —
+     o piso ia para o ícone de 16px e o link continuava pequeno.
+     O `header a` cobre ainda o caso de link de marca sem classe nenhuma. */
+  a.marca,
+  a.grife,
+  a.logo,
+  header a[href='#topo'],
+  .grife { min-height: 2.75rem; }
+
+  /* Link de ficha dentro de cartão: cresce sem empurrar o texto ao lado. */
+  .peca__ficha a,
+  .ficha__abrir,
+  .proc__abrir,
+  .card__link,
+  .abertura__ir,
+  a[class*='__ir'] { display: inline-flex; align-items: center; min-height: 2.75rem; }
+
+  /* Link ao lado de rótulo curto (legenda de abertura, ficha de peça) também
+     é alvo: cresce em altura, mantém o tamanho do texto. */
+  .abertura__legenda a,
+  figcaption a,
+  .rotulo a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+
+  /* Rádio e caixa de seleção com rótulo clicável: quem recebe a altura é o
+     rótulo, que é a área real de toque. O controle em si continua pequeno. */
+  .escolha,
+  .opcao,
+  label:has(> input[type='radio']),
+  label:has(> input[type='checkbox']) { display: flex; align-items: center; min-height: 2.75rem; }
+}
+
+/* Fora do celular o piso é o mínimo de 24px da WCAG 2.2, mas ele vale para
+   todo alvo: um link de 21px de altura é pequeno até para o mouse. */
+@media (min-width: 40.01rem) {
+  .abertura__legenda a,
+  .abertura__ir,
+  a[class*='__ir'],
+  figcaption a,
+  .rotulo a { display: inline-flex; align-items: center; min-height: 1.75rem; }
+}
+/* <<< piso de área de toque <<< */
+

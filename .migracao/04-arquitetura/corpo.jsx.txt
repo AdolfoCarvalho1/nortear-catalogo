@@ -1,0 +1,892 @@
+<a className="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header className="cabecalho">
+  <div className="tela cabecalho__interno">
+    <a className="marca" href="#conteudo">
+      <svg className="marca__desenho" viewBox="0 0 30 24" aria-hidden="true">
+        <path d="M2 21h26M6 21V11l8-6 8 6v10M14 21v-6h5v6" />
+      </svg>
+      <span className="marca__texto">
+        <b>Ateliê Horizonte</b>
+        <span>arquitetura e interiores · BH</span>
+      </span>
+    </a>
+    <nav className="nav" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#escritorio">Escritório</a>
+      <a href="#publicacoes">Publicações</a>
+      <a href="#terreno"><span className="nav__longo">Falar sobre um terreno</span><span className="nav__curto">Terreno</span></a>
+    </nav>
+    <a className="botao botao--pequeno" href="#estimador">Estimar honorários</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  {/* ============ ABERTURA — a prancha na mesa, não um slogan ============ */}
+  <section className="abertura" aria-labelledby="titulo-abertura">
+    <div className="tela abertura__grade">
+
+      <div className="abertura__texto">
+        <p className="abertura__assinatura mono">Ateliê Horizonte · Belo Horizonte, MG · desde 2006</p>
+        <h1 id="titulo-abertura">Projeto começa no terreno, não no estilo.</h1>
+        <p className="abertura__linha">Projetamos a partir do terreno, da luz e do uso — o estilo é consequência.</p>
+        <p className="abertura__corpo">Nove pessoas, obra residencial de médio e alto padrão e dois projetos comerciais em execução. Cada projeto sai do ateliê como prancha: desenho, ficha técnica e uma decisão que se pode defender em obra.</p>
+        <div className="abertura__acoes">
+          <a className="botao" href="#projetos">Ver projetos</a>
+          <a className="botao botao--vazio" href="#terreno">Falar sobre um terreno</a>
+        </div>
+        <dl className="abertura__dados">
+          <div>
+            <dt>Endereço</dt>
+            <dd>Rua Antônio de Albuquerque, 330 — Savassi, Belo Horizonte/MG · 30112-010</dd>
+          </div>
+          <div>
+            <dt>Telefone</dt>
+            <dd><a href="tel:+5531900000000">(31) 90000-0000</a> · <a href="mailto:atelie@ateliehorizonte.com.br">atelie@ateliehorizonte.com.br</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure className="prancha-mestra">
+        <div className="prancha-mestra__folha">
+          <svg className="planta" viewBox="0 0 480 350" role="img" aria-label="Planta baixa do pavimento térreo da Casa Serra do Curral: estar, suíte, quarto, cozinha e banho em torno de um núcleo de circulação, com varanda corrida voltada para o vale.">
+            {/* cotas: medida é informação, não enfeite */}
+            <g className="grupo-cota">
+              <path className="cota" d="M70 26 H410" />
+              <path className="cota" d="M70 22 V30 M410 22 V30" />
+              <path className="cota-seta" d="M70 26 l9 -3.4 v6.8 z M410 26 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="240" y="18" textAnchor="middle">17,00 m</text>
+              <path className="cota" d="M44 46 V286" />
+              <path className="cota" d="M40 46 H48 M40 286 H48" />
+              <path className="cota-seta" d="M44 46 l-3.4 9 h6.8 z M44 286 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="34" y="166" textAnchor="middle" transform="rotate(-90 34 166)">12,00 m</text>
+            </g>
+
+            {/* norte */}
+            <g className="grupo-norte">
+              <circle className="traco" cx="444" cy="86" r="15" />
+              <path className="plano-cheio" d="M444 74 L450 96 L444 90 L438 96 Z" />
+              <text className="cota-txt" x="444" y="60" textAnchor="middle">N</text>
+            </g>
+
+            {/* paredes externas, com vãos de janela e a abertura para a varanda */}
+            <path className="traco traco--parede" d="M70 46 H200 M224 46 H410 M410 46 V140 M410 164 V286 M410 286 H300 M276 286 H70 M70 286 V206 M70 182 V46" />
+            <path className="traco traco--esquadria" d="M200 46 H224 M410 140 V164 M70 182 V206" />
+
+            {/* divisórias */}
+            <path className="traco traco--divisoria" d="M250 46 V100 M250 124 V210 M250 234 V286 M70 166 H96 M120 166 H250 M250 166 H300 M324 166 H410 M340 166 V196 M340 220 V286" />
+
+            {/* portas: folha e arco de giro */}
+            <g className="grupo-porta">
+              <path className="traco-fino" d="M250 124 H274 M274 124 Q274 100 250 100" />
+              <path className="traco-fino" d="M96 166 V190 M96 190 Q120 190 120 166" />
+              <path className="traco-fino" d="M324 166 V190 M324 190 Q300 190 300 166" />
+              <path className="traco-fino" d="M340 220 H364 M364 220 Q364 196 340 196" />
+              <path className="traco-fino" d="M276 286 V310 M276 310 Q300 310 300 286" />
+            </g>
+
+            {/* mobiliário */}
+            <g className="grupo-mobilia">
+              <circle className="traco-fino" cx="176" cy="90" r="15" />
+              <path className="traco-fino" d="M172 68 H181 V77 H172 Z M172 103 H181 V112 H172 Z M154 86 H163 V95 H154 Z M190 86 H199 V95 H190 Z" />
+              <path className="traco-fino" d="M96 138 H140 V155 H96 Z M104 112 H126 V124 H104 Z" />
+              <path className="traco-fino" d="M300 66 H332 V106 H300 Z M302 68 H330 V76 H302 Z M338 66 H350 V78 H338 Z" />
+              <path className="traco-fino" d="M96 200 H128 V240 H96 Z M98 202 H126 V210 H98 Z M212 170 H246 V186 H212 Z" />
+              <path className="traco-fino" d="M252 170 H338 V182 H252 Z M280 172 H300 V180 H280 Z M312 172 H328 V180 H312 Z" />
+              <path className="traco-fino" d="M356 238 H368 V252 H356 Z M372 262 H406 V282 H372 Z" />
+              <circle className="traco-fino" cx="362" cy="231" r="5" />
+            </g>
+
+            {/* ambientes */}
+            <g className="grupo-rotulo">
+              <text className="rotulo-planta" x="222" y="100" textAnchor="middle">estar</text>
+              <text className="rotulo-planta" x="330" y="140" textAnchor="middle">suíte</text>
+              <text className="rotulo-planta" x="170" y="230" textAnchor="middle">quarto 2</text>
+              <text className="rotulo-planta" x="295" y="240" textAnchor="middle">cozinha</text>
+              <text className="rotulo-planta" x="375" y="204" textAnchor="middle">banho</text>
+            </g>
+
+            {/* varanda corrida para o vale */}
+            <g className="grupo-varanda">
+              <path className="traco-tracejado" d="M58 286 H422 V326 H58 Z" />
+              <path className="traco-fino" d="M58 294 H422 M58 301 H422 M58 308 H422 M58 315 H422 M58 322 H422" />
+              <path className="traco-fino" d="M240 330 V326" />
+              <text className="cota-txt" x="240" y="344" textAnchor="middle">varanda · vale</text>
+            </g>
+          </svg>
+
+          {/* carimbo: o canto de toda prancha de verdade */}
+          <div className="carimbo">
+            <div className="carimbo__campo"><span>Ateliê</span><b>Ateliê Horizonte</b></div>
+            <div className="carimbo__campo"><span>Projeto</span><b>Casa Serra do Curral</b></div>
+            <div className="carimbo__campo carimbo__campo--largo"><span>Peça</span><b>Planta baixa — pavimento térreo</b></div>
+            <div className="carimbo__campo"><span>Escala</span><b>1:100</b></div>
+            <div className="carimbo__campo"><span>Prancha</span><b>PR-01</b></div>
+            <div className="carimbo__campo"><span>Data</span><b>03/2024</b></div>
+            <div className="carimbo__campo"><span>Área</span><b>412 m²</b></div>
+            <div className="carimbo__campo"><span>Estágio</span><b className="carimbo__estagio">em obra</b></div>
+          </div>
+        </div>
+        <figcaption className="mono prancha-mestra__legenda">Prancha PR-01 · desenho do ateliê · sem foto, sem render</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  {/* ============ FAIXA DE DADOS DO ATELIÊ ============ */}
+  <section className="faixa-dados" aria-label="O ateliê em números verificáveis">
+    <div className="tela faixa-dados__grade">
+      <div className="dado">
+        <b>6 obras</b>
+        <span>em execução neste momento — três em Belo Horizonte, duas em Nova Lima e uma em Brumadinho</span>
+      </div>
+      <div className="dado">
+        <b>412 m²</b>
+        <span>a maior residência entregue até hoje, concluída em 2024 na Serra do Curral</span>
+      </div>
+      <div className="dado">
+        <b>20 anos</b>
+        <span>de prática da arquiteta responsável por assinar cada prancha do ateliê</span>
+      </div>
+      <div className="dado">
+        <b>98 pranchas</b>
+        <span>de projeto executivo emitidas só em 2025, em formato A1 e A0</span>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ PROJETOS — TRILHO DE PRANCHAS ============ */}
+  <section className="secao secao--projetos" id="projetos" aria-labelledby="titulo-projetos">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2 id="titulo-projetos">Seis obras em prancha. Cada uma abre pela ficha técnica.</h2>
+        <p>Nenhuma foto de fachada bonita: o que está aqui é o desenho que foi para a obra, com local, área, ano e estágio. Percorra com as setas do teclado ou com os botões; abra a prancha para ver a equipe e a decisão principal do projeto.</p>
+      </div>
+      <p className="cota-solto mono">6 pranchas · 1.630 m² projetados · 4 cidades</p>
+    </div>
+
+    <div className="trilho" id="trilho" role="region" aria-label="Trilho de pranchas de projeto">
+      <div className="trilho__folga" aria-hidden="true"></div>
+
+      {/* PR-01 */}
+      <article className="prancha" data-indice="0" aria-labelledby="nome-1">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-01</span>
+          <span className="estagio estagio--obra"><i aria-hidden="true"></i>em obra</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-1">Casa Serra do Curral</h3>
+        <p className="prancha__resumo mono">Nova Lima, MG · 412 m² · 2024</p>
+        <p className="prancha__decisao">A casa se abre para o vale e fecha para a rua.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação sudeste: embasamento de concreto aparente, volume longo com a metade esquerda cega e a direita em vidro, sob laje de beiral contínuo.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 62 L58 42 L86 58 L120 34 L156 56 L188 30 L214 52 L248 38 L286 58 L328 44" />
+              <path className="traco" d="M22 182 H328" />
+              <path className="traco" d="M62 182 V154 H278 V182" />
+              <path className="traco" d="M62 154 V100 H278 V154" />
+              <path className="plano" d="M62 154 V100 H156 V154 Z" />
+              <path className="traco" d="M50 100 H292 M50 96 H292" />
+              <path className="traco" d="M156 100 V154 M178 100 V154 M200 100 V154 M222 100 V154 M244 100 V154 M266 100 V154" />
+              <path className="traco" d="M22 182 V138 H62" />
+              <path className="traco-fino" d="M36 182 V172 M46 182 V176" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M62 204 H278" />
+              <path className="cota" d="M62 200 V208 M278 200 V208" />
+              <path className="cota-seta" d="M62 204 l9 -3.4 v6.8 z M278 204 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="170" y="218" textAnchor="middle">26,00 m</text>
+              <path className="cota" d="M20 96 V182" />
+              <path className="cota" d="M16 96 H24 M16 182 H24" />
+              <path className="cota-seta" d="M20 96 l-3.4 9 h6.8 z M20 182 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="10" y="139" textAnchor="middle" transform="rotate(-90 10 139)">11,20 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Elevação sudeste · escala 1:200</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-1">
+          <span>Abrir ficha técnica — Casa Serra do Curral</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-1" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Nova Lima, MG — encosta da Serra do Curral</dd></div>
+            <div><dt>Área construída</dt><dd>412 m² em dois pavimentos</dd></div>
+            <div><dt>Terreno</dt><dd>1.240 m², declive de 9 m no sentido leste-oeste</dd></div>
+            <div><dt>Ano</dt><dd>2024 (projeto iniciado em 2021)</dd></div>
+            <div><dt>Estágio</dt><dd>em obra — estrutura e alvenaria concluídas, esquadrias em montagem</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Rafael Nogueira (projeto executivo), Camila Assis (interiores), Bruno Sathler (obra)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">A casa se abre para o vale e fecha para a rua: a metade oeste é parede cega de concreto, a leste é vidro de piso a teto sob beiral de 1,20 m.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      {/* PR-02 */}
+      <article className="prancha" data-indice="1" aria-labelledby="nome-2">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-02</span>
+          <span className="estagio estagio--entregue"><i aria-hidden="true"></i>entregue</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-2">Apartamento Savassi</h3>
+        <p className="prancha__resumo mono">Belo Horizonte, MG · 168 m² · 2023</p>
+        <p className="prancha__decisao">Tudo o que é móvel saiu do caminho da janela.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação interna: marcenaria baixa corrida em uma parede, janela de piso a teto na outra, com a linha do horizonte da cidade atravessando o vão.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 34 H328" />
+              <path className="traco" d="M22 176 H328" />
+              <path className="traco" d="M232 42 H322 V176 H232 Z" />
+              <path className="traco" d="M277 42 V176 M232 104 H322" />
+              <path className="traco-fino" d="M232 118 H246 V108 H256 V120 H268 V112 H282 V122 H296 V114 H310 V124 H322" />
+              <path className="plano" d="M38 136 H196 V176 H38 Z" />
+              <path className="traco" d="M38 136 H196 V176 H38 Z" />
+              <path className="traco-fino" d="M78 136 V176 M118 136 V176 M158 136 V176" />
+              <path className="traco-fino" d="M60 145 H72 M100 145 H112 M140 145 H152 M178 145 H190" />
+              <path className="traco" d="M38 106 H196 M38 112 H196" />
+              <path className="traco-fino" d="M60 112 V122 M174 112 V122" />
+              <path className="traco" d="M112 34 V78" />
+              <path className="traco-fino" d="M104 78 H120 L124 90 H100 Z" />
+              <path className="traco-fino" d="M64 56 H136 V96 H64 Z" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M38 204 H322" />
+              <path className="cota" d="M38 200 V208 M322 200 V208" />
+              <path className="cota-seta" d="M38 204 l9 -3.4 v6.8 z M322 204 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="180" y="218" textAnchor="middle">6,40 m</text>
+              <path className="cota" d="M14 34 V176" />
+              <path className="cota" d="M10 34 H18 M10 176 H18" />
+              <path className="cota-seta" d="M14 34 l-3.4 9 h6.8 z M14 176 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="8" y="105" textAnchor="middle" transform="rotate(-90 8 105)">3,20 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Elevação interna · escala 1:50</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-2">
+          <span>Abrir ficha técnica — Apartamento Savassi</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-2" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Belo Horizonte, MG — Savassi, Rua Antônio de Albuquerque</dd></div>
+            <div><dt>Área construída</dt><dd>168 m² reformados, sem alteração de estrutura</dd></div>
+            <div><dt>Terreno</dt><dd>apartamento no 11º pavimento, face oeste, vista para a Serra do Curral</dd></div>
+            <div><dt>Ano</dt><dd>2023 (obra de 7 meses)</dd></div>
+            <div><dt>Estágio</dt><dd>entregue — cliente morando desde novembro de 2023</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Camila Assis (interiores e marcenaria), Diego Ferrari (luminotécnico)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">Tudo o que é móvel saiu do caminho da janela: a marcenaria inteira foi para a parede cega, e a face oeste ficou livre de piso a teto.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      {/* PR-03 */}
+      <article className="prancha" data-indice="2" aria-labelledby="nome-3">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-03</span>
+          <span className="estagio estagio--obra"><i aria-hidden="true"></i>em obra</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-3">Padaria Pampulha</h3>
+        <p className="prancha__resumo mono">Belo Horizonte, MG · 240 m² · 2025</p>
+        <p className="prancha__decisao">O forno fica na vitrine; o balcão sai da frente.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação da fachada: dois pilares de alvenaria nas extremidades, vitrine de piso a teto entre eles, marquise nova em execução sobre a entrada e o forno visível ao fundo.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 190 H328 M22 182 H328" />
+              <path className="plano plano--obra" d="M28 52 H332 V64 H28 Z" />
+              <path className="traco" d="M28 64 H332" />
+              <path className="plano" d="M40 64 H58 V182 H40 Z" />
+              <path className="plano" d="M302 64 H320 V182 H302 Z" />
+              <path className="traco" d="M58 64 H302 V182 H58 Z" />
+              <path className="traco" d="M100 64 V182 M142 64 V182 M184 64 V182 M226 64 V182 M268 64 V182" />
+              <path className="traco" d="M78 140 H196 V182 H78 Z M74 134 H200 V140 H74 Z" />
+              <path className="traco" d="M226 132 H286 V182 H226 Z" />
+              <path className="traco" d="M240 152 H272 V172 H240 Z" />
+              <path className="traco" d="M248 132 V96 H264 V132" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M40 204 H320" />
+              <path className="cota" d="M40 200 V208 M320 200 V208" />
+              <path className="cota-seta" d="M40 204 l9 -3.4 v6.8 z M320 204 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="180" y="218" textAnchor="middle">14,00 m</text>
+              <path className="cota" d="M14 52 V182" />
+              <path className="cota" d="M10 52 H18 M10 182 H18" />
+              <path className="cota-seta" d="M14 52 l-3.4 9 h6.8 z M14 182 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="8" y="114" textAnchor="middle" transform="rotate(-90 8 114)">6,30 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Fachada norte · escala 1:100 · marquise em execução</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-3">
+          <span>Abrir ficha técnica — Padaria Pampulha</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-3" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Belo Horizonte, MG — Pampulha, Avenida Otacílio Negrão de Lima</dd></div>
+            <div><dt>Área construída</dt><dd>240 m², sendo 186 m² de salão e 54 m² de produção</dd></div>
+            <div><dt>Terreno</dt><dd>lote de esquina com 320 m², duas frentes e calçada em declive</dd></div>
+            <div><dt>Ano</dt><dd>2025 (projeto de 2024, obra em andamento)</dd></div>
+            <div><dt>Estágio</dt><dd>em obra — marquise e vitrine em montagem, previsão de entrega em agosto</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Rafael Nogueira (executivo), Marina Tosatti (comercial e fluxo), Bruno Sathler (obra)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">O forno fica na vitrine e o balcão sai da frente: quem passa na avenida vê o pão saindo, e a fila não atravessa o salão.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      {/* PR-04 */}
+      <article className="prancha" data-indice="3" aria-labelledby="nome-4">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-04</span>
+          <span className="estagio estagio--entregue"><i aria-hidden="true"></i>entregue</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-4">Sítio Serra Negra</h3>
+        <p className="prancha__resumo mono">Brumadinho, MG · 290 m² · 2022</p>
+        <p className="prancha__decisao">Uma cobertura só, e a casa inteira é varanda.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação sul: pavilhão longo coberto por uma única água, núcleo fechado à esquerda, varanda em pilotis à direita e piscina à frente.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 52 L60 28 L98 48 L140 22 L182 46 L224 26 L262 48 L300 30 L328 50" />
+              <path className="traco" d="M22 182 H328" />
+              <path className="traco" d="M34 92 L318 84 M34 98 L318 90" />
+              <path className="plano" d="M54 98 H112 V164 H54 Z" />
+              <path className="traco" d="M54 98 H112 V164 H54 Z" />
+              <path className="traco" d="M140 95 V164 M178 94 V164 M216 93 V164 M254 92 V164 M292 91 V164" />
+              <path className="traco" d="M34 164 H318 M34 172 H318" />
+              <path className="traco-fino" d="M120 186 H286 M120 192 H286" />
+              <path className="traco-fino" d="M140 186 V192 M180 186 V192 M220 186 V192 M260 186 V192" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M34 204 H318" />
+              <path className="cota" d="M34 200 V208 M318 200 V208" />
+              <path className="cota-seta" d="M34 204 l9 -3.4 v6.8 z M318 204 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="176" y="218" textAnchor="middle">28,00 m</text>
+              <path className="cota" d="M14 92 V172" />
+              <path className="cota" d="M10 92 H18 M10 172 H18" />
+              <path className="cota-seta" d="M14 92 l-3.4 9 h6.8 z M14 172 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="8" y="132" textAnchor="middle" transform="rotate(-90 8 132)">3,90 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Elevação sul · escala 1:200</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-4">
+          <span>Abrir ficha técnica — Sítio Serra Negra</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-4" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Brumadinho, MG — estrada da Serra Negra, km 7</dd></div>
+            <div><dt>Área construída</dt><dd>290 m², pavimento único</dd></div>
+            <div><dt>Terreno</dt><dd>6.400 m² de pasto com nascente na divisa norte</dd></div>
+            <div><dt>Ano</dt><dd>2022 (projeto iniciado em 2019, obra de 20 meses)</dd></div>
+            <div><dt>Estágio</dt><dd>entregue — casa de fim de semana em uso desde julho de 2022</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Marina Tosatti (arquitetura), Rafael Nogueira (estrutura de madeira), Camila Assis (interiores)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">Uma cobertura só, e a casa inteira é varanda: os únicos ambientes fechados são um núcleo de 58 m² com banho, cozinha e depósito.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      {/* PR-05 */}
+      <article className="prancha" data-indice="4" aria-labelledby="nome-5">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-05</span>
+          <span className="estagio estagio--entregue"><i aria-hidden="true"></i>entregue</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-5">Clínica Lourdes</h3>
+        <p className="prancha__resumo mono">Belo Horizonte, MG · 386 m² · 2023</p>
+        <p className="prancha__decisao">A espera fica na sombra; o consultório fica na luz.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação da fachada: dois pavimentos com brise-soleil vertical contínuo, entrada recuada no térreo e marquise sobre o acesso.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 190 H328 M22 182 H328" />
+              <path className="traco" d="M36 52 H322 M36 48 H322 M36 140 H322" />
+              <path className="traco" d="M44 56 V182 M60 56 V182 M76 56 V182 M92 56 V182 M108 56 V182 M124 56 V182 M140 56 V182 M156 56 V182 M172 56 V182 M188 56 V182 M204 56 V182 M220 56 V182 M236 56 V182 M252 56 V182 M268 56 V182 M284 56 V182 M300 56 V182 M316 56 V182" />
+              <path className="traco" d="M36 182 V140" />
+              <path className="traco" d="M136 128 H224 M136 134 H224" />
+              <path className="plano" d="M148 140 H212 V182 H148 Z" />
+              <path className="traco" d="M148 140 H212 V182 H148 Z" />
+              <path className="traco" d="M180 140 V182" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M36 204 H322" />
+              <path className="cota" d="M36 200 V208 M322 200 V208" />
+              <path className="cota-seta" d="M36 204 l9 -3.4 v6.8 z M322 204 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="180" y="218" textAnchor="middle">14,30 m</text>
+              <path className="cota" d="M14 48 V182" />
+              <path className="cota" d="M10 48 H18 M10 182 H18" />
+              <path className="cota-seta" d="M14 48 l-3.4 9 h6.8 z M14 182 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="8" y="115" textAnchor="middle" transform="rotate(-90 8 115)">6,70 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Fachada oeste · escala 1:100</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-5">
+          <span>Abrir ficha técnica — Clínica Lourdes</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-5" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Belo Horizonte, MG — Lourdes, Rua Pernambuco</dd></div>
+            <div><dt>Área construída</dt><dd>386 m² em dois pavimentos, 11 consultórios</dd></div>
+            <div><dt>Terreno</dt><dd>lote de 420 m² com fachada oeste e edícula nos fundos</dd></div>
+            <div><dt>Ano</dt><dd>2023 (obra de 14 meses, entregue em maio)</dd></div>
+            <div><dt>Estágio</dt><dd>entregue — clínica em operação com 9 profissionais</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Rafael Nogueira (executivo e brise), Marina Tosatti (fluxo de pacientes), Diego Ferrari (luz e acústica)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">A espera fica na sombra e o consultório fica na luz: o brise vertical cobre a circulação e para antes das salas de atendimento.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      {/* PR-06 */}
+      <article className="prancha" data-indice="5" aria-labelledby="nome-6">
+        <header className="prancha__topo">
+          <span className="prancha__num mono">PR-06</span>
+          <span className="estagio estagio--projeto"><i aria-hidden="true"></i>em projeto</span>
+        </header>
+        <h3 className="prancha__nome" id="nome-6">Reforma Santa Tereza</h3>
+        <p className="prancha__resumo mono">Belo Horizonte, MG · 134 m² · 2026</p>
+        <p className="prancha__decisao">A casa antiga fica de pé; o que falta é anexado atrás.</p>
+
+        <figure className="prancha__desenho">
+          <svg className="elevacao" viewBox="0 0 340 226" role="img" aria-label="Elevação oeste: casa existente em traço tracejado com telhado de duas águas, e ampliação em traço cheio, com caixilho largo, anexada à direita.">
+            <g className="grupo-desenho">
+              <path className="traco" d="M22 198 L328 178" />
+              <path className="traco-tracejado" d="M46 198 V132 H150 V198" />
+              <path className="traco-tracejado" d="M38 132 L98 98 L158 132" />
+              <path className="traco-tracejado" d="M70 152 H92 V176 H70 Z M112 152 H134 V176 H112 Z" />
+              <path className="traco-tracejado" d="M150 100 V206" />
+              <path className="traco" d="M142 130 H304 M142 126 H304" />
+              <path className="traco" d="M150 188 V130 H296 V188" />
+              <path className="traco" d="M172 150 H256 V188 H172 Z" />
+              <path className="traco" d="M214 150 V188" />
+              <path className="traco-fino" d="M150 188 H300" />
+            </g>
+            <g className="grupo-cota">
+              <path className="cota" d="M46 214 H296" />
+              <path className="cota" d="M46 210 V218 M296 210 V218" />
+              <path className="cota-seta" d="M46 214 l9 -3.4 v6.8 z M296 214 l-9 -3.4 v6.8 z" />
+              <text className="cota-txt" x="171" y="222" textAnchor="middle">12,50 m</text>
+              <path className="cota" d="M14 98 V198" />
+              <path className="cota" d="M10 98 H18 M10 198 H18" />
+              <path className="cota-seta" d="M14 98 l-3.4 9 h6.8 z M14 198 l-3.4 -9 h6.8 z" />
+              <text className="cota-txt" x="8" y="148" textAnchor="middle" transform="rotate(-90 8 148)">5,00 m</text>
+            </g>
+          </svg>
+          <figcaption className="mono">Elevação oeste · escala 1:100 · existente tracejado, ampliação em traço cheio</figcaption>
+        </figure>
+
+        <button className="prancha__abrir" type="button" aria-expanded="false" aria-controls="ficha-6">
+          <span>Abrir ficha técnica — Reforma Santa Tereza</span>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+
+        <div className="prancha__completa" id="ficha-6" hidden>
+          <dl className="ficha">
+            <div><dt>Local</dt><dd>Belo Horizonte, MG — Santa Tereza, Rua Mármore</dd></div>
+            <div><dt>Área construída</dt><dd>134 m², sendo 82 m² existentes e 52 m² de ampliação</dd></div>
+            <div><dt>Terreno</dt><dd>lote de 260 m² em rua de declive, casa de 1948 sem tombamento</dd></div>
+            <div><dt>Ano</dt><dd>2026 (estudo preliminar em andamento)</dd></div>
+            <div><dt>Estágio</dt><dd>em projeto — levantamento concluído, segundo partido em estudo</dd></div>
+            <div><dt>Equipe</dt><dd>Helena Prado (responsável), Marina Tosatti (existente e restauro), Rafael Nogueira (estrutura da ampliação)</dd></div>
+            <div><dt>Decisão principal</dt><dd className="ficha__prosa">A casa antiga fica de pé e o que falta é anexado atrás: nenhuma parede existente é demolida, a ampliação encosta na face leste.</dd></div>
+          </dl>
+          <button className="prancha__fechar mono" type="button">Recolher ficha</button>
+        </div>
+      </article>
+
+      <div className="trilho__folga" aria-hidden="true"></div>
+    </div>
+
+    <div className="tela trilho__barra">
+      <p className="trilho__contador mono" id="trilho-contador" aria-live="polite" aria-atomic="true">prancha 1 de 6</p>
+      <div className="trilho__botoes">
+        <button className="botao botao--vazio botao--pequeno" type="button" id="trilho-antes" disabled>
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          Prancha anterior
+        </button>
+        <button className="botao botao--vazio botao--pequeno" type="button" id="trilho-depois">
+          Próxima prancha
+          <svg className="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ PROCESSO — faixa escura, o corte da prancheta ============ */}
+  <section className="faixa-escura" id="processo" aria-labelledby="titulo-processo">
+    <div className="tela">
+      <div className="secao__cabeca secao__cabeca--escura">
+        <h2 id="titulo-processo">Quatro etapas, com prazo e peça definidos antes de começar.</h2>
+        <p>Nenhuma etapa começa sem a anterior aprovada por escrito. Os prazos abaixo são os do contrato e contam a partir do recebimento do levantamento topográfico e do programa do cliente.</p>
+      </div>
+
+      <ol className="etapas">
+        <li className="etapa">
+          <p className="etapa__num mono">Etapa 01</p>
+          <h3>Levantamento e leitura do terreno</h3>
+          <p className="etapa__prazo mono">3 semanas · 2 reuniões, uma delas no terreno</p>
+          <p>Antes de qualquer desenho, o terreno é medido e entendido: onde bate o sol em junho, de onde vem o vento, o que a vizinhança já resolveu e o que a legislação permite.</p>
+          <p className="etapa__entrega mono">O cliente recebe</p>
+          <ul>
+            <li>Levantamento planialtimétrico conferido em campo</li>
+            <li>Relatório de condicionantes — PDF, 14 a 22 páginas</li>
+            <li>Estudo de insolação e ventilação em 4 pranchas A3</li>
+            <li>Consulta prévia de índices na Prefeitura de BH</li>
+          </ul>
+        </li>
+
+        <li className="etapa">
+          <p className="etapa__num mono">Etapa 02</p>
+          <h3>Estudo preliminar</h3>
+          <p className="etapa__prazo mono">6 semanas · 3 reuniões de apresentação</p>
+          <p>Dois ou três partidos estudados em escala real. A escolha é feita sobre desenho e maquete, não sobre render: o cliente vê o que está comprando antes de pagar o executivo.</p>
+          <p className="etapa__entrega mono">O cliente recebe</p>
+          <ul>
+            <li>2 a 3 partidos com implantação, plantas e cortes</li>
+            <li>Maquete volumétrica física, escala 1:200</li>
+            <li>Estimativa de custo de obra por m², com memória</li>
+            <li>Caderno de intenções — 24 páginas, com referências</li>
+          </ul>
+        </li>
+
+        <li className="etapa">
+          <p className="etapa__num mono">Etapa 03</p>
+          <h3>Projeto executivo</h3>
+          <p className="etapa__prazo mono">5 meses em média · 1 reunião por quinzena</p>
+          <p>É a etapa mais longa e a que evita obra refeita. Tudo é compatibilizado com estrutura e instalações antes de virar prancha assinada.</p>
+          <p className="etapa__entrega mono">O cliente recebe</p>
+          <ul>
+            <li>Plantas de arquitetura 1:50 em pranchas A1</li>
+            <li>Cortes, fachadas e detalhamento de esquadrias</li>
+            <li>Caderno de acabamentos com especificação e fornecedor</li>
+            <li>Projeto legal protocolado na Prefeitura de BH</li>
+            <li>Planilha de quantitativos para orçamento de 3 empreiteiras</li>
+          </ul>
+        </li>
+
+        <li className="etapa">
+          <p className="etapa__num mono">Etapa 04</p>
+          <h3>Obra acompanhada</h3>
+          <p className="etapa__prazo mono">durante toda a obra · visita semanal</p>
+          <p>Projeto bom em obra ruim não vira casa boa. Acompanhamos com visita marcada, ata assinada e conferência de medição — o cliente não precisa traduzir desenho para o empreiteiro.</p>
+          <p className="etapa__entrega mono">O cliente recebe</p>
+          <ul>
+            <li>Relatório fotográfico semanal com pendências</li>
+            <li>Ata de obra assinada pelo ateliê e pela empreiteira</li>
+            <li>Conferência de medição antes de cada pagamento</li>
+            <li>Reunião mensal de custo com o cliente</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  {/* ============ ESCRITÓRIO ============ */}
+  <section className="secao" id="escritorio" aria-labelledby="titulo-escritorio">
+    <div className="tela escritorio">
+      <div className="escritorio__texto">
+        <div className="secao__cabeca">
+          <h2 id="titulo-escritorio">Nove pessoas numa sala com mesa grande, e o desenho passa por ela toda.</h2>
+        </div>
+        <p>O Ateliê Horizonte abriu em 2006, numa sala de dois ambientes na Savassi, com uma arquiteta e um estagiário. Hoje somos nove: três arquitetos, duas arquitetas de interiores, dois projetistas, uma pessoa de obra e uma de administração. Fazemos obra residencial de médio e alto padrão e, desde 2021, dois projetos comerciais — a Padaria Pampulha e a Clínica Lourdes. Não temos setor comercial: quem atende é quem projeta.</p>
+        <p><b>Helena Prado</b> é a sócia principal. Formada pela Escola de Arquitetura da UFMG em 2001, passou cinco anos em São Paulo num escritório de habitação coletiva e requalificação urbana antes de voltar a Belo Horizonte e abrir o ateliê, em 2006. São vinte anos de prática, trinta e um projetos entregues e uma regra que não mudou: nenhuma prancha sai daqui sem a assinatura de quem vai à obra. Helena dá aula de projeto na UFMG desde 2018 e integra o conselho do IAB-MG.</p>
+        <p>A semana tem uma mesa de desenho na quarta-feira de manhã, com o time inteiro em volta dos projetos em andamento, e uma reunião de obra por obra toda sexta. Aceitamos no máximo seis obras em execução ao mesmo tempo — é o que permite visita semanal de verdade em cada uma. Cobramos por escopo fechado, em parcelas por etapa aprovada, e não trabalhamos com percentual sobre a obra além do acompanhamento previsto em contrato.</p>
+      </div>
+
+      <aside className="carimbo-escritorio" aria-label="O ateliê em números">
+        <p className="carimbo-escritorio__titulo mono">ficha do ateliê</p>
+        <dl className="carimbo-escritorio__lista">
+          <div><dt>Projetos entregues</dt><dd className="mono">31</dd></div>
+          <div><dt>Pessoas no ateliê</dt><dd className="mono">9</dd></div>
+          <div><dt>Cidades com obra</dt><dd className="mono">4</dd></div>
+          <div><dt>Prazo médio do projeto executivo</dt><dd className="mono">5 meses</dd></div>
+          <div><dt>Obras em execução agora</dt><dd className="mono">6</dd></div>
+          <div><dt>Registro profissional</dt><dd className="mono">CAU/MG A-148902-3</dd></div>
+        </dl>
+        <p className="carimbo-escritorio__nota">Ficha fictícia, criada para demonstração de catálogo.</p>
+      </aside>
+    </div>
+  </section>
+
+  {/* ============ ESTIMADOR DE HONORÁRIOS ============ */}
+  <section className="secao secao--calculadora" id="estimador" aria-labelledby="titulo-estimador">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2 id="titulo-estimador">Estime os honorários antes de nos escrever.</h2>
+        <p>Todo projeto do ateliê é cobrado por metro quadrado de intervenção. Informe a área, o tipo de projeto e se você quer acompanhamento de obra: a faixa estimada aparece com a memória de cálculo linha por linha, do jeito que ela é feita aqui dentro.</p>
+      </div>
+
+      <div className="estimador" id="estimador-caixa" data-estado="vazio">
+        <form className="estimador__form" id="form-estimador" noValidate>
+          <div className="campo">
+            <label htmlFor="area">Área de intervenção</label>
+            <div className="campo__unidade">
+              <input id="area" name="area" type="text" inputMode="decimal" autoComplete="off" placeholder="412" aria-describedby="area-dica area-erro" />
+              <span className="mono" aria-hidden="true">m²</span>
+            </div>
+            <p className="campo__dica" id="area-dica">Área construída ou a construir. A tabela do ateliê cobre de 40 m² a 2.000 m².</p>
+            <p className="campo__erro" id="area-erro" role="alert"></p>
+          </div>
+
+          <fieldset className="grupo">
+            <legend>Tipo de projeto</legend>
+            <div className="opcoes">
+              <label className="opcao"><input type="radio" name="tipo" value="residencial" defaultChecked /><span>Residencial</span><small className="mono">R$ 180/m²</small></label>
+              <label className="opcao"><input type="radio" name="tipo" value="interiores" /><span>Interiores</span><small className="mono">R$ 140/m²</small></label>
+              <label className="opcao"><input type="radio" name="tipo" value="comercial" /><span>Comercial</span><small className="mono">R$ 210/m²</small></label>
+              <label className="opcao"><input type="radio" name="tipo" value="reforma" /><span>Reforma</span><small className="mono">R$ 120/m²</small></label>
+            </div>
+          </fieldset>
+
+          <fieldset className="grupo">
+            <legend>Acompanhamento</legend>
+            <div className="opcoes opcoes--dois">
+              <label className="opcao"><input type="radio" name="acompanhamento" value="projeto" defaultChecked /><span>Só projeto</span><small className="mono">sem obra</small></label>
+              <label className="opcao"><input type="radio" name="acompanhamento" value="obra" /><span>Projeto + obra</span><small className="mono">+6% da obra</small></label>
+            </div>
+          </fieldset>
+
+          <div className="estimador__acoes">
+            <button className="botao" type="submit" id="btn-calcular">Calcular honorários</button>
+            <button className="botao botao--vazio botao--pequeno" type="reset" id="btn-limpar">Limpar</button>
+          </div>
+        </form>
+
+        <div className="estimador__saida" id="saida" aria-live="polite">
+          <p className="saida__titulo mono" id="saida-titulo">memória de cálculo</p>
+          <div className="saida__faixa" id="saida-faixa"></div>
+          <dl className="saida__memoria" id="saida-memoria"></dl>
+          <p className="saida__nota" id="saida-nota"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ HONORÁRIOS — a tabela de onde saem os números ============ */}
+  <section className="secao" id="honorarios" aria-labelledby="titulo-honorarios">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2 id="titulo-honorarios">A tabela é pública. O escopo é que muda o número.</h2>
+        <p>Os valores abaixo são o piso de 2026 por metro quadrado de intervenção. Não cobramos visita para orçar e não trabalhamos com percentual sobre o custo da obra além da linha de acompanhamento.</p>
+      </div>
+
+      <div className="tabela-role">
+        <table className="tabela">
+          <caption className="mono">honorários por m² de intervenção · tabela 2026 · valores de partida</caption>
+          <thead>
+            <tr>
+              <th scope="col">Etapa contratada</th>
+              <th scope="col">Como cobramos</th>
+              <th scope="col">Valor de partida</th>
+              <th scope="col">O que entra</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Estudo preliminar</th>
+              <td data-rotulo="Como cobramos">por m² de intervenção</td>
+              <td className="mono" data-rotulo="Valor">a partir de R$ 95/m²</td>
+              <td data-rotulo="O que entra">Levantamento, condicionantes, dois a três partidos, maquete e estimativa de custo.</td>
+            </tr>
+            <tr>
+              <th scope="row">Projeto executivo</th>
+              <td data-rotulo="Como cobramos">por m² de intervenção</td>
+              <td className="mono" data-rotulo="Valor">a partir de R$ 180/m²</td>
+              <td data-rotulo="O que entra">Pranchas de arquitetura, cortes, fachadas, esquadrias, acabamentos e projeto legal protocolado.</td>
+            </tr>
+            <tr>
+              <th scope="row">Interiores</th>
+              <td data-rotulo="Como cobramos">por m² de área interna</td>
+              <td className="mono" data-rotulo="Valor">a partir de R$ 140/m²</td>
+              <td data-rotulo="O que entra">Marcenaria detalhada, luminotécnico, caderno de acabamentos e lista de fornecedores.</td>
+            </tr>
+            <tr>
+              <th scope="row">Acompanhamento de obra</th>
+              <td data-rotulo="Como cobramos">percentual do custo da obra</td>
+              <td className="mono" data-rotulo="Valor">6% do custo da obra</td>
+              <td data-rotulo="O que entra">Visita semanal, ata assinada, conferência de medição e reunião mensal de custo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="ressalvas">
+        <p className="ressalvas__titulo mono">o valor final depende de</p>
+        <ul>
+          <li>Declividade e estabilidade do terreno — encosta exige projeto de contenção e mais visitas.</li>
+          <li>Número de disciplinas complementares: estrutura, instalações, acústica, luminotécnico e paisagismo.</li>
+          <li>Imóvel em área de tombamento ou de proteção cultural, que alonga o projeto legal.</li>
+          <li>Distância da obra: acompanhamos semanalmente num raio de 150 km de Belo Horizonte.</li>
+          <li>Reforma com estrutura a manter e levantamento do existente a refazer, que soma de 15% a 25% ao projeto.</li>
+        </ul>
+        <p>O orçamento fecha depois da conversa sobre o terreno e vale 90 dias. Não cobramos pelo estudo preliminar quando o cliente contrata o executivo na sequência.</p>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ PUBLICAÇÕES ============ */}
+  <section className="secao secao--publicacoes" id="publicacoes" aria-labelledby="titulo-publicacoes">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2 id="titulo-publicacoes">Publicações, prêmios e uma exposição de desenhos.</h2>
+        <p>O ateliê publica desenho, não foto de obra pronta. Os quatro registros abaixo são os que mais aparecem nas conversas com clientes novos.</p>
+      </div>
+
+      <ol className="publicacoes">
+        <li className="publicacao">
+          <p className="publicacao__ano mono">2024</p>
+          <div>
+            <p className="publicacao__tipo mono">Prêmio</p>
+            <h3>Prêmio Minas de Arquitetura — 2º lugar, residência unifamiliar</h3>
+            <p>Casa Serra do Curral, escolhida entre 62 inscrições pelo júri do prêmio. O parecer destacou a leitura do declive como partido, não como problema.</p>
+          </div>
+        </li>
+        <li className="publicacao">
+          <p className="publicacao__ano mono">2023</p>
+          <div>
+            <p className="publicacao__tipo mono">Matéria</p>
+            <h3>Revista Traço & Terreno, n. 42 — “A casa que se fecha para a rua”</h3>
+            <p>Oito páginas sobre a Casa Serra do Curral e sobre a decisão de manter a fachada oeste cega, com entrevista de Helena Prado e cortes publicados na íntegra.</p>
+          </div>
+        </li>
+        <li className="publicacao">
+          <p className="publicacao__ano mono">2022</p>
+          <div>
+            <p className="publicacao__tipo mono">Exposição</p>
+            <h3>Prancheta aberta — 12 desenhos de obra, Espaço Corredor, Belo Horizonte</h3>
+            <p>Doze pranchas de executivo expostas como peça gráfica, de maio a julho, com visita guiada do ateliê em quatro sábados.</p>
+          </div>
+        </li>
+        <li className="publicacao">
+          <p className="publicacao__ano mono">2021</p>
+          <div>
+            <p className="publicacao__tipo mono">Livro</p>
+            <h3>Terreno primeiro — notas de obra sobre 8 casas mineiras</h3>
+            <p>Edição do ateliê, 176 páginas, com desenhos originais, fotos de obra de terceiros e um capítulo sobre o que deu errado em cada projeto.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  {/* ============ PERGUNTAS ============ */}
+  <section className="secao" id="duvidas" aria-labelledby="titulo-duvidas">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2 id="titulo-duvidas">O que perguntam na primeira conversa.</h2>
+      </div>
+      <div className="perguntas">
+        <details className="pergunta" open>
+          <summary>Vocês têm um estilo? Como sei que a casa vai ficar do meu jeito?</summary>
+          <p>O ateliê não parte de estilo, parte do terreno e do uso. O que se repete entre os nossos projetos é o método — ler o lote, estudar sol e vento, resolver a circulação — e não uma fachada. Se você já tem uma referência forte, ela entra como dado do programa, junto com o orçamento e o prazo. O que não fazemos é aplicar um repertório pronto sobre um terreno que não pede aquilo.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Preciso ter o terreno comprado para começar?</summary>
+          <p>Não. Boa parte dos nossos projetos começa com dois ou três terrenos em análise. Nesse caso fazemos uma leitura comparativa — área, topografia, insolação, o que a legislação permite construir e uma estimativa de custo por terreno. É a etapa mais barata do processo e costuma evitar um erro caro.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Quanto tempo entre a primeira conversa e a obra começar?</summary>
+          <p>Entre 9 e 14 meses para uma casa: três semanas de levantamento, seis de estudo preliminar, cerca de cinco meses de projeto executivo e dois a três meses de orçamento, aprovação na prefeitura e escolha da empreiteira. Reforma de apartamento costuma levar de 5 a 7 meses no total.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Vocês trabalham fora de Belo Horizonte?</summary>
+          <p>Sim, em quatro cidades hoje: Belo Horizonte, Nova Lima, Brumadinho e Ouro Preto. Fora do raio de 150 km, aceitamos o projeto executivo, mas não o acompanhamento semanal de obra — nesse caso indicamos um arquiteto local para fazer a visita e nós conferimos por relatório e vídeo.</p>
+        </details>
+        <details className="pergunta">
+          <summary>O que vocês não fazem?</summary>
+          <p>Não fazemos projeto de interiores sem o projeto de instalações da mesma equipe, não assinamos prancha de outro escritório, não trabalhamos com preço fechado de obra (orçamento é da empreiteira, nossa estimativa é referência) e não entregamos render fotorrealista para vender o projeto: a decisão é tomada em desenho e maquete.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Como funciona o pagamento?</summary>
+          <p>Por etapa aprovada, com contrato de escopo fechado. Estudo preliminar em duas parcelas, projeto executivo em quatro ou cinco conforme o tamanho, acompanhamento de obra em medições mensais proporcionais ao andamento da construção. Nada é cobrado antes da etapa anterior estar aprovada por escrito.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ FECHO — FALAR SOBRE UM TERRENO ============ */}
+  <section className="fecho" id="terreno" aria-labelledby="titulo-terreno">
+    <div className="tela fecho__grade">
+      <div className="fecho__texto">
+        <h2 id="titulo-terreno">Conte do terreno. A gente responde com uma leitura, não com um orçamento.</h2>
+        <p>Descreva o lote ou o imóvel em cinco linhas. Helena ou Marina respondem em até dois dias úteis com o que já dá para dizer sobre o terreno, quais etapas fazem sentido e quanto custaria a primeira delas. Sem visita marcada e sem proposta automática.</p>
+        <p className="mono fecho__endereco">Rua Antônio de Albuquerque, 330 — Savassi, Belo Horizonte/MG<br />Segunda a sexta, 9h às 18h · (31) 90000-0000</p>
+      </div>
+
+      <div className="fecho__caixa">
+        <p className="recado-ok" id="recado-ok" hidden role="status"></p>
+        <form id="form-terreno" noValidate>
+          <div className="campo" data-campo="nome">
+            <label htmlFor="nome">Seu nome</label>
+            <input id="nome" name="nome" type="text" autoComplete="name" placeholder="Helena Prado" required />
+            <p className="campo__erro" data-erro="nome"></p>
+          </div>
+          <div className="campo" data-campo="email">
+            <label htmlFor="email">E-mail</label>
+            <input id="email" name="email" type="email" autoComplete="email" placeholder="helena@exemplo.com.br" required />
+            <p className="campo__erro" data-erro="email"></p>
+          </div>
+          <div className="linha">
+            <div className="campo" data-campo="cidade">
+              <label htmlFor="cidade">Cidade do terreno</label>
+              <input id="cidade" name="cidade" type="text" autoComplete="address-level2" placeholder="Nova Lima" required />
+              <p className="campo__erro" data-erro="cidade"></p>
+            </div>
+            <div className="campo" data-campo="areaterreno">
+              <label htmlFor="areaterreno">Área do terreno (m²)</label>
+              <input id="areaterreno" name="areaterreno" type="text" inputMode="decimal" placeholder="1.240" required />
+              <p className="campo__erro" data-erro="areaterreno"></p>
+            </div>
+          </div>
+          <div className="campo" data-campo="etapa">
+            <label htmlFor="etapa">Em que ponto você está</label>
+            <select id="etapa" name="etapa" required>
+              <option value="">Escolha uma opção</option>
+              <option value="analise">Analisando terrenos, ainda não comprei</option>
+              <option value="comprado">Terreno comprado, quero começar o projeto</option>
+              <option value="aprovado">Já tenho projeto aprovado, quero executivo ou obra</option>
+              <option value="reforma">É reforma de imóvel existente</option>
+            </select>
+            <p className="campo__erro" data-erro="etapa"></p>
+          </div>
+          <div className="campo" data-campo="recado">
+            <label htmlFor="recado">O que você já sabe sobre o terreno</label>
+            <textarea id="recado" name="recado" rows={4} placeholder="Lote de 1.240 m² em encosta, com 9 m de desnível no sentido leste-oeste. Quero casa de 400 m² em dois pavimentos." required></textarea>
+            <p className="campo__erro" data-erro="recado"></p>
+          </div>
+          <button className="botao" type="submit" id="btn-terreno">Enviar sobre o terreno</button>
+          <p className="miudo">Ao enviar, você concorda em receber um contato do ateliê sobre este terreno. Nada é compartilhado com terceiros.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer className="rodape">
+  <div className="tela rodape__grade">
+    <div>
+      <p><strong>Ateliê Horizonte</strong> · arquitetura e interiores · Rua Antônio de Albuquerque, 330 — Savassi, Belo Horizonte/MG</p>
+      <p>Demonstração de catálogo. Nome, preços e textos são fictícios. Prêmios, publicações, exposição e livro são inventados para este modelo, assim como o registro profissional e os números do ateliê.</p>
+    </div>
+    <p className="rodape__volta"><a href="../index.html">Voltar ao catálogo de modelos</a></p>
+  </div>
+</footer>

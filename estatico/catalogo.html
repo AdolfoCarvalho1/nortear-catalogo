@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de modelos de site — Nortear Estúdio</title>
+<meta name="description" content="Dez modelos de site completos, um para cada tipo de negócio, com preço fechado a partir de R$ 300. Escolha o modelo, a gente adapta para a sua marca.">
+<meta name="theme-color" content="#F7F5F0">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/catalogo.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F1B2D'/%3E%3Cpath d='M16 7l7 9-7 9-7-9z' fill='%23D6431E'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="pular" href="#modelos">Pular para os modelos</a>
+
+<header class="cabecalho">
+  <div class="tela cabecalho__interno">
+    <a class="marca" href="#topo">
+      <span class="marca__pilha" aria-hidden="true"></span>
+      Nortear Estúdio
+      <small>catálogo 2026</small>
+    </a>
+    <nav class="nav" aria-label="Seções do catálogo">
+      <a href="#modelos">Modelos</a>
+      <a href="#comparar">Comparar</a>
+      <a href="#precos">Preços</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="botao botao--pequeno" href="#orcamento">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ============ ABERTURA ============ -->
+  <section class="abertura">
+    <div class="tela abertura__grade">
+      <h1>Dez modelos de site prontos. Escolha o seu e a gente veste com a <em>sua marca</em>.</h1>
+      <div class="abertura__texto">
+        <p>Cada modelo abaixo é um site inteiro, navegável, feito para um tipo de negócio específico. Você não compra um tema: compra a estrutura, o texto e o comportamento já resolvidos — e recebe adaptado com as suas cores, sua tipografia e o seu conteúdo.</p>
+        <div class="abertura__acoes">
+          <a class="botao" href="#modelos">Ver os 10 modelos</a>
+          <a class="botao botao--vazio" href="#precos">Preços e prazos</a>
+        </div>
+        <p class="abertura__nota">A partir de R$ 300 · publicação em 5 dias úteis · o site fica no seu nome</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__trilho">
+      <span>10 nichos diferentes<span></span></span>
+      <span>Preço fechado antes de começar<span></span></span>
+      <span>Feito primeiro para o celular<span></span></span>
+      <span>Sem mensalidade obrigatória<span></span></span>
+      <span>Você fica dono do domínio e do código<span></span></span>
+      <span>10 nichos diferentes<span></span></span>
+      <span>Preço fechado antes de começar<span></span></span>
+      <span>Feito primeiro para o celular<span></span></span>
+      <span>Sem mensalidade obrigatória<span></span></span>
+      <span>Você fica dono do domínio e do código<span></span></span>
+    </div>
+  </div>
+
+  <!-- ============ MODELOS ============ -->
+  <section class="secao" id="modelos">
+    <div class="tela">
+      <div class="secao__cabeca revelar">
+        <h2>Os dez modelos, um por tipo de negócio.</h2>
+        <p>Abra qualquer um deles e navegue de verdade: os menus abrem, os filtros filtram, os formulários validam. O que você vê é o que vai ao ar — só trocando o conteúdo pelo seu.</p>
+      </div>
+
+      <div class="filtros revelar" role="group" aria-label="Filtrar modelos por faixa de preço">
+        <button class="filtro" type="button" data-faixa="todos" aria-pressed="true">Todos os 10</button>
+        <button class="filtro" type="button" data-faixa="essencial" aria-pressed="false">Até R$ 300</button>
+        <button class="filtro" type="button" data-faixa="profissional" aria-pressed="false">Até R$ 900</button>
+        <button class="filtro" type="button" data-faixa="sobmedida" aria-pressed="false">Linha sob medida</button>
+        <span class="filtros__contagem" id="contagem" aria-live="polite"></span>
+      </div>
+
+      <ul class="grade" id="grade"></ul>
+      <p class="abertura__nota" style="margin-top:1.5rem">
+        Preços de implantação do modelo, com o seu conteúdo aplicado. Textos e fotos produzidos por nós entram no pacote Sob medida.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ COMPARAR ============ -->
+  <section class="secao secao--papel2" id="comparar">
+    <div class="tela">
+      <div class="secao__cabeca revelar">
+        <h2>Comparar lado a lado.</h2>
+        <p>A mesma informação para os dez, sem letra miúda: para quem serve, o que ele resolve e quanto custa para colocar no ar.</p>
+      </div>
+      <div class="tabela-envolucro revelar">
+        <table>
+          <caption>Preços de implantação. Todos os modelos incluem versão para celular, formulário de contato e SEO básico.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Modelo</th>
+              <th scope="col">Nicho</th>
+              <th scope="col">O que ele resolve</th>
+              <th scope="col">Destaque técnico</th>
+              <th scope="col">Pacote</th>
+              <th scope="col">Implantação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREÇOS ============ -->
+  <section class="secao" id="precos">
+    <div class="tela">
+      <div class="secao__cabeca revelar">
+        <h2>Três pacotes. O modelo é o mesmo, muda o quanto você quer pronto.</h2>
+        <p>O valor é fechado antes de começar e não muda no meio do caminho. Escolhido o modelo, você decide só o nível de acabamento.</p>
+      </div>
+      <div class="pacotes revelar" id="pacotes"></div>
+
+      <div class="secao__cabeca revelar" style="margin-top:3.5rem">
+        <h2>Manutenção, só se você quiser.</h2>
+        <p>Nenhum pacote exige mensalidade. Hospedagem e domínio ficam no seu nome, pagos direto por você — normalmente entre R$ 40 e R$ 90 por mês. Se preferir não cuidar disso, temos duas opções.</p>
+      </div>
+      <div class="pacotes revelar" id="manutencao"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESSO ============ -->
+  <section class="secao secao--papel2" id="processo">
+    <div class="tela">
+      <div class="secao__cabeca revelar">
+        <h2>Do primeiro contato ao site no ar.</h2>
+        <p>Quatro etapas, sem reunião que não decide nada. Você acompanha tudo por WhatsApp e aprova em duas telas.</p>
+      </div>
+      <div class="processo revelar" id="processo-lista"></div>
+    </div>
+  </section>
+
+  <!-- ============ DÚVIDAS ============ -->
+  <section class="secao" id="duvidas">
+    <div class="tela">
+      <div class="secao__cabeca revelar">
+        <h2>Perguntas que sempre aparecem.</h2>
+        <p>Se a sua não estiver aqui, pergunte direto no orçamento — respondemos no mesmo dia útil.</p>
+      </div>
+      <div class="perguntas revelar" id="perguntas"></div>
+    </div>
+  </section>
+
+  <!-- ============ ORÇAMENTO ============ -->
+  <section class="fecho" id="orcamento">
+    <div class="tela fecho__grade">
+      <div>
+        <h2>Diga qual modelo chamou atenção e a gente devolve o escopo.</h2>
+        <p>Em até um dia útil você recebe o que está incluso, o prazo e o valor fechado. Sem proposta genérica e sem compromisso de seguir.</p>
+        <ul class="contato__aviso" style="margin-top:1.5rem; display:grid; gap:0.4rem">
+          <li>WhatsApp <strong id="wpp">—</strong></li>
+          <li>E-mail <strong id="mail">—</strong></li>
+          <li id="cidade">—</li>
+        </ul>
+      </div>
+
+      <form class="contato" id="formulario" novalidate>
+        <div class="contato__ok" id="ok" hidden role="status"></div>
+        <div class="contato__linha">
+          <div class="campo" data-campo="nome">
+            <label for="nome">Seu nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar" required>
+            <span class="campo__erro" data-erro="nome"></span>
+          </div>
+          <div class="campo" data-campo="empresa">
+            <label for="empresa">Negócio</label>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nome do negócio ou cidade" required>
+            <span class="campo__erro" data-erro="empresa"></span>
+          </div>
+        </div>
+        <div class="contato__linha">
+          <div class="campo" data-campo="email">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@negocio.com.br" required>
+            <span class="campo__erro" data-erro="email"></span>
+          </div>
+          <div class="campo" data-campo="whats">
+            <label for="whats">WhatsApp</label>
+            <input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required>
+            <span class="campo__erro" data-erro="whats"></span>
+          </div>
+        </div>
+        <div class="contato__linha">
+          <div class="campo" data-campo="modelo">
+            <label for="modelo-escolhido">Modelo de interesse</label>
+            <select id="modelo-escolhido" name="modelo" required>
+              <option value="">Escolha um modelo</option>
+            </select>
+            <span class="campo__erro" data-erro="modelo"></span>
+          </div>
+          <div class="campo" data-campo="pacote">
+            <label for="pacote-escolhido">Pacote</label>
+            <select id="pacote-escolhido" name="pacote" required>
+              <option value="">Escolha um pacote</option>
+            </select>
+            <span class="campo__erro" data-erro="pacote"></span>
+          </div>
+        </div>
+        <div class="campo" data-campo="recado">
+          <label for="recado">O que precisa acontecer no site</label>
+          <textarea id="recado" name="recado" placeholder="Ex.: quero reserva de mesa online e um menu que eu mesma consiga trocar."></textarea>
+          <span class="campo__erro" data-erro="recado"></span>
+        </div>
+        <div class="abertura__acoes">
+          <button class="botao" type="submit" id="enviar">Receber escopo e valor</button>
+          <span class="contato__aviso">Nada é enviado para servidor nenhum: este catálogo é uma demonstração local.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="tela rodape__grade">
+    <div>
+      <strong>Nortear Estúdio</strong>
+      <p style="margin-top:0.5rem">Catálogo de modelos de site · edição 2026</p>
+    </div>
+    <div>
+      <strong>Modelos</strong>
+      <ul id="rodape-modelos" style="margin-top:0.75rem"></ul>
+    </div>
+    <div>
+      <strong>Catálogo</strong>
+      <ul style="margin-top:0.75rem">
+        <li><a href="#comparar">Comparar modelos</a></li>
+        <li><a href="#precos">Preços e pacotes</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        <li><a href="#orcamento">Pedir orçamento</a></li>
+      </ul>
+    </div>
+    <p class="rodape__nota" id="nota-rodape"></p>
+  </div>
+</footer>
+
+<script src="assets/modelos-data.js"></script>
+<script>
+/* Script clássico de propósito: `import` não carrega por file://, e este
+   catálogo precisa abrir direto do disco. Os dados vêm de window.CATALOGO. */
+const { MODELOS, PACOTES, MANUTENCAO, PROCESSO, PERGUNTAS, AGENCIA, brl } = window.CATALOGO;
+
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+/* ---------- Cartões de modelo ---------- */
+const faixaDe = (m) => (m.preco <= 300 ? 'essencial' : m.preco <= 900 ? 'profissional' : 'sobmedida');
+
+function cartao(m) {
+  const li = document.createElement('li');
+  li.className = 'modelo revelar';
+  li.dataset.faixa = faixaDe(m);
+  li.innerHTML = `
+    <div class="modelo__quadro">
+      <img src="assets/thumbs/${m.id}.png" alt="Prévia do modelo ${m.nome}, para ${m.nicho.toLowerCase()}" loading="lazy" width="1440" height="990" decoding="async">
+      <span class="modelo__numero" aria-hidden="true">${m.numero}</span>
+    </div>
+    <div class="modelo__corpo">
+      <div class="modelo__topo">
+        <span class="modelo__nicho">${m.nicho}</span>
+        <span class="modelo__preco">${brl(m.preco)}</span>
+      </div>
+      <h3>${m.nome}</h3>
+      <p class="modelo__promessa">${m.promessa}</p>
+      <p class="modelo__destaque"><b>O que ele tem de próprio</b>${m.destaque}</p>
+      <div class="amostra" title="Paleta do modelo">
+        ${m.paleta.map((c) => `<i style="background:${c}"></i>`).join('')}
+        <span>${m.tipografia}</span>
+      </div>
+      <div class="modelo__rodape">
+        <a class="botao botao--pequeno" href="${m.arquivo}">Abrir o modelo</a>
+        <a class="botao botao--pequeno botao--vazio" href="#orcamento" data-modelo="${m.id}">Quero este</a>
+      </div>
+    </div>`;
+  const img = $('img', li);
+  img.addEventListener('error', () => {
+    const quadro = $('.modelo__quadro', li);
+    quadro.classList.add('modelo__quadro--vazio');
+    quadro.innerHTML = `<span>Prévia ainda não gerada.<br>Rode <code>node scripts/capturar.mjs</code>.<br>O modelo abre normalmente.</span><span class="modelo__numero">${m.numero}</span>`;
+  });
+  return li;
+}
+
+const grade = $('#grade');
+MODELOS.forEach((m) => grade.append(cartao(m)));
+$('#contagem').textContent = `${MODELOS.length} modelos`;
+
+/* ---------- Filtros ---------- */
+$$('.filtro').forEach((b) => {
+  b.addEventListener('click', () => {
+    $$('.filtro').forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+    const faixa = b.dataset.faixa;
+    let visiveis = 0;
+    $$('.modelo', grade).forEach((li) => {
+      const mostra = faixa === 'todos' || li.dataset.faixa === faixa;
+      li.classList.toggle('oculto', !mostra);
+      if (mostra) visiveis++;
+    });
+    $('#contagem').textContent = `${visiveis} ${visiveis === 1 ? 'modelo' : 'modelos'}`;
+  });
+});
+
+/* ---------- Tabela de comparação ---------- */
+const corpo = $('#tabela-corpo');
+corpo.innerHTML = MODELOS.map((m) => `
+  <tr>
+    <th scope="row"><a href="${m.arquivo}">${m.nome}</a></th>
+    <td>${m.nicho}</td>
+    <td>${m.melhorPara.join(' · ')}</td>
+    <td>${m.destaque}</td>
+    <td>${m.pacote}</td>
+    <td class="num">${brl(m.preco)}</td>
+  </tr>`).join('');
+
+/* ---------- Pacotes e manutenção ---------- */
+const listaPacote = (p) => `
+  ${p.destaque ? '<span class="pacote__selo">Mais escolhido</span>' : ''}
+  <h3>${p.nome}</h3>
+  <div class="pacote__preco">${brl(p.preco)} <small>implantação</small></div>
+  <p class="pacote__para">${p.para}</p>
+  <ul class="pacote__lista">${p.inclui.map((i) => `<li>${i}</li>`).join('')}</ul>
+  <ul class="pacote__lista pacote__lista--nao">${p.naoInclui.map((i) => `<li>${i}</li>`).join('')}</ul>
+  <p class="pacote__prazo">Prazo: ${p.prazo} após o conteúdo</p>
+  <a class="botao ${p.destaque ? '' : 'botao--vazio'}" href="#orcamento" data-pacote="${p.id}">Escolher ${p.nome}</a>`;
+
+$('#pacotes').innerHTML = PACOTES.map((p) => `<article class="pacote ${p.destaque ? 'pacote--destaque' : ''}">${listaPacote(p)}</article>`).join('');
+
+$('#manutencao').innerHTML = MANUTENCAO.opcoes.map((o) => `
+  <article class="pacote">
+    <h3>${o.nome}</h3>
+    <div class="pacote__preco">${brl(o.preco)} <small>por mês</small></div>
+    <p class="pacote__para">${o.desc}</p>
+    <p class="pacote__prazo">${MANUTENCAO.nome} · cancelamento a qualquer momento</p>
+  </article>`).join('');
+
+/* ---------- Processo e dúvidas ---------- */
+$('#processo-lista').innerHTML = PROCESSO.map((e) => `
+  <article class="etapa">
+    <span class="etapa__n">${e.etapa}</span>
+    <h3>${e.nome}</h3>
+    <p>${e.desc}</p>
+  </article>`).join('');
+
+$('#perguntas').innerHTML = PERGUNTAS.map((p, i) => `
+  <details class="pergunta" ${i === 0 ? 'open' : ''}>
+    <summary>${p.q}</summary>
+    <p class="pergunta__resposta">${p.a}</p>
+  </details>`).join('');
+
+/* ---------- Contato ---------- */
+$('#wpp').textContent = AGENCIA.whatsapp;
+$('#mail').textContent = AGENCIA.email;
+$('#cidade').textContent = AGENCIA.cidade;
+$('#nota-rodape').textContent = `${AGENCIA.nota} Todos os nomes de negócio, preços, textos e imagens dos modelos são material de demonstração, criados para este catálogo.`;
+
+$('#rodape-modelos').innerHTML = MODELOS.map((m) => `<li><a href="${m.arquivo}">${m.numero} · ${m.nome}</a></li>`).join('');
+
+const selModelo = $('#modelo-escolhido');
+selModelo.append(...MODELOS.map((m) => new Option(`${m.numero} · ${m.nome} — ${m.nicho}`, m.id)));
+const selPacote = $('#pacote-escolhido');
+selPacote.append(...PACOTES.map((p) => new Option(`${p.nome} — ${brl(p.preco)}`, p.id)));
+
+document.addEventListener('click', (ev) => {
+  const alvo = ev.target.closest('[data-modelo], [data-pacote]');
+  if (!alvo) return;
+  if (alvo.dataset.modelo) selModelo.value = alvo.dataset.modelo;
+  if (alvo.dataset.pacote) selPacote.value = alvo.dataset.pacote;
+  $('#nome').focus({ preventScroll: true });
+});
+
+const regras = {
+  nome: (v) => (v.trim().length >= 2 ? '' : 'Escreva pelo menos 2 letras.'),
+  empresa: (v) => (v.trim().length >= 2 ? '' : 'Diga o nome do negócio ou a cidade.'),
+  email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Confira o e-mail: falta algo como nome@dominio.com.br.'),
+  whats: (v) => (v.replace(/\D/g, '').length >= 10 ? '' : 'Inclua o DDD, com 10 ou 11 números.'),
+  modelo: (v) => (v ? '' : 'Escolha um modelo — pode ser o mais parecido.'),
+  pacote: (v) => (v ? '' : 'Escolha um pacote.'),
+  recado: () => ''
+};
+
+function validarCampo(nome) {
+  const input = $(`[name="${nome}"]`);
+  if (!input) return true;
+  const msg = regras[nome](input.value);
+  const caixa = $(`[data-campo="${nome}"]`);
+  caixa?.classList.toggle('campo--erro', Boolean(msg));
+  const erro = $(`[data-erro="${nome}"]`);
+  if (erro) erro.textContent = msg;
+  input.setAttribute('aria-invalid', String(Boolean(msg)));
+  return !msg;
+}
+
+Object.keys(regras).forEach((nome) => {
+  const input = $(`[name="${nome}"]`);
+  if (!input) return;
+  input.addEventListener('blur', () => validarCampo(nome));
+  input.addEventListener('input', () => {
+    if ($(`[data-campo="${nome}"]`)?.classList.contains('campo--erro')) validarCampo(nome);
+  });
+});
+
+$('#whats').addEventListener('input', (e) => {
+  const d = e.target.value.replace(/\D/g, '').slice(0, 11);
+  e.target.value = d.length > 10
+    ? `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`
+    : d.length > 6
+      ? `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`
+      : d.length > 2
+        ? `(${d.slice(0, 2)}) ${d.slice(2)}`
+        : d;
+});
+
+$('#formulario').addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  const validos = Object.keys(regras).map(validarCampo).every(Boolean);
+  const primeiroErro = $('.campo--erro input, .campo--erro select, .campo--erro textarea');
+  if (!validos) {
+    primeiroErro?.focus();
+    return;
+  }
+  const botao = $('#enviar');
+  botao.disabled = true;
+  botao.textContent = 'Montando o escopo…';
+  const modelo = MODELOS.find((m) => m.id === selModelo.value);
+  const pacote = PACOTES.find((p) => p.id === selPacote.value);
+  setTimeout(() => {
+    const ok = $('#ok');
+    ok.hidden = false;
+    ok.innerHTML = `<strong>Prontinho, ${$('#nome').value.trim().split(' ')[0]}.</strong><br>
+      Numa versão publicada, este pedido chegaria por e-mail agora: modelo <b>${modelo.nome}</b> (${modelo.nicho}),
+      pacote <b>${pacote.nome}</b> — ${brl(pacote.preco)}, prazo de ${pacote.prazo}.`;
+    botao.disabled = false;
+    botao.textContent = 'Receber escopo e valor';
+    ok.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }, 550);
+});
+
+/* ---------- Revelação ----------
+   A página revela por rolagem, mas nunca pode esconder conteúdo: quem chega
+   por âncora (#precos), abre um link direto ou imprime precisa ver a seção.
+   Por isso o destino da âncora é revelado na hora e há uma rede de segurança. */
+const observador = new IntersectionObserver((entradas) => {
+  entradas.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visivel');
+    observador.unobserve(e.target);
+  });
+}, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+
+$$('.revelar').forEach((el, i) => {
+  el.style.transitionDelay = `${Math.min(i % 4, 3) * 70}ms`;
+  observador.observe(el);
+});
+
+function revelarDentro(alvo) {
+  if (!alvo) return;
+  if (alvo.classList.contains('revelar')) alvo.classList.add('visivel');
+  $$('.revelar', alvo).forEach((el) => el.classList.add('visivel'));
+  const pai = alvo.closest('.revelar');
+  if (pai) pai.classList.add('visivel');
+}
+
+if (location.hash) revelarDentro(document.querySelector(location.hash));
+
+document.addEventListener('click', (ev) => {
+  const link = ev.target.closest('a[href^="#"]');
+  if (link && link.getAttribute('href').length > 1) revelarDentro(document.querySelector(link.getAttribute('href')));
+});
+
+/* Rede de segurança: nada que já esteja na tela pode ficar invisível. */
+const redeDeSeguranca = () => {
+  $$('.revelar:not(.visivel)').forEach((el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('visivel');
+  });
+};
+setTimeout(redeDeSeguranca, 1200);
+window.addEventListener('beforeprint', () => $$('.revelar').forEach((el) => el.classList.add('visivel')));
+</script>
+</body>
+</html>

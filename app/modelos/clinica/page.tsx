@@ -1,0 +1,599 @@
+import Interacoes from './Interacoes';
+
+/**
+ * 06-clinica — markup convertido do modelo estático.
+ *
+ * As classes e a estrutura são as originais: o desenho não mudou na migração
+ * para Next. O CSS do modelo é importado no layout da rota.
+ */
+export default function PaginaClinica() {
+  return (
+    <>
+      <Interacoes />
+      <a className="pular" href="#procedimentos">Pular para os procedimentos</a>
+
+      <header className="cabecalho">
+        <div className="tela cabecalho__interno">
+          <a className="marca" href="#abertura">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.2" fill="none" stroke="#B98A76" strokeWidth="1.6" /><path d="M12 4.8v14.4" stroke="#5E6B5F" strokeWidth="1.6" /></svg>
+            <b>Clara</b><span>· clínica</span>
+          </a>
+          <nav className="nav" aria-label="Navegação principal">
+            <a href="#procedimentos">Procedimentos</a>
+            <a href="#avaliacao">Avaliação</a>
+            <a href="#depois">Antes e depois</a>
+            <a href="#corpo">Corpo clínico</a>
+            <a href="#agendar">Agendar</a>
+          </nav>
+          <a className="botao botao--pequeno" href="#agendar">Agendar avaliação</a>
+        </div>
+      </header>
+
+      <main id="abertura">
+
+        {/* ================= ABERTURA ================= */}
+        <section className="abertura">
+          <div className="tela abertura__grade">
+            <div className="abertura__texto">
+              <h1>Pele cuidada com <em>critério clínico</em>.</h1>
+              <p className="abertura__linha">Cada protocolo começa com avaliação dermatológica e termina com alta — não com pacote infinito.</p>
+              <p className="abertura__apoio">Dermatologia estética no Centro de Florianópolis. Oito procedimentos, com duração real, número de sessões, o que está incluso e o que contraindica — antes de você marcar.</p>
+              <div className="abertura__acoes">
+                <a className="botao" href="#agendar">Agendar avaliação</a>
+                <a className="botao botao--vazio" href="#procedimentos">Ver procedimentos</a>
+              </div>
+              <p className="abertura__credito">
+                <span>Dra. Helena Bastos · CRM-SC 000000 · RQE 0000</span>
+                <span>desde 2017</span>
+                <span>4 profissionais</span>
+              </p>
+            </div>
+
+            {/* Quadro de horários do dia: a clínica mostrando a própria operação */}
+            <aside className="quadro" aria-label="Agenda de uma terça-feira na clínica">
+              <div className="quadro__topo">
+                <b>Terça-feira · 3 salas em uso</b>
+                <span className="quadro__contagem">9 horários livres hoje</span>
+              </div>
+              <ul className="quadro__lista">
+                <li><time>08:40</time><span className="quadro__proc">Avaliação dermatológica</span><span className="quadro__quem">Dra. Helena · sala 1</span></li>
+                <li><time>09:30</time><span className="quadro__proc">Microagulhamento · sessão 2 de 3</span><span className="quadro__quem">Dra. Helena · sala 1</span></li>
+                <li><time>10:15</time><span className="quadro__proc">Limpeza de pele profunda</span><span className="quadro__quem">Camila Prado · sala 2</span></li>
+                <li><time>11:00</time><span className="quadro__proc">Peeling de ácido mandélico · sessão 3 de 4</span><span className="quadro__quem">Camila Prado · sala 2</span></li>
+                <li><time>13:30</time><span className="quadro__proc">Luz intensa pulsada para manchas</span><span className="quadro__quem">Dra. Helena · sala 1</span></li>
+                <li><time>14:20</time><span className="quadro__proc">Skinbooster · retorno de 30 dias</span><span className="quadro__quem">Enf. Marina Kiel · sala 3</span></li>
+                <li><time>15:10</time><span className="quadro__proc">Criolipólise · flank</span><span className="quadro__quem">Tainá Bonfim · sala 3</span></li>
+                <li><time>16:00</time><span className="quadro__proc">Avaliação dermatológica</span><span className="quadro__quem">Dra. Helena · sala 1</span></li>
+                <li><time>17:30</time><span className="quadro__proc">Toxina botulínica · retoque</span><span className="quadro__quem">Dra. Helena · sala 1</span></li>
+              </ul>
+              <p className="quadro__rodape">Consulta de 45 min em média. Avaliação com retorno em até 48 h por telefone.</p>
+            </aside>
+          </div>
+        </section>
+
+        {/* ================= NÚMEROS ================= */}
+        <section className="numeros" aria-label="A clínica em números de 2025">
+          <div className="tela numeros__grade">
+            <div className="numero"><b>1.860</b><span>atendimentos em 2025, entre avaliações, sessões e retornos</span></div>
+            <div className="numero"><b>45 min</b><span>tempo médio de consulta, do exame da pele à explicação do protocolo</span></div>
+            <div className="numero"><b>3 salas</b><span>equipadas, uma delas exclusiva para laser e luz intensa pulsada</span></div>
+            <div className="numero"><b>48 h</b><span>prazo máximo para retorno da avaliação com o protocolo escrito</span></div>
+          </div>
+        </section>
+
+        {/* ================= PROCEDIMENTOS ================= */}
+        <section className="secao" id="procedimentos">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Oito procedimentos. Duração, sessões, preço e contraindicação à vista.</h2>
+              <p className="secao__apoio">Preço por sessão, sem pacote fechado: você decide sessão a sessão, com o protocolo escrito na mão. Filtre pelo que você quer resolver.</p>
+            </div>
+
+            <div className="filtro" role="group" aria-label="Filtrar procedimentos por objetivo">
+              <button type="button" className="filtro__op" data-filtro="todos" aria-pressed="true">Todos os 8</button>
+              <button type="button" className="filtro__op" data-filtro="tom" aria-pressed="false">Manchas e tom</button>
+              <button type="button" className="filtro__op" data-filtro="textura" aria-pressed="false">Textura e cicatriz de acne</button>
+              <button type="button" className="filtro__op" data-filtro="firmeza" aria-pressed="false">Firmeza e linhas</button>
+              <button type="button" className="filtro__op" data-filtro="gordura" aria-pressed="false">Gordura localizada</button>
+              <button type="button" className="filtro__op" data-filtro="limpeza" aria-pressed="false">Limpeza e manutenção</button>
+            </div>
+            <p className="filtro__recado" id="filtro-recado" role="status">Mostrando os 8 procedimentos.</p>
+
+            <div className="proc" id="lista-procedimentos">
+
+              <article className="proc__item" data-objetivo="limpeza|textura" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Limpeza de pele profunda</h3>
+                  <p className="proc__resolve">Remove comedão e cisto de queratina, desobstrui o poro e reduz a inflamação de pele oleosa ou acneica. É a porta de entrada de quase todo protocolo — e, em pele com acne ativa, o que evita que o resto do tratamento piore a inflamação.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>60 min</dd></div>
+                  <div><dt>Sessões</dt><dd>1, com retorno em 45 dias</dd></div>
+                  <div><dt>Intervalo</dt><dd>45 dias entre limpezas de manutenção</dd></div>
+                  <div><dt>Desconforto</dt><dd>1 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> limpeza e higienização, extração manual, máscara calmante, protetor ao final e orientação de cuidado em casa.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver acne inflamatória aguda em crise, herpes labial ativo, queimadura solar recente ou uso de isotretinoína nos últimos 6 meses.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 220</b><span>por sessão · esteticista</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="tom|textura" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Peeling de ácido mandélico</h3>
+                  <p className="proc__resolve">Clareia mancha pós-acne e melasma superficial, afina a camada de células mortas e melhora a textura. O mandélico é o ácido mais tolerado por pele sensível e por pele com tendência a mancha — por isso é o nosso primeiro passo antes de qualquer laser.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>50 min</dd></div>
+                  <div><dt>Sessões</dt><dd>4 sessões típicas</dd></div>
+                  <div><dt>Intervalo</dt><dd>15 dias entre sessões</dd></div>
+                  <div><dt>Desconforto</dt><dd>2 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> limpeza prévia, anestesia tópica se você pedir, neutralização, máscara de reparo e orientação pós com ácido suspenso por 3 dias.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver gestação ou amamentação, herpes ativo, pele lesionada por outro ácido nos últimos 15 dias, exposição solar intensa nos últimos 7 dias ou histórico de quelóide.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 280</b><span>por sessão · esteticista</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="tom|textura|firmeza" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Microagulhamento com drug delivery</h3>
+                  <p className="proc__resolve">Estimula colágeno para cicatriz de acne, poro dilatado, linha fina e flacidez inicial. Depois das microperfurações aplicamos ativos que só entram na pele por essa via — é o que separa o resultado de uma sessão isolada de um protocolo de verdade.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>75 min</dd></div>
+                  <div><dt>Sessões</dt><dd>3 sessões típicas</dd></div>
+                  <div><dt>Intervalo</dt><dd>30 dias entre sessões</dd></div>
+                  <div><dt>Desconforto</dt><dd>3 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> limpeza, anestesia tópica de 30 min, agulha estéril descartável, ativos de drug delivery, máscara calmante e orientação pós com ácido e vitamina C suspensos por 5 dias.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver acne inflamatória ativa na área, herpes ativo, uso de isotretinoína nos últimos 6 meses, anticoagulante em dose plena, doença autoimune em atividade ou gestação.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 520</b><span>por sessão · Dra. Helena Bastos</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="tom|textura" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Luz intensa pulsada para manchas</h3>
+                  <p className="proc__resolve">Clareia melasma, lentigo solar, mancha de sol e vermelhidão de rosácea. Também fecha vasinho aparente no rosto. Exige fototipo compatível: em pele mais escura o risco de mancha nova sobe, e aí indicamos outra via.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>40 min</dd></div>
+                  <div><dt>Sessões</dt><dd>3 a 5 sessões típicas</dd></div>
+                  <div><dt>Intervalo</dt><dd>21 dias entre sessões</dd></div>
+                  <div><dt>Desconforto</dt><dd>2 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> limpeza, gel condutor, proteção ocular, anestesia tópica se necessário, compressa fria ao final e protetor solar FPS 50 para levar.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver exposição solar nos últimos 14 dias, bronzeado artificial, uso de isotretinoína nos últimos 6 meses, gestação, epilepsia fotossensível ou lesão de pele não diagnosticada na área.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 480</b><span>por sessão · Dra. Helena Bastos</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="firmeza" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Toxina botulínica</h3>
+                  <p className="proc__resolve">Suaviza linha de expressão da testa, glabela e pés de galinha. Não preenche ruga parada: onde já existe sulco em repouso, o resultado é parcial e a gente diz isso na avaliação, não depois.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>30 min</dd></div>
+                  <div><dt>Sessões</dt><dd>1 aplicação · retoque em 30 dias</dd></div>
+                  <div><dt>Intervalo</dt><dd>4 a 6 meses entre aplicações</dd></div>
+                  <div><dt>Desconforto</dt><dd>2 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> avaliação de mímica facial, antissepsia, anestesia tópica, aplicação com agulha fina, retoque de 30 dias e retorno de 6 meses para reavaliar.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver gestação ou amamentação, doença neuromuscular (miastenia, ELA), alergia a albumina, infecção ativa no local ou uso de aminoglicosídeo. Não aplicamos em quem não aceita o retoque de 30 dias — é ele que fecha o resultado.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 1.290</b><span>por região · só com a dermatologista</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="firmeza" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Preenchimento de ácido hialurônico</h3>
+                  <p className="proc__resolve">Devolve volume a sulco nasolabial, olheira funda, lábio e contorno de mandíbula. Todo preenchimento desta casa é reversível com hialuronidase — e a gente prefere começar com menos produto e completar depois.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>60 min</dd></div>
+                  <div><dt>Sessões</dt><dd>1 · retorno em 30 dias</dd></div>
+                  <div><dt>Intervalo</dt><dd>12 a 18 meses entre aplicações</dd></div>
+                  <div><dt>Desconforto</dt><dd>3 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> avaliação de face com marcação prévia, anestesia tópica, produto com registro Anvisa, retorno de 30 dias, compressa fria e orientação de cuidados.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver gestação, infecção ou herpes ativo na área, doença autoimune em atividade, uso de anticoagulante sem liberação do seu médico, histórico de reação a preenchedor permanente ou expectativa de mudança que o produto não entrega.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 1.690</b><span>por sessão · só com a dermatologista</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="firmeza|textura" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Skinbooster</h3>
+                  <p className="proc__resolve">Hidrata a pele em profundidade e melhora a qualidade do tecido — pele fina, opaca e com linha fina de desidratação. Não é preenchimento: não muda volume nem contorno, e quem procura volume deve fazer preenchimento.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>45 min</dd></div>
+                  <div><dt>Sessões</dt><dd>2 sessões típicas</dd></div>
+                  <div><dt>Intervalo</dt><dd>30 dias entre sessões</dd></div>
+                  <div><dt>Desconforto</dt><dd>2 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> antissepsia, anestesia tópica, aplicação de ácido hialurônico não reticulado, máscara calmante e retorno em 30 dias.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver infecção ativa na área, herpes labial recorrente sem profilaxia, gestação, doença autoimune em atividade ou alergia a hialuronidase não testada.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 980</b><span>por sessão · com a dermatologista ou a enfermeira</span></p>
+              </article>
+
+              <article className="proc__item" data-objetivo="gordura" tabIndex={-1}>
+                <div className="proc__nome">
+                  <h3>Criolipólise</h3>
+                  <p className="proc__resolve">Reduz gordura localizada em flank, abdômen e região submentoniana, com resfriamento controlado. Não é tratamento de peso nem de flacidez de pele — quem espera emagrecer ou levantar a pele sai frustrada, e a avaliação existe para dizer isso antes.</p>
+                </div>
+                <dl className="proc__dados">
+                  <div><dt>Duração</dt><dd>90 min</dd></div>
+                  <div><dt>Sessões</dt><dd>1 a 2 sessões por área</dd></div>
+                  <div><dt>Intervalo</dt><dd>60 dias entre sessões na mesma área</dd></div>
+                  <div><dt>Desconforto</dt><dd>2 de 5</dd></div>
+                </dl>
+                <div className="proc__notas">
+                  <p className="nota nota--incluso"><b>Incluso</b> medida de dobra cutânea, aplicação com membrana de proteção, massagem manual ao final e retorno de 60 dias com nova medida.</p>
+                  <p className="nota nota--clinic"><b>Não indicamos se</b> houver crioglobulinemia, anemia falciforme ou outra hemoglobinopatia, hérnia na área, marca-passo próximo ao aplicador, gestação, obesidade grau II ou III, ou pele em flacidez acentuada.</p>
+                </div>
+                <p className="proc__preco"><b>R$ 750</b><span>por sessão · esteticista</span></p>
+              </article>
+
+            </div>
+
+            {/* Comparador: a pergunta real é quantas sessões e quanto custa no total */}
+            <div className="comparador" id="comparador">
+              <div className="comparador__cabeca">
+                <div>
+                  <h3>Comparador de protocolos</h3>
+                  <p>Escolha dois procedimentos e veja o protocolo inteiro lado a lado: sessões, intervalo, preço total estimado e o desconforto de cada um.</p>
+                </div>
+                <div className="comparador__escolhas">
+                  <div className="campo">
+                    <label htmlFor="comp-a">Procedimento A</label>
+                    <select id="comp-a">
+                      <option value="">Escolha um procedimento</option>
+                    </select>
+                  </div>
+                  <div className="campo">
+                    <label htmlFor="comp-b">Procedimento B</label>
+                    <select id="comp-b">
+                      <option value="">Escolha um procedimento</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div id="comp-saida" aria-live="polite">
+                <p className="comparador__vazio">Nenhum procedimento selecionado. Escolha os dois campos acima para montar a comparação.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= AVALIAÇÃO ================= */}
+        <section className="secao bloco bloco--clinico" id="avaliacao">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Como é a avaliação, em 4 etapas.</h2>
+              <p className="secao__apoio">A avaliação dura 45 minutos, custa R$ 290 e é feita pela dermatologista. O valor é abatido do primeiro procedimento quando você decide tratar aqui.</p>
+            </div>
+            <ol className="etapas">
+              <li className="etapa">
+                <span className="etapa__n">Etapa 1 · 20 min</span>
+                <h3>Diagnóstico de pele</h3>
+                <p>Exame com lupa e lâmpada de Wood, medida de hidratação e fototipo, histórico de tratamento, medicação em uso e alergia. Você sai com o nome do que a sua pele tem — melasma, lentigo, rosácea, acne grau II — e não com "pele mista".</p>
+                <p className="etapa__sai"><b>Sai dali</b> diagnóstico escrito no prontuário e a lista do que precisa ser investigado antes de tratar.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__n">Etapa 2 · 15 min</span>
+                <h3>Protocolo escrito</h3>
+                <p>Quais procedimentos, em que ordem, quantas sessões, com qual intervalo e o que fazer em casa. A ordem importa: laser em pele com acne ativa piora o quadro, e o protocolo é montado para evitar isso.</p>
+                <p className="etapa__sai"><b>Sai dali</b> protocolo impresso e enviado por e-mail, com a ordem das sessões e a data sugerida de cada uma.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__n">Etapa 3 · 10 min</span>
+                <h3>Orçamento fechado</h3>
+                <p>Preço por sessão, total estimado do protocolo, o que está incluso em cada sessão e a política de remarcação. Sem valor que aparece depois, sem "a partir de".</p>
+                <p className="etapa__sai"><b>Sai dali</b> orçamento com validade de 60 dias e a opção de pagar sessão a sessão ou o protocolo em até 6 vezes sem juros.</p>
+              </li>
+              <li className="etapa">
+                <span className="etapa__n">Etapa 4 · a qualquer momento</span>
+                <h3>Ou não indicamos tratamento agora</h3>
+                <p>Acontece em cerca de 1 avaliação a cada 6. Pele em crise de acne, gestação, isotretinoína em curso, lesão que precisa de biópsia, ou expectativa que nenhum procedimento daqui entrega: nesses casos a resposta honesta é esperar, encaminhar ou não fazer.</p>
+                <p className="etapa__sai"><b>Sai dali</b> encaminhamento para o colega certo, orientação de cuidado em casa e o convite para reavaliar quando fizer sentido — sem cobrar de novo em 90 dias.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* ================= ANTES E DEPOIS ================= */}
+        <section className="secao" id="depois">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Antes e depois, sem foto de paciente.</h2>
+              <p className="secao__apoio">Foto clínica fica no prontuário, protegida por sigilo — não vira anúncio. No lugar dela, a régua do que costuma acontecer e quando, por tipo de tratamento. Resultado varia com fototipo, idade, sol e constância.</p>
+            </div>
+
+            <figure className="regua" id="regua">
+              <figcaption className="regua__titulo">Régua de tempo · o que se espera em cada marco</figcaption>
+              <div className="regua__campo">
+                <div className="regua__linha" aria-hidden="true"></div>
+                <ol className="regua__marcos">
+                  <li className="marco">
+                    <span className="marco__ponto" aria-hidden="true"></span>
+                    <b className="marco__dia">Dia 0</b>
+                    <span className="marco__quando">avaliação</span>
+                    <p>Diagnóstico, protocolo escrito e primeira sessão, quando a pele permite começar no mesmo dia.</p>
+                  </li>
+                  <li className="marco">
+                    <span className="marco__ponto" aria-hidden="true"></span>
+                    <b className="marco__dia">Dia 15</b>
+                    <span className="marco__quando">resposta da pele</span>
+                    <p>Vermelhidão e descamação já passaram. A pele fica mais lisa ao toque antes de qualquer mancha clarear — é o primeiro sinal de que o protocolo está funcionando.</p>
+                  </li>
+                  <li className="marco">
+                    <span className="marco__ponto" aria-hidden="true"></span>
+                    <b className="marco__dia">Dia 45</b>
+                    <span className="marco__quando">mudança visível</span>
+                    <p>Mancha começa a clarear, poro aparece menor, linha fina suaviza. É o marco em que a maioria das pacientes percebe diferença em foto comparada.</p>
+                  </li>
+                  <li className="marco">
+                    <span className="marco__ponto" aria-hidden="true"></span>
+                    <b className="marco__dia">Dia 90</b>
+                    <span className="marco__quando">resultado e alta</span>
+                    <p>Colágeno novo se consolida, o resultado estabiliza e o protocolo termina. Alta com plano de manutenção — não com pacote renovado.</p>
+                  </li>
+                </ol>
+              </div>
+              <p className="regua__nota">A linha do tempo vale para protocolo concluído sem interrupção. Faltar sessão, tomar sol sem proteção ou suspender o cuidado em casa atrasa o marco — e a gente remarca a régua junto com você.</p>
+            </figure>
+
+            <div className="espera">
+              <article className="espera__col">
+                <h3>Mancha e melasma</h3>
+                <ul>
+                  <li><b>Dia 15</b> pele mais uniforme ao toque, mancha ainda igual.</li>
+                  <li><b>Dia 45</b> clareamento de 30 % a 50 % na mancha superficial.</li>
+                  <li><b>Dia 90</b> tom estável, com manutenção a cada 3 meses.</li>
+                </ul>
+              </article>
+              <article className="espera__col">
+                <h3>Textura, poro e cicatriz de acne</h3>
+                <ul>
+                  <li><b>Dia 15</b> pele descama e fica lisa; poro ainda visível.</li>
+                  <li><b>Dia 45</b> poro menor e cicatriz mais rasa, sem sumir.</li>
+                  <li><b>Dia 90</b> ganho de 40 % a 60 % na textura, medido em foto.</li>
+                </ul>
+              </article>
+              <article className="espera__col">
+                <h3>Linha de expressão e firmeza</h3>
+                <ul>
+                  <li><b>Dia 15</b> toxina em efeito pleno, linha de movimento suave.</li>
+                  <li><b>Dia 45</b> colágeno em produção, pele mais firme ao pinçar.</li>
+                  <li><b>Dia 90</b> sulco em repouso melhora em parte, não some.</li>
+                </ul>
+              </article>
+            </div>
+
+            <div className="aviso">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v5M12 16h.01" /></svg>
+              <p><b>O que não prometemos.</b> Nenhum procedimento daqui apaga mancha por completo, elimina ruga em repouso, substitui emagrecimento ou dispensa protetor solar. Também não publicamos foto de paciente: o antes e depois de cada caso fica no prontuário e é mostrado a você, na consulta, no seu próprio rosto.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CORPO CLÍNICO ================= */}
+        <section className="secao" id="corpo">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Quem coloca a mão na sua pele.</h2>
+              <p className="secao__apoio">Quatro pessoas, com registro profissional e área definida. Procedimento médico só sai com a dermatologista; o resto tem nome, formação e tempo de casa.</p>
+            </div>
+            <div className="equipe">
+              <article className="pessoa">
+                <span className="pessoa__iniciais" aria-hidden="true">HB</span>
+                <h3>Dra. Helena Bastos</h3>
+                <p className="pessoa__cargo">Dermatologista · CRM-SC 000000 · RQE 0000</p>
+                <p className="pessoa__bio">Residência em dermatologia pela UFSC, título de especialista pela Sociedade Brasileira de Dermatologia e pós-graduação em dermatologia estética. Fundou a Clara em 2017 e atende de terça a sábado.</p>
+                <p className="pessoa__area">Faz: avaliação, toxina, preenchimento, skinbooster, luz intensa pulsada, microagulhamento e peeling.</p>
+                <p className="pessoa__tempo">8 anos de casa</p>
+              </article>
+              <article className="pessoa">
+                <span className="pessoa__iniciais" aria-hidden="true">CP</span>
+                <h3>Camila Prado</h3>
+                <p className="pessoa__cargo">Esteticista · técnica em estética e cosmetologia</p>
+                <p className="pessoa__bio">Formada pelo Senac e especializada em extração e cuidado de pele acneica. É ela quem conversa com você sobre o que fazer em casa entre as sessões — e quem avisa quando a pele não está pronta para a sessão do dia.</p>
+                <p className="pessoa__area">Faz: limpeza de pele profunda, peeling de ácido mandélico e criolipólise.</p>
+                <p className="pessoa__tempo">5 anos de casa</p>
+              </article>
+              <article className="pessoa">
+                <span className="pessoa__iniciais" aria-hidden="true">MK</span>
+                <h3>Enf. Marina Kiel</h3>
+                <p className="pessoa__cargo">Enfermeira esteta · COREN-SC 000000</p>
+                <p className="pessoa__bio">Graduação em enfermagem pela UNIVALI, com pós em dermatologia e curso de laserterapia. Cuida dos retornos de skinbooster e do acompanhamento de quem faz protocolo longo.</p>
+                <p className="pessoa__area">Faz: skinbooster, retornos de protocolo e orientação pós-procedimento.</p>
+                <p className="pessoa__tempo">4 anos de casa</p>
+              </article>
+              <article className="pessoa">
+                <span className="pessoa__iniciais" aria-hidden="true">TB</span>
+                <h3>Tainá Bonfim</h3>
+                <p className="pessoa__cargo">Esteticista · criolipólise e protocolos corporais</p>
+                <p className="pessoa__bio">Formada em estética pelo IFSC, com certificação em criolipólise e radiofrequência. Faz a medida de dobra antes e depois de cada área tratada e registra no prontuário.</p>
+                <p className="pessoa__area">Faz: criolipólise, limpeza de pele e protocolos corporais.</p>
+                <p className="pessoa__tempo">3 anos de casa</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= AGENDAR ================= */}
+        <section className="secao agendar" id="agendar">
+          <div className="tela agendar__grade">
+            <div className="agendar__intro">
+              <h2>Agendar horário</h2>
+              <p>Escolha o procedimento e a agenda mostra quem faz, quanto dura e quanto custa. Terça a sexta, 9h às 19h; sábado, 9h às 13h. Fechado domingo e segunda.</p>
+              <ul className="agendar__regras">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>Remarcação até 24 h antes, sem custo.</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>Procedimento médico só com a dermatologista.</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>Primeira vez? A sessão inclui anestesia tópica.</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6" /></svg>Confirmação por telefone em até 48 h.</li>
+              </ul>
+              <p className="agendar__nota">Esta é uma demonstração de catálogo: o agendamento acontece no seu navegador e nada é enviado.</p>
+            </div>
+
+            <div className="painel">
+              <form id="form-agenda" noValidate>
+                <div className="erro-geral" id="erro-geral" role="alert" hidden></div>
+
+                <fieldset className="grupo" id="grupo-procedimento">
+                  <legend>1. Procedimento</legend>
+                  <div className="opcoes" id="ops-procedimento"></div>
+                  <p className="resumo" id="resumo-procedimento" aria-live="polite">Nenhum procedimento escolhido ainda.</p>
+                  <p className="campo__erro" data-erro="procedimento"></p>
+                </fieldset>
+
+                <fieldset className="grupo" id="grupo-profissional">
+                  <legend>2. Profissional</legend>
+                  <div className="opcoes opcoes--linha" id="ops-profissional"></div>
+                  <p className="campo__erro" data-erro="profissional"></p>
+                </fieldset>
+
+                <fieldset className="grupo" id="grupo-quando">
+                  <legend>3. Dia e horário</legend>
+                  <div className="campo campo--data">
+                    <label htmlFor="data">Data</label>
+                    <input type="date" id="data" name="data" />
+                    <p className="dica" id="dica-data">A clínica atende de terça a sábado. Escolha uma data a partir de amanhã.</p>
+                  </div>
+                  <div className="campo">
+                    <span className="campo__rotulo" id="rotulo-horarios">Horário</span>
+                    <div className="horarios" id="horarios" role="group" aria-labelledby="rotulo-horarios"></div>
+                  </div>
+                  <p className="campo__erro" data-erro="data"></p>
+                  <p className="campo__erro" data-erro="horario"></p>
+                </fieldset>
+
+                <fieldset className="grupo" id="grupo-quem">
+                  <legend>4. Seus dados</legend>
+                  <div className="campo" data-campo="nome">
+                    <label htmlFor="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" autoComplete="name" placeholder="Marina Aguiar" aria-describedby="erro-nome" />
+                    <p className="campo__erro" id="erro-nome" data-erro="nome"></p>
+                  </div>
+                  <div className="campo" data-campo="fone">
+                    <label htmlFor="fone">Telefone com DDD</label>
+                    <input type="tel" id="fone" name="fone" inputMode="numeric" autoComplete="tel" placeholder="(48) 90000-0000" aria-describedby="erro-fone" />
+                    <p className="campo__erro" id="erro-fone" data-erro="fone"></p>
+                  </div>
+                  <div className="campo">
+                    <p className="rotulo-pergunta" id="rotulo-antes">Você já fez esse procedimento antes?</p>
+                    <div className="opcoes opcoes--linha" role="radiogroup" aria-labelledby="rotulo-antes">
+                      <label className="op op--curta"><input type="radio" name="antes" value="sim" /><span>Sim, já fiz</span></label>
+                      <label className="op op--curta"><input type="radio" name="antes" value="nao" /><span>Não, é a primeira vez</span></label>
+                    </div>
+                    <p className="campo__erro" data-erro="antes"></p>
+                  </div>
+                  <div className="orientacao" id="orientacao" hidden></div>
+                </fieldset>
+
+                <button className="botao botao--largo" type="submit" id="btn-agendar">Confirmar agendamento</button>
+                <p className="miudo">Você recebe a confirmação por telefone. Nada é cobrado agora.</p>
+              </form>
+
+              <div className="recibo" id="recibo" role="status" aria-live="polite" tabIndex={-1} hidden></div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= PERGUNTAS ================= */}
+        <section className="secao" id="duvidas">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Perguntas que chegam antes de agendar.</h2>
+            </div>
+            <div className="perguntas">
+              <details className="pergunta" open>
+                <summary>Posso fazer procedimento no mesmo dia da avaliação?</summary>
+                <p>Depende da pele e do procedimento. Limpeza de pele e peeling de mandélico costumam sair na hora. Microagulhamento, laser, luz intensa pulsada e criolipólise precisam de pele sem sol recente e sem inflamação — nesses casos a sessão é marcada de 7 a 14 dias depois. Toxina e preenchimento podem ser feitos no mesmo dia, se você não estiver com herpes ativo nem usando anticoagulante sem liberação médica.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Qual a diferença entre a esteticista e a dermatologista?</summary>
+                <p>Procedimento que envolve medicamento, injeção ou diagnóstico é feito pela Dra. Helena: toxina, preenchimento, skinbooster, luz intensa pulsada, microagulhamento e peeling. Limpeza de pele profunda e criolipólise são feitas pelas esteticistas, com a enfermeira nos retornos. A avaliação inicial é sempre com a dermatologista, mesmo quando o tratamento é de esteticista.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Quanto custa o protocolo inteiro?</summary>
+                <p>Some o preço da sessão pelo número de sessões típicas. Peeling de mandélico, por exemplo: 4 sessões de R$ 280 dão R$ 1.120. Microagulhamento: 3 de R$ 520, R$ 1.560. O comparador desta página faz essa conta para qualquer par de procedimentos. Você pode pagar sessão a sessão ou o protocolo em até 6 vezes sem juros.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Preciso parar de tomar sol?</summary>
+                <p>Para laser, luz intensa pulsada e peeling, sim: 7 dias sem exposição intensa e 3 dias sem ácido em casa. Depois do procedimento, protetor solar FPS 50 todos os dias, inclusive dentro de casa — sem isso a mancha volta e o resultado se perde.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Vocês publicam fotos de antes e depois?</summary>
+                <p>Não. A foto clínica fica no seu prontuário, protegida por sigilo, e é mostrada a você na consulta para acompanhar a evolução do seu próprio caso. Nenhuma imagem de paciente sai daqui para propaganda.</p>
+              </details>
+              <details className="pergunta">
+                <summary>E se eu precisar remarcar?</summary>
+                <p>Até 24 horas antes, sem custo e sem justificativa. Depois disso, a sessão é cobrada em 50 % porque a sala e o profissional já estavam reservados. Falta sem aviso conta como sessão realizada.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Quantas sessões preciso, de verdade?</summary>
+                <p>O número típico está em cada procedimento nesta página, e o protocolo escrito na avaliação traz o seu. Ninguém aqui vende 10 sessões de laser para quem precisa de 3 de peeling — e se você chegar com um pacote comprado em outro lugar, a gente avalia se ele faz sentido para a sua pele antes de continuar.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= FECHO ================= */}
+        <section className="fecho bloco bloco--clinico" id="contato">
+          <div className="tela fecho__caixa">
+            <h2>Peça o retorno da avaliação por e-mail.</h2>
+            <p>Se você só quer saber se o seu caso tem indicação aqui, escreva o que incomoda e a Dra. Helena responde em até 48 h com o próximo passo — que pode ser uma avaliação, um encaminhamento ou um "não é caso para nós".</p>
+            <div className="recado" id="recado" role="status" hidden></div>
+            <form id="form-contato" noValidate>
+              <div className="campo" data-campo="c-nome">
+                <label htmlFor="c-nome">Seu nome</label>
+                <input type="text" id="c-nome" name="c-nome" autoComplete="name" placeholder="Marina Aguiar" aria-describedby="erro-c-nome" />
+                <p className="campo__erro" id="erro-c-nome" data-erro="c-nome"></p>
+              </div>
+              <div className="campo" data-campo="c-email">
+                <label htmlFor="c-email">E-mail</label>
+                <input type="email" id="c-email" name="c-email" autoComplete="email" placeholder="marina@exemplo.com.br" aria-describedby="erro-c-email" />
+                <p className="campo__erro" id="erro-c-email" data-erro="c-email"></p>
+              </div>
+              <div className="campo" data-campo="c-queixa">
+                <label htmlFor="c-queixa">O que você quer tratar</label>
+                <textarea id="c-queixa" name="c-queixa" rows={4} placeholder="Manchas de sol no rosto que apareceram depois do verão, e poro dilatado no nariz." aria-describedby="erro-c-queixa"></textarea>
+                <p className="campo__erro" id="erro-c-queixa" data-erro="c-queixa"></p>
+              </div>
+              <button className="botao" type="submit" id="btn-contato">Pedir retorno da dermatologista</button>
+              <p className="miudo">Não enviamos propaganda nem compartilhamos o seu contato. Dados fictícios nesta demonstração.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="rodape">
+        <div className="tela rodape__grade">
+          <div>
+            <p><strong>Clara · dermatologia estética</strong></p>
+            <p>Rua Bocaiúva 000, sala 802 · Centro, Florianópolis · SC</p>
+            <p>(48) 3000-0000 · (48) 90000-0000 · oi@clinicaclara.com.br</p>
+          </div>
+          <div>
+            <p>Responsável técnica: Dra. Helena Bastos · CRM-SC 000000 · RQE 0000</p>
+            <p>Terça a sexta, 9h às 19h · sábado, 9h às 13h · fechado domingo e segunda</p>
+            <p><a href="/">Voltar ao catálogo de modelos</a></p>
+          </div>
+          <p className="rodape__fino">Demonstração de catálogo. Nome, preços e textos são fictícios.</p>
+        </div>
+      </footer>
+    </>
+  );
+}

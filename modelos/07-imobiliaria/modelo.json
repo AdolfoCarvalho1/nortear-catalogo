@@ -1,0 +1,16 @@
+{
+  "id": "imobiliaria",
+  "numero": "07",
+  "nome": "Costa & Vilela",
+  "nicho": "Imobiliária boutique",
+  "promessa": "Poucos imóveis. Todos visitáveis hoje.",
+  "preco": 900,
+  "pacote": "Profissional",
+  "paleta": ["#F7F4EE", "#22262B", "#1F4E5F", "#C4A47C"],
+  "tipografia": "Palatino Linotype · Lato",
+  "mundo": "Portfólio de carteira: papel quente, azul-petróleo para o que está disponível, latão para o que é exclusivo.",
+  "destaque": "Busca de imóveis com filtros de bairro, faixa de preço e quartos, com resultado imediato.",
+  "arquivo": "modelos/07-imobiliaria/index.html",
+  "melhorPara": ["Imobiliária boutique", "Corretor autônomo de alto padrão", "Incorporadora pequena"],
+  "secoes": ["Buscar imóveis", "Carteira em destaque", "Como conduzimos a visita", "Quem somos", "Avaliar meu imóvel"]
+}

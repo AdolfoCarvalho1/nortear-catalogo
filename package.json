@@ -1,0 +1,34 @@
+{
+  "name": "nortear-catalogo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Catálogo de venda de sites com 10 modelos — Next.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "verificar": "node scripts/verificar-rotas.mjs",
+    "auditar": "node scripts/auditar.mjs",
+    "auditar:foco": "node scripts/auditar-foco.mjs",
+    "fidelidade": "node scripts/fidelidade.mjs",
+    "interacao": "node scripts/interacao.mjs",
+    "detectar": "node scripts/detectar.mjs",
+    "thumbs": "node scripts/capturar-cdp.mjs --todos --largura 1440 --thumbs",
+    "dados": "node scripts/sincronizar-dados.mjs",
+    "dados:conferir": "node scripts/sincronizar-dados.mjs --conferir",
+    "toque": "node scripts/aplicar-toque.mjs",
+    "toque:conferir": "node scripts/aplicar-toque.mjs --conferir"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

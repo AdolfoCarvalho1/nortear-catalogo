@@ -1,0 +1,45 @@
+/* ============================================================
+   TIPOGRAFIA — catálogo Nortear Estúdio
+   As famílias abaixo resolvem nesta máquina (Windows, sem rede).
+   Cada modelo do catálogo usa um par próprio; todas as pilhas
+   terminam em alternativas genéricas para outras máquinas.
+   Nenhuma fonte é baixada em tempo de execução.
+   ============================================================ */
+
+:root {
+  /* --- Vozes disponíveis (verificadas localmente) --- */
+  --f-sans: "Segoe UI", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --f-sans-alt: "Lato", "Segoe UI", Calibri, Arial, sans-serif;
+  --f-grotesk: "Franklin Gothic Medium", "Franklin Gothic", "Segoe UI", Arial, sans-serif;
+  --f-geometric: "Candara", "Corbel", "Segoe UI", Arial, sans-serif;
+  --f-humanist: "Corbel", "Candara", "Segoe UI", sans-serif;
+  --f-condensed: "Bahnschrift SemiCondensed", "Bahnschrift", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  --f-condensed-wide: "Bahnschrift", "Franklin Gothic Medium", "Segoe UI", sans-serif;
+  --f-heavy: "Arial Black", "Franklin Gothic Medium", Impact, sans-serif;
+  --f-serif-text: "Sitka Text", "Constantia", Cambria, Georgia, serif;
+  --f-serif-display: "Sitka Display", "Sitka Banner", Constantia, Georgia, serif;
+  --f-serif-banner: "Sitka Banner", "Sitka Display", Constantia, Georgia, serif;
+  --f-serif-old: "Palatino Linotype", "Sitka Text", Georgia, "Times New Roman", serif;
+  --f-serif-classic: Georgia, "Sitka Text", "Times New Roman", serif;
+  --f-serif-slab: "Constantia", "Sitka Text", Georgia, serif;
+  --f-mono: "Cascadia Mono", Consolas, "Courier New", monospace;
+  --f-mono-alt: Consolas, "Cascadia Mono", "Courier New", monospace;
+  --f-label: "Leelawadee UI", "Segoe UI", Tahoma, sans-serif;
+
+  /* --- Escala tipográfica do catálogo --- */
+  --t-display: clamp(2.75rem, 7vw, 5.5rem);
+  --t-h1: clamp(2rem, 4.5vw, 3.5rem);
+  --t-h2: clamp(1.5rem, 2.6vw, 2.25rem);
+  --t-h3: 1.25rem;
+  --t-body: 1.0625rem;
+  --t-small: 0.9375rem;
+  --t-micro: 0.8125rem;
+
+  --lh-display: 0.98;
+  --lh-tight: 1.12;
+  --lh-body: 1.62;
+
+  --tr-display: -0.03em;
+  --tr-tight: -0.015em;
+  --tr-label: 0.08em;
+}

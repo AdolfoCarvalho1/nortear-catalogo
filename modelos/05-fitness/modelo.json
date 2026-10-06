@@ -1,0 +1,17 @@
+{
+  "id": "fitness",
+  "numero": "05",
+  "nome": "Forja",
+  "nicho": "Personal trainer e studio",
+  "promessa": "Treino medido. Resultado anotado.",
+  "preco": 300,
+  "pacote": "Essencial",
+  "paleta": ["#111214", "#F5F3EF", "#D6F94B", "#7C8188"],
+  "tipografia": "Bahnschrift · Lato",
+  "mundo": "Quadro de anotações da academia: chão escuro, giz branco, um limão elétrico reservado só para o número que importa.",
+  "destaque": "Calculadora de plano que monta a proposta na hora, com frequência e objetivo.",
+  "arquivo": "modelos/05-fitness/index.html",
+  "melhorPara": ["Personal trainer", "Studio de treino funcional", "Consultoria de corrida"],
+  "melhorParaObs": "",
+  "secoes": ["Como funciona o acompanhamento", "Planos e valores", "Calculadora de plano", "Resultados anotados", "Agendar avaliação"]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "advocacia",
+  "numero": "03",
+  "nome": "Fontes & Prado",
+  "nicho": "Advocacia empresarial",
+  "promessa": "Segurança jurídica para quem decide rápido.",
+  "preco": 900,
+  "pacote": "Profissional",
+  "paleta": ["#101A2B", "#FFFFFF", "#9A7B4F", "#5A6B82"],
+  "tipografia": "Sitka Display · Lato",
+  "mundo": "Papel timbrado de sociedade: azul-tinta profundo, branco absoluto, um latão discreto que marca o que é institucional.",
+  "destaque": "Áreas de atuação em acordeão que abre o escopo real de cada serviço, com prazo médio.",
+  "arquivo": "modelos/03-advocacia/index.html",
+  "melhorPara": ["Advocacia empresarial", "Contabilidade e consultoria", "Escritório de assessoria regulatória"],
+  "secoes": ["Áreas de atuação", "Como conduzimos um caso", "Sócios", "Publicações", "Agendar conversa"]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "clinica",
+  "numero": "06",
+  "nome": "Clara",
+  "nicho": "Clínica de estética",
+  "promessa": "Pele cuidada com critério clínico.",
+  "preco": 900,
+  "pacote": "Profissional",
+  "paleta": ["#F6F1EC", "#2A2622", "#B98A76", "#5E6B5F"],
+  "tipografia": "Sitka Text · Lato",
+  "mundo": "Consultório claro de manhã: linho, madeira clara, um rosé queimado para cuidado e um verde-sálvia para o que é clínico.",
+  "destaque": "Agendamento com escolha de procedimento e duração, mostrando o que está incluso.",
+  "arquivo": "modelos/06-clinica/index.html",
+  "melhorPara": ["Dermatologia estética", "Odontologia estética", "Estúdio de beleza e bem-estar"],
+  "secoes": ["Procedimentos", "Como é a avaliação", "Antes e depois", "Corpo clínico", "Agendar horário"]
+}

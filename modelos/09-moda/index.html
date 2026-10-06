@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trama — roupa autoral em pequena tiragem · ateliê em Pinheiros</title>
+<meta name="description" content="Trama faz roupa feminina em pequena tiragem no ateliê em Pinheiros: linho, algodão orgânico, seda e lã. Cada peça entre 30 e 60 unidades, com tecido, tamanhos e estoque à vista.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" href="estilo.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D0D0D'/%3E%3Cpath d='M8 11h16M16 11v14' stroke='%23FFFFFF' stroke-width='2.6' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="pular" href="#colecao">Pular para a coleção</a>
+
+<header class="cabecalho">
+  <div class="tela cabecalho__interno">
+    <a class="marca" href="#abertura">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="marca__fio"><path d="M3 8h18M3 16h18M8 3v18M16 3v18"/></svg>
+      <b>Trama</b><span>ateliê · pinheiros</span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#colecao">Coleção</a>
+      <a href="#medidas">Medidas</a>
+      <a href="#comprar">Comprar</a>
+      <a href="#atelie">Ateliê</a>
+      <a href="#cuidados">Cuidados</a>
+    </nav>
+    <button class="botao botao--sacola" type="button" id="abrir-sacola" aria-controls="sacola" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4zM9 8V6a3 3 0 016 0v2"/></svg>
+      Sacola <b id="contador">0</b>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ================= ABERTURA: o lookbook abre com a peça-carro-chefe ================= -->
+  <section class="abertura" id="abertura">
+    <div class="tela abertura__grade">
+      <div class="abertura__texto">
+        <h1 class="abertura__titulo">
+          <span class="abertura__marca">Trama</span>
+          <span class="abertura__promessa">Peça em pequena tiragem, tecido de verdade.</span>
+        </h1>
+        <p class="abertura__linha">Cada peça é cortada em tiragem de 30 a 60 unidades. Quando acaba, não volta.</p>
+        <div class="abertura__acoes">
+          <a class="botao" href="#colecao">Ver a coleção</a>
+          <a class="botao botao--vazio" href="#comprar">Como comprar</a>
+        </div>
+        <ul class="abertura__prova">
+          <li>Duas coleções por ano</li>
+          <li>Costurado em Pinheiros, São Paulo</li>
+          <li>Sem promoção, sem desconto, sem liquidação</li>
+        </ul>
+      </div>
+
+      <figure class="abertura__peca">
+        <svg class="desenho desenho--abertura" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico do Vestido Ramo: vestido midi de linho, decote V, manga curta, cinto de amarrar na cintura e bolsos aplicados.">
+          <g class="desenho__silhueta"><path d="M88 42 L76 47 L60 61 L53 85 L69 91 L75 73 L79 96 L71 112 L63 232 L137 232 L129 112 L121 96 L125 73 L131 91 L147 85 L140 61 L124 47 L112 42 L100 66 Z"/></g>
+          <g class="desenho__costura">
+            <path d="M92 46 L100 63 L108 46"/>
+            <path d="M76 150 L94 150 L94 172 L76 172 Z"/>
+            <path d="M106 150 L124 150 L124 172 L106 172 Z"/>
+          </g>
+          <g class="desenho__vinco">
+            <path d="M71 112 L129 112"/>
+            <path d="M100 112 L100 232"/>
+            <path d="M100 112 L86 128"/>
+            <path d="M100 112 L112 126"/>
+            <path d="M118 190 L118 224 M115 194 L118 190 L121 194 M115 220 L118 224 L121 220"/>
+          </g>
+        </svg>
+        <figcaption class="abertura__legenda">
+          <span class="abertura__cod">TR-041</span>
+          <span class="abertura__nome">Vestido Ramo</span>
+          <span class="abertura__tecido">linho 100%, 210 g/m²</span>
+          <a class="abertura__ir" href="#peca-TR-041">Ver a ficha e os tamanhos</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Faixa de matéria-prima: a areia marca só o que é tecido -->
+    <div class="tela abertura__materia">
+      <p class="abertura__materia-nomes"><span class="amostra" aria-hidden="true"></span>linho · algodão orgânico · seda · lã</p>
+      <p class="abertura__materia-origem">linho da Bélgica · algodão do Cerrado · seda de Nova Friburgo · lã da Serra Gaúcha</p>
+    </div>
+  </section>
+
+  <!-- ================= NÚMEROS DO ATELIÊ ================= -->
+  <section class="numeros" aria-label="Como o ateliê produz">
+    <div class="tela">
+      <ul class="numeros__grade">
+        <li class="numero">
+          <p class="numero__frase"><b>3</b> costureiras</p>
+          <p class="numero__nota">Neide, Rosana e Fátima. Cada peça passa pelas três mãos, do corte à barra.</p>
+        </li>
+        <li class="numero">
+          <p class="numero__frase"><b>42</b> peças por semana</p>
+          <p class="numero__nota">É o que sai da mesa de corte sem apertar o ritmo de quem costura.</p>
+        </li>
+        <li class="numero">
+          <p class="numero__frase"><b>2</b> coleções por ano</p>
+          <p class="numero__nota">Outono-inverno em março, primavera-verão em setembro. Nada entre as duas.</p>
+        </li>
+        <li class="numero">
+          <p class="numero__frase"><b>12</b> dias sob encomenda</p>
+          <p class="numero__nota">Do corte à peça pronta, quando o tamanho está em produção.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= COLEÇÃO: passagem densa ================= -->
+  <section class="secao" id="colecao">
+    <div class="tela">
+      <div class="secao__cabeca">
+        <h2>Oito peças nesta tiragem. Cada uma entre 30 e 60 unidades.</h2>
+        <p>A ficha de cada peça mostra o tecido com a composição, o estoque real por tamanho e a verdade sobre a disponibilidade: última peça, esgotado ou sob encomenda. Escolha o tamanho e leve para a sacola.</p>
+      </div>
+
+      <!-- Controle interativo (b): filtros da coleção -->
+      <form class="filtros" id="filtros" aria-labelledby="filtros-titulo">
+        <h3 class="visualmente-oculto" id="filtros-titulo">Filtrar a coleção</h3>
+
+        <fieldset class="filtro">
+          <legend>Categoria</legend>
+          <div class="filtro__chips">
+            <input type="radio" name="categoria" id="cat-todas" value="" checked><label for="cat-todas">Todas</label>
+            <input type="radio" name="categoria" id="cat-vestido" value="vestido"><label for="cat-vestido">Vestido</label>
+            <input type="radio" name="categoria" id="cat-camisa" value="camisa"><label for="cat-camisa">Camisa</label>
+            <input type="radio" name="categoria" id="cat-blusa" value="blusa"><label for="cat-blusa">Blusa</label>
+            <input type="radio" name="categoria" id="cat-calca" value="calca"><label for="cat-calca">Calça</label>
+            <input type="radio" name="categoria" id="cat-casaco" value="casaco"><label for="cat-casaco">Casaco</label>
+            <input type="radio" name="categoria" id="cat-saia" value="saia"><label for="cat-saia">Saia</label>
+            <input type="radio" name="categoria" id="cat-top" value="top"><label for="cat-top">Top</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filtro">
+          <legend>Tecido</legend>
+          <div class="filtro__chips">
+            <input type="radio" name="tecido" id="tec-todos" value="" checked><label for="tec-todos">Todos</label>
+            <input type="radio" name="tecido" id="tec-linho" value="linho"><label for="tec-linho">Linho</label>
+            <input type="radio" name="tecido" id="tec-algodao" value="algodao"><label for="tec-algodao">Algodão orgânico</label>
+            <input type="radio" name="tecido" id="tec-seda" value="seda"><label for="tec-seda">Seda</label>
+            <input type="radio" name="tecido" id="tec-la" value="la"><label for="tec-la">Lã</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filtro">
+          <legend>Tamanho com estoque</legend>
+          <div class="filtro__chips">
+            <input type="radio" name="tamanho" id="tam-todos" value="" checked><label for="tam-todos">Todos</label>
+            <input type="radio" name="tamanho" id="tam-P" value="P"><label for="tam-P">P</label>
+            <input type="radio" name="tamanho" id="tam-M" value="M"><label for="tam-M">M</label>
+            <input type="radio" name="tamanho" id="tam-G" value="G"><label for="tam-G">G</label>
+            <input type="radio" name="tamanho" id="tam-GG" value="GG"><label for="tam-GG">GG</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filtro">
+          <legend>Faixa de preço</legend>
+          <div class="filtro__chips">
+            <input type="radio" name="preco" id="pre-todos" value="" checked><label for="pre-todos">Qualquer</label>
+            <input type="radio" name="preco" id="pre-1" value="ate600"><label for="pre-1">Até R$ 600</label>
+            <input type="radio" name="preco" id="pre-2" value="600a1000"><label for="pre-2">R$ 600 a R$ 1.000</label>
+            <input type="radio" name="preco" id="pre-3" value="acima1000"><label for="pre-3">Acima de R$ 1.000</label>
+          </div>
+        </fieldset>
+
+        <div class="filtros__pe">
+          <p class="filtros__contagem" id="contagem" role="status">8 peças na coleção</p>
+          <button class="botao botao--vazio botao--pequeno" type="reset" id="limpar">Limpar filtros</button>
+        </div>
+      </form>
+
+      <p class="colecao__vazio" id="vazio" hidden>
+        Nenhuma peça combina com esses filtros. O estoque muda toda semana — a <b>Calça Amplo</b> volta ao tamanho GG em produção, e o <b>Vestido Cais</b> está esgotado até novembro.
+        <button class="botao botao--vazio botao--pequeno" type="button" data-limpar>Limpar filtros</button>
+      </p>
+
+      <!-- Grade densa: o coração do lookbook. Cada peça é um desenho técnico. -->
+      <div class="grade" id="grade">
+
+        <!-- TR-041 -->
+        <article class="peca" id="peca-TR-041" data-cod="TR-041" data-nome="Vestido Ramo" data-categoria="vestido" data-tecido="linho" data-preco="1290">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-041</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico do Vestido Ramo: vestido midi de linho com decote V, manga curta, cinto de amarrar e dois bolsos aplicados.">
+              <g class="desenho__silhueta"><path d="M88 42 L76 47 L60 61 L53 85 L69 91 L75 73 L79 96 L71 112 L63 232 L137 232 L129 112 L121 96 L125 73 L131 91 L147 85 L140 61 L124 47 L112 42 L100 66 Z"/></g>
+              <g class="desenho__costura"><path d="M92 46 L100 63 L108 46"/><path d="M76 150 L94 150 L94 172 L76 172 Z"/><path d="M106 150 L124 150 L124 172 L106 172 Z"/></g>
+              <g class="desenho__vinco"><path d="M71 112 L129 112"/><path d="M100 112 L100 232"/><path d="M100 112 L86 128"/><path d="M100 112 L112 126"/><path d="M118 190 L118 224 M115 194 L118 190 L121 194 M115 220 L118 224 L121 220"/></g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Vestido Ramo</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Linho</b><span class="peca__comp">100% · 210 g/m²</span></p>
+            <p class="peca__modelagem">midi, decote V, manga curta, cinto de amarrar</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos do Vestido Ramo">
+              <button type="button" class="tam" data-tam="P" data-estoque="3" aria-pressed="false" aria-label="Tamanho P, 3 peças em estoque">P<i class="tam__n">3</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="4" aria-pressed="false" aria-label="Tamanho M, 4 peças em estoque">M<i class="tam__n">4</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="2" aria-pressed="false" aria-label="Tamanho G, 2 peças em estoque">G<i class="tam__n">2</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="GG" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho GG, esgotado"><s>GG</s><i class="tam__n">0</i></button>
+            </div>
+            <p class="peca__disp peca__disp--ultima">Última peça no tamanho GG</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 1.290</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>118 cm no tamanho M, do ombro à barra</dd>
+                <dt>Cós</dt><dd>cinto de amarrar no mesmo tecido, 4 cm</dd>
+                <dt>Bolsos</dt><dd>dois bolsos aplicados na frente, 18 × 22 cm</dd>
+                <dt>Origem do tecido</dt><dd>linho belga, tingido em São Paulo</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-042 -->
+        <article class="peca" id="peca-TR-042" data-cod="TR-042" data-nome="Camisa Areia" data-categoria="camisa" data-tecido="algodao" data-preco="590">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-042</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico da Camisa Areia: camisa reta de algodão orgânico, colarinho italiano, manga longa com punho, bolso no peito e carcela central.">
+              <g class="desenho__silhueta"><path d="M87 45 L75 49 L62 63 L52 126 L67 131 L77 92 L71 218 L129 218 L123 92 L133 131 L148 126 L138 63 L125 49 L113 45 L100 64 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M87 45 L100 56 L113 45"/>
+                <path d="M76 49 L100 57 L124 49"/>
+                <path d="M96 57 L96 218"/>
+                <path d="M76 100 L92 100"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M87 45 L81 54 L95 57 M113 45 L119 54 L105 57"/>
+                <path d="M100 57 L100 218"/>
+                <path d="M76 94 L92 94 L92 112 L76 112 Z"/>
+                <path d="M55 118 L69 123"/>
+                <circle cx="100" cy="80" r="1.6"/><circle cx="100" cy="106" r="1.6"/><circle cx="100" cy="132" r="1.6"/>
+                <circle cx="100" cy="158" r="1.6"/><circle cx="100" cy="184" r="1.6"/><circle cx="100" cy="206" r="1.6"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Camisa Areia</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Algodão orgânico</b><span class="peca__comp">97%, elastano 3% · 165 g/m²</span></p>
+            <p class="peca__modelagem">reta, colarinho italiano, manga longa com punho</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos da Camisa Areia">
+              <button type="button" class="tam" data-tam="P" data-estoque="6" aria-pressed="false" aria-label="Tamanho P, 6 peças em estoque">P<i class="tam__n">6</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="7" aria-pressed="false" aria-label="Tamanho M, 7 peças em estoque">M<i class="tam__n">7</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="5" aria-pressed="false" aria-label="Tamanho G, 5 peças em estoque">G<i class="tam__n">5</i></button>
+              <button type="button" class="tam" data-tam="GG" data-estoque="3" aria-pressed="false" aria-label="Tamanho GG, 3 peças em estoque">GG<i class="tam__n">3</i></button>
+            </div>
+            <p class="peca__disp">Pronta entrega, envio em 3 dias úteis</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 590</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>68 cm no tamanho M, do ombro à barra</dd>
+                <dt>Fechamento</dt><dd>seis botões de coco na carcela central</dd>
+                <dt>Costura</dt><dd>pala nas costas, cava fechada à mão</dd>
+                <dt>Origem do tecido</dt><dd>algodão do Cerrado, fiação em Minas Gerais</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-043 -->
+        <article class="peca" id="peca-TR-043" data-cod="TR-043" data-nome="Calça Amplo" data-categoria="calca" data-tecido="linho" data-preco="890">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-043</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico da Calça Amplo: calça wide leg de linho com cintura alta, duas pregas frontais, cós reto com passantes e barra larga.">
+              <g class="desenho__silhueta"><path d="M74 40 L126 40 L139 96 L146 234 L112 234 L100 142 L88 234 L54 234 L61 96 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M74.5 54 L125.5 54"/>
+                <path d="M74.5 54 Q88 92 100 142"/>
+                <path d="M125.5 54 Q112 92 100 142"/>
+                <path d="M54.8 224 L87 224 M113 224 L145.2 224"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M86 40 L86 54 M114 40 L114 54"/>
+                <path d="M84 54 L80 100 M89 54 L85 100"/>
+                <path d="M116 54 L120 100 M111 54 L115 100"/>
+                <circle cx="100" cy="47" r="2"/>
+                <path d="M130 158 L130 194 M127 162 L130 158 L133 162 M127 190 L130 194 L133 190"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Calça Amplo</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Linho</b><span class="peca__comp">55%, algodão 45% · 240 g/m²</span></p>
+            <p class="peca__modelagem">wide leg, cintura alta, duas pregas frontais</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos da Calça Amplo">
+              <button type="button" class="tam" data-tam="P" data-estoque="2" aria-pressed="false" aria-label="Tamanho P, 2 peças em estoque">P<i class="tam__n">2</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="1" aria-pressed="false" aria-label="Tamanho M, 1 peça em estoque">M<i class="tam__n">1</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="2" aria-pressed="false" aria-label="Tamanho G, 2 peças em estoque">G<i class="tam__n">2</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="GG" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho GG, esgotado"><s>GG</s><i class="tam__n">0</i></button>
+            </div>
+            <p class="peca__disp peca__disp--ultima">Última peça no tamanho M · GG esgotado</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 890</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>104 cm no tamanho M, do cós à barra</dd>
+                <dt>Cós</dt><dd>4 cm, com dois passantes e botão forrado</dd>
+                <dt>Barra</dt><dd>larga, 5 cm, com costura invisível</dd>
+                <dt>Origem do tecido</dt><dd>linho belga com algodão do Cerrado</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-044 -->
+        <article class="peca" id="peca-TR-044" data-cod="TR-044" data-nome="Casaco Neblina" data-categoria="casaco" data-tecido="la" data-preco="1890">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-044</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico do Casaco Neblina: casaco longo de lã com transpassado, lapela, dois botões e bolsos com pala.">
+              <g class="desenho__silhueta"><path d="M84 42 L72 47 L58 60 L46 148 L62 154 L74 96 L66 238 L134 238 L126 96 L138 154 L154 148 L142 60 L128 47 L116 42 L100 74 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M62 176 L86 176 M114 176 L138 176"/>
+                <path d="M74 112 L79 152 M126 112 L121 152"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M84 42 L91 82 L100 74 M116 42 L109 82 L100 74"/>
+                <path d="M100 74 L100 238"/>
+                <path d="M62 168 L86 168 L86 184 L62 184 Z"/>
+                <path d="M114 168 L138 168 L138 184 L114 184 Z"/>
+                <circle cx="100" cy="108" r="2.4"/><circle cx="100" cy="146" r="2.4"/>
+                <path d="M120 196 L120 228 M117 200 L120 196 L123 200 M117 224 L120 228 L123 224"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Casaco Neblina</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Lã merino</b><span class="peca__comp">88%, poliamida 12% · 340 g/m²</span></p>
+            <p class="peca__modelagem">longo, transpassado, lapela, dois botões</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos do Casaco Neblina">
+              <button type="button" class="tam" data-tam="P" data-estoque="1" aria-pressed="false" aria-label="Tamanho P, 1 peça em estoque">P<i class="tam__n">1</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="2" aria-pressed="false" aria-label="Tamanho M, 2 peças em estoque">M<i class="tam__n">2</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="G" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho G, esgotado"><s>G</s><i class="tam__n">0</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="GG" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho GG, esgotado"><s>GG</s><i class="tam__n">0</i></button>
+            </div>
+            <p class="peca__disp peca__disp--ultima">Última peça no tamanho P · G e GG esgotados</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 1.890</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>112 cm no tamanho M, do ombro à barra</dd>
+                <dt>Forro</dt><dd>viscose de bem-te-vi, do corpo e das mangas</dd>
+                <dt>Fechamento</dt><dd>dois botões de corno, casa feita à mão</dd>
+                <dt>Origem do tecido</dt><dd>lã merino da Serra Gaúcha, tecida em Farroupilha</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-045 -->
+        <article class="peca" id="peca-TR-045" data-cod="TR-045" data-nome="Saia Dobra" data-categoria="saia" data-tecido="algodao" data-preco="690">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-045</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico da Saia Dobra: saia midi de algodão orgânico com sete pregas macho, cós reto com botão e zíper invisível.">
+              <g class="desenho__silhueta"><path d="M78 52 L122 52 L156 232 L44 232 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M78.4 66 L121.6 66"/>
+                <path d="M50 222 L150 222"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M82 66 L58 232 M88 66 L74 232 M94 66 L88 232 M100 66 L100 232 M106 66 L112 232 M112 66 L126 232 M118 66 L142 232"/>
+                <path d="M88 66 L84 78 M112 66 L116 78"/>
+                <circle cx="100" cy="59" r="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Saia Dobra</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Algodão orgânico</b><span class="peca__comp">100% · 190 g/m²</span></p>
+            <p class="peca__modelagem">midi, sete pregas macho, cós reto</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos da Saia Dobra">
+              <button type="button" class="tam" data-tam="P" data-estoque="4" aria-pressed="false" aria-label="Tamanho P, 4 peças em estoque">P<i class="tam__n">4</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="5" aria-pressed="false" aria-label="Tamanho M, 5 peças em estoque">M<i class="tam__n">5</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="3" aria-pressed="false" aria-label="Tamanho G, 3 peças em estoque">G<i class="tam__n">3</i></button>
+              <button type="button" class="tam" data-tam="GG" data-estoque="2" aria-pressed="false" aria-label="Tamanho GG, 2 peças em estoque">GG<i class="tam__n">2</i></button>
+            </div>
+            <p class="peca__disp">Pronta entrega, envio em 3 dias úteis</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 690</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>78 cm no tamanho M, do cós à barra</dd>
+                <dt>Fechamento</dt><dd>zíper invisível na lateral esquerda</dd>
+                <dt>Pregas</dt><dd>sete pregas macho de 4 cm, pespontadas até o quadril</dd>
+                <dt>Origem do tecido</dt><dd>algodão do Cerrado, tecido em Santa Catarina</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-046 -->
+        <article class="peca" id="peca-TR-046" data-cod="TR-046" data-nome="Top Entrelinha" data-categoria="top" data-tecido="seda" data-preco="390">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-046</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico do Top Entrelinha: top de seda com decote reto, viés na gola e alças finas que cruzam nas costas.">
+              <g class="desenho__silhueta"><path d="M80 62 L71 86 L77 152 L123 152 L129 86 L120 62 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M80 68 L120 68"/>
+                <path d="M82 66 L76 88 L80 150 M118 66 L124 88 L120 150"/>
+                <path d="M78 146 L122 146"/>
+                <path d="M86 38 L100 56 L114 38"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M80 62 L86 36 M83 36 L89 36 M120 62 L114 36 M111 36 L117 36"/>
+                <path d="M92 92 Q88 122 90 152 M108 92 Q112 122 110 152"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Top Entrelinha</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Seda</b><span class="peca__comp">100% · 19 momme</span></p>
+            <p class="peca__modelagem">decote reto, alças finas cruzadas nas costas</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos do Top Entrelinha">
+              <button type="button" class="tam tam--esgotado" data-tam="P" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho P, esgotado"><s>P</s><i class="tam__n">0</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="3" aria-pressed="false" aria-label="Tamanho M, 3 peças em estoque">M<i class="tam__n">3</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="4" aria-pressed="false" aria-label="Tamanho G, 4 peças em estoque">G<i class="tam__n">4</i></button>
+              <button type="button" class="tam" data-tam="GG" data-estoque="2" aria-pressed="false" aria-label="Tamanho GG, 2 peças em estoque">GG<i class="tam__n">2</i></button>
+            </div>
+            <p class="peca__disp peca__disp--ultima">Tamanho P esgotado · demais prontos</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 390</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>46 cm no tamanho M, do ombro à barra</dd>
+                <dt>Acabamento</dt><dd>viés do mesmo tecido na gola e nas cavas</dd>
+                <dt>Alças</dt><dd>1 cm, reguláveis por dentro, cruzadas nas costas</dd>
+                <dt>Origem do tecido</dt><dd>seda de Nova Friburgo, tinturaria de pequeno lote</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-047 -->
+        <article class="peca" id="peca-TR-047" data-cod="TR-047" data-nome="Blusa Ponto" data-categoria="blusa" data-tecido="la" data-preco="740" data-modo="encomenda">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-047</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico da Blusa Ponto: blusa de tricô fino de lã merino, gola redonda canelada, manga longa com punho e barra canelada.">
+              <g class="desenho__silhueta"><path d="M86 46 Q100 36 114 46 L124 50 L142 76 L152 134 L136 139 L124 92 L130 208 L70 208 L76 92 L64 139 L48 134 L58 76 L76 50 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M88 48 Q100 39 112 48"/>
+                <path d="M70 198 L130 198"/>
+                <path d="M50.5 128 L64.5 133 M149.5 128 L135.5 133"/>
+                <path d="M79 52 L79 90 M121 52 L121 90"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M93 45 L93 51 M100 42 L100 48 M107 45 L107 51"/>
+                <path d="M78 198 L78 207 M90 198 L90 207 M100 198 L100 207 M110 198 L110 207 M122 198 L122 207"/>
+                <path d="M88 104 L88 190 M100 104 L100 190 M112 104 L112 190"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Blusa Ponto</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Lã merino</b><span class="peca__comp">100% · 180 g/m²</span></p>
+            <p class="peca__modelagem">tricô fino, gola redonda canelada, manga longa</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos da Blusa Ponto">
+              <button type="button" class="tam" data-tam="P" data-estoque="2" aria-pressed="false" aria-label="Tamanho P, 2 vagas na próxima tiragem">P<i class="tam__n">2</i></button>
+              <button type="button" class="tam" data-tam="M" data-estoque="2" aria-pressed="false" aria-label="Tamanho M, 2 vagas na próxima tiragem">M<i class="tam__n">2</i></button>
+              <button type="button" class="tam" data-tam="G" data-estoque="1" aria-pressed="false" aria-label="Tamanho G, 1 vaga na próxima tiragem">G<i class="tam__n">1</i></button>
+              <button type="button" class="tam" data-tam="GG" data-estoque="1" aria-pressed="false" aria-label="Tamanho GG, 1 vaga na próxima tiragem">GG<i class="tam__n">1</i></button>
+            </div>
+            <p class="peca__disp">Feito sob encomenda, 12 dias</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 740</span>
+              <button type="button" class="botao botao--add">Adicionar à sacola</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>58 cm no tamanho M, do ombro à barra</dd>
+                <dt>Tricô</dt><dd>fio 2/28, agulha 12, ponto meia com canelado 1×1</dd>
+                <dt>Prazo</dt><dd>12 dias corridos, contados do dia seguinte ao pedido</dd>
+                <dt>Origem do fio</dt><dd>lã merino da Serra Gaúcha, fiada em Farroupilha</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <!-- TR-048 -->
+        <article class="peca" id="peca-TR-048" data-cod="TR-048" data-nome="Vestido Cais" data-categoria="vestido" data-tecido="seda" data-preco="1690" data-modo="esgotado">
+          <div class="peca__desenho">
+            <span class="peca__cod">TR-048</span>
+            <svg class="desenho" viewBox="0 0 200 260" role="img" aria-label="Desenho técnico do Vestido Cais: vestido longo de seda com transpassado, amarração na cintura e fenda lateral.">
+              <g class="desenho__silhueta"><path d="M84 42 L74 46 Q70 74 78 98 L62 240 L138 240 L122 98 Q130 74 126 46 L116 42 L100 88 Z"/></g>
+              <g class="desenho__costura">
+                <path d="M88 106 Q76 172 70 238"/>
+                <path d="M108 106 Q118 176 124 238"/>
+                <path d="M120 162 L132 240"/>
+              </g>
+              <g class="desenho__vinco">
+                <path d="M84 42 L118 92"/>
+                <path d="M118 92 L138 84"/>
+                <path d="M118 92 L110 118"/>
+                <circle cx="118" cy="92" r="3"/>
+                <path d="M100 178 L100 212 M97 182 L100 178 L103 182 M97 208 L100 212 L103 208"/>
+              </g>
+            </svg>
+          </div>
+          <div class="peca__ficha">
+            <h3 class="peca__nome">Vestido Cais</h3>
+            <p class="peca__tecido"><span class="amostra" aria-hidden="true"></span><b>Seda</b><span class="peca__comp">100% · 22 momme</span></p>
+            <p class="peca__modelagem">longo, transpassado, amarração na cintura</p>
+            <div class="peca__tamanhos" role="group" aria-label="Tamanhos do Vestido Cais">
+              <button type="button" class="tam tam--esgotado" data-tam="P" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho P, esgotado"><s>P</s><i class="tam__n">0</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="M" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho M, esgotado"><s>M</s><i class="tam__n">0</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="G" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho G, esgotado"><s>G</s><i class="tam__n">0</i></button>
+              <button type="button" class="tam tam--esgotado" data-tam="GG" data-estoque="0" aria-pressed="false" disabled aria-disabled="true" aria-label="Tamanho GG, esgotado"><s>GG</s><i class="tam__n">0</i></button>
+            </div>
+            <p class="peca__disp peca__disp--esgotado">Esgotado · lista de espera aberta</p>
+            <div class="peca__compra">
+              <span class="peca__preco">R$ 1.690</span>
+              <button type="button" class="botao botao--vazio botao--espera" data-espera="TR-048">Avisar quando voltar</button>
+            </div>
+            <p class="peca__erro" role="status"></p>
+            <details class="peca__mais">
+              <summary>Ficha técnica completa</summary>
+              <dl>
+                <dt>Comprimento</dt><dd>138 cm no tamanho M, do ombro à barra</dd>
+                <dt>Fenda</dt><dd>lateral direita, 62 cm, com viés reforçado</dd>
+                <dt>Tiragem</dt><dd>48 unidades no total, todas vendidas em 9 dias</dd>
+                <dt>Origem do tecido</dt><dd>seda de Nova Friburgo, 22 momme</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEDIDAS ================= -->
+  <section class="secao secao--papel" id="medidas">
+    <div class="tela medidas">
+      <div class="secao__cabeca">
+        <h2>Medidas do corpo, em centímetros.</h2>
+        <p>Meça sobre a pele, sem apertar a fita. Se estiver entre dois tamanhos, escolha o maior nas peças de linho e o menor nas de seda — o linho assenta com o uso, a seda não cede.</p>
+      </div>
+      <table class="tabela">
+        <caption>Tabela de medidas Trama · corpo, não peça. Comprimento medido do ombro à barra.</caption>
+        <thead>
+          <tr><th scope="col">Medida</th><th scope="col">P</th><th scope="col">M</th><th scope="col">G</th><th scope="col">GG</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Busto</th><td>86</td><td>90</td><td>96</td><td>102</td></tr>
+          <tr><th scope="row">Cintura</th><td>68</td><td>72</td><td>78</td><td>84</td></tr>
+          <tr><th scope="row">Quadril</th><td>94</td><td>98</td><td>104</td><td>110</td></tr>
+          <tr><th scope="row">Comprimento <span>do Vestido Ramo</span></th><td>116</td><td>118</td><td>120</td><td>122</td></tr>
+        </tbody>
+      </table>
+      <p class="medidas__nota">Em caso de dúvida, mande suas três medidas pelo WhatsApp <b>(11) 90000-0000</b> e o ateliê responde qual tamanho serve — quem responde é a Rosana, que corta as peças.</p>
+    </div>
+  </section>
+
+  <!-- ================= COMPRAR: valores em R$ ================= -->
+  <section class="secao" id="comprar">
+    <div class="tela">
+      <div class="secao__cabeca">
+        <h2>Quatro passos entre escolher o tamanho e receber a peça.</h2>
+        <p>Não há cadastro obrigatório, não há cupom e não há contagem regressiva. O preço que está na peça é o preço que você paga.</p>
+      </div>
+      <ol class="etapas">
+        <li class="etapa">
+          <span class="etapa__n">1</span>
+          <h3>Escolher e conferir a tabela</h3>
+          <p>Veja o estoque por tamanho na própria peça e confira a tabela de medidas. Se ficar na dúvida, mande suas medidas: o ateliê responde em até um dia útil.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa__n">2</span>
+          <h3>Sacola e dados</h3>
+          <p>A sacola reserva as peças por 30 minutos enquanto você decide. Depois, nome, e-mail, endereço e CPF para a nota fiscal — nada além disso.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa__n">3</span>
+          <h3>Pagamento por Pix ou cartão</h3>
+          <p>Pix à vista ou cartão de crédito em até 6x sem juros. Não existe desconto para Pix: o preço é o mesmo para todo mundo, o ano inteiro.</p>
+        </li>
+        <li class="etapa">
+          <span class="etapa__n">4</span>
+          <h3>Envio em 3 dias úteis</h3>
+          <p>Peça pronta sai do ateliê em até 3 dias úteis. Peça sob encomenda leva 12 dias. Troca em até 30 dias, com a etiqueta presa e a peça sem uso.</p>
+        </li>
+      </ol>
+
+      <div class="frete">
+        <table class="tabela tabela--frete">
+          <caption>Frete para todo o Brasil, por região. Envio em até 3 dias úteis após a confirmação do pagamento.</caption>
+          <thead>
+            <tr><th scope="col">Destino</th><th scope="col">Frete</th><th scope="col">Prazo</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Sudeste · SP, RJ, MG, ES</th><td>R$ 32</td><td>3 a 5 dias úteis</td></tr>
+            <tr><th scope="row">Sul, Centro-Oeste, Nordeste e Norte</th><td>R$ 48</td><td>5 a 9 dias úteis</td></tr>
+            <tr><th scope="row">Qualquer região acima de R$ 900</th><td>Grátis</td><td>mesmo prazo da região</td></tr>
+          </tbody>
+        </table>
+        <div class="frete__nota">
+          <p><b>Pagamento:</b> Pix à vista ou cartão em até 6x sem juros, com parcela mínima de R$ 120.</p>
+          <p><b>Troca:</b> 30 dias corridos do recebimento, primeira troca por conta do ateliê.</p>
+          <p><b>Nota fiscal:</b> emitida em nome de quem compra, com o CNPJ do ateliê em Pinheiros.</p>
+          <button class="botao botao--vazio" type="button" id="abrir-sacola-2">Calcular o frete</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ATELIÊ: passagem quieta ================= -->
+  <section class="secao secao--papel atelie" id="atelie">
+    <div class="tela atelie__grade">
+      <div class="atelie__texto">
+        <h2>Três costureiras, uma mesa de corte e quarenta e duas peças por semana.</h2>
+        <p>O ateliê fica no segundo andar de um prédio baixo na Rua Fradique Coutinho, em Pinheiros. São duas salas: na primeira ficam a mesa de corte, a overloque e a galoneira; na segunda, as três máquinas de costura reta, a passadoria e uma parede onde a coleção inteira fica pendurada antes de virar anúncio. Não existe linha de produção — existe uma peça por vez, e a mesma pessoa que corta acompanha a peça até a barra.</p>
+        <p>Neide corta. Rosana costura as peças de linho e algodão, que são as de maior volume. Fátima faz a seda e a lã, que exigem máquina regulada mais fina e agulha 60. São três costureiras, quarenta e duas peças por semana em ritmo normal, e esse número não sobe: quando um pedido é maior do que isso, ele entra na fila da semana seguinte em vez de virar hora extra. Cada peça leva de quatro a nove horas de trabalho, dependendo do tecido — o Vestido Cais, em seda 22 momme, é o mais lento dos oito.</p>
+        <p>A tiragem é pequena por três razões honestas. A primeira é o tecido: linho belga, seda de Nova Friburgo e lã da Serra Gaúcha são comprados em rolo fechado, e um rolo dá para 30 a 60 peças — não para 600. A segunda é o caixa: a marca compra o tecido antes de vender a roupa, e prefere comprar pouco a dever a fornecedor. A terceira é o descarte: peça que não vende em uma coleção não volta na seguinte com outro nome. Duas coleções por ano, outono-inverno em março e primavera-verão em setembro, e nada entre as duas.</p>
+      </div>
+      <aside class="atelie__ficha" aria-label="Dados do ateliê">
+        <p class="atelie__linha"><span>Endereço</span>Rua Fradique Coutinho, 1180 · 2º andar<br>Pinheiros · São Paulo · CEP 05416-001</p>
+        <p class="atelie__linha"><span>Visita</span>Terças e quintas, das 14h às 18h, com horário marcado pelo WhatsApp (11) 90000-0000</p>
+        <p class="atelie__linha"><span>Costureiras</span>Neide Barbosa, Rosana Ferraz e Fátima Okada</p>
+        <p class="atelie__linha"><span>Tecidos</span>linho da Bélgica · algodão do Cerrado · seda de Nova Friburgo · lã da Serra Gaúcha</p>
+        <p class="atelie__linha"><span>Tiragem</span>30 a 60 unidades por peça, duas coleções por ano</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= CUIDADOS ================= -->
+  <section class="secao secao--papel" id="cuidados">
+    <div class="tela">
+      <div class="secao__cabeca">
+        <h2>Tecido natural pede cuidado simples. Aqui está o de cada um.</h2>
+        <p>Nenhuma peça da Trama precisa de lavagem a seco obrigatória. O que alonga a vida da roupa é lavar menos, com água fria, e secar na sombra. A etiqueta de composição vai costurada na lateral, com o símbolo de cada cuidado.</p>
+      </div>
+      <div class="cuidados">
+        <article class="cuidado">
+          <h3>Linho <span class="cuidado__gramatura">210 g/m²</span></h3>
+          <dl>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2zM7 9V7a5 5 0 0110 0v2"/></svg>Lavagem</dt><dd>Máquina em ciclo delicado, água fria (30 °C), com sabão neutro. Peça sozinha na primeira lavagem: o linho solta fibras.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M6 5l1 14h10l1-14M9 9v6M15 9v6"/></svg>Secagem</dt><dd>No varal, na sombra, com a peça esticada à mão. Nunca em secadora: o linho encolhe até 4 % e perde o caimento.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16h12l3-8 4 8zM7 16v3h9v-3"/></svg>Passar</dt><dd>Úmida, com ferro quente (200 °C) e vapor. Passe do avesso e abra as costuras antes de passar a frente.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 14H4zM12 9v4M12 16v.5"/></svg>Evitar</dt><dd>Alvejante com cloro, amaciante e secadora. Amaciante entope a fibra e o linho fica áspero no terceiro uso.</dd></div>
+          </dl>
+        </article>
+
+        <article class="cuidado">
+          <h3>Algodão orgânico <span class="cuidado__gramatura">190 g/m²</span></h3>
+          <dl>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2zM7 9V7a5 5 0 0110 0v2"/></svg>Lavagem</dt><dd>Máquina, água fria, do avesso e com cores parecidas. O algodão orgânico sem acabamento químico encolhe até 3 % na primeira lavagem — é esperado.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M6 5l1 14h10l1-14M9 9v6M15 9v6"/></svg>Secagem</dt><dd>Sombra, em cabide, para a peça cair reta. Secadora só em ciclo frio e por pouco tempo.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16h12l3-8 4 8zM7 16v3h9v-3"/></svg>Passar</dt><dd>Ferro médio (150 °C) do avesso, ou vapor pendurado. O algodão aceita bem o ferro, mas marca se estiver seco demais.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 14H4zM12 9v4M12 16v.5"/></svg>Evitar</dt><dd>Água quente e lavagem junto com zíper, botão de metal ou qualquer peça pesada: o algodão orgânico pinica com atrito.</dd></div>
+          </dl>
+        </article>
+
+        <article class="cuidado">
+          <h3>Seda <span class="cuidado__gramatura">19 e 22 momme</span></h3>
+          <dl>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2zM7 9V7a5 5 0 0110 0v2"/></svg>Lavagem</dt><dd>Só à mão, em água fria, com sabão neutro ou sabão de coco. Dez minutos de molho, sem torcer e sem esfregar. A cada três usos, no máximo.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M6 5l1 14h10l1-14M9 9v6M15 9v6"/></svg>Secagem</dt><dd>Estendida na horizontal, sobre uma toalha, na sombra. Nunca pendurada molhada: o peso da água marca a seda para sempre.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16h12l3-8 4 8zM7 16v3h9v-3"/></svg>Passar</dt><dd>Ferro morno (110 °C), do avesso e com um pano de algodão por cima. Vapor direto na seda deixa mancha de água.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 14H4zM12 9v4M12 16v.5"/></svg>Evitar</dt><dd>Sol direto, perfume e desodorante em spray na altura da axila: o álcool e o óleo mancham a seda e a mancha não sai.</dd></div>
+          </dl>
+        </article>
+
+        <article class="cuidado">
+          <h3>Lã merino <span class="cuidado__gramatura">180 e 340 g/m²</span></h3>
+          <dl>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2zM7 9V7a5 5 0 0110 0v2"/></svg>Lavagem</dt><dd>À mão, água fria, com sabão próprio para lã. Ou máquina em ciclo lã a 30 °C, com pouco sabão. Nunca torça — aperte entre as mãos.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M6 5l1 14h10l1-14M9 9v6M15 9v6"/></svg>Secagem</dt><dd>Deitada sobre uma toalha, na sombra e longe do radiador, com o formato da peça ajustado à mão. Leva de 24 a 36 horas.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16h12l3-8 4 8zM7 16v3h9v-3"/></svg>Passar</dt><dd>Vapor pendurado, sem encostar o ferro, ou ferro morno (110 °C) com pano por cima. Ferro quente diretamente na lã felpa a superfície.</dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 14H4zM12 9v4M12 16v.5"/></svg>Evitar</dt><dd>Secadora, calor direto e cabide fino nos ombros: a lã do casaco deforma no ombro e não volta ao lugar.</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="cuidados__nota">Peça furada ou costura aberta por desgaste? O ateliê conserta qualquer peça Trama dentro de um ano, sem cobrar. Mande uma foto pelo WhatsApp <b>(11) 90000-0000</b>.</p>
+    </div>
+  </section>
+
+  <!-- ================= DÚVIDAS ================= -->
+  <section class="secao" id="duvidas">
+    <div class="tela">
+      <div class="secao__cabeca">
+        <h2>O que perguntam antes de comprar.</h2>
+      </div>
+      <div class="perguntas">
+        <details class="pergunta" open>
+          <summary>A peça encolhe?<svg class="mais" viewBox="0 0 24 24" aria-hidden="true"><path class="mais__v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+          <p>Encolhe um pouco na primeira lavagem, e é medido: linho até 4 %, algodão orgânico até 3 %, seda até 1 % e lã até 2 % quando seca deitada. Já descontamos isso no molde, então a peça nova sai do ateliê levemente maior do que a tabela e assenta no corpo depois da primeira lavagem. Se você lavar como manda a etiqueta, não encolhe mais do que isso.</p>
+        </details>
+        <details class="pergunta">
+          <summary>Posso trocar?<svg class="mais" viewBox="0 0 24 24" aria-hidden="true"><path class="mais__v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+          <p>Pode, em até 30 dias corridos do recebimento. A primeira troca de tamanho vai por conta do ateliê: mandamos a etiqueta de devolução por e-mail e a peça nova sai quando a primeira chega. A peça precisa estar sem uso, com a etiqueta de composição presa. Peça sob encomenda também troca, só não pode ser cancelada depois do corte, que acontece 24 horas após o pedido.</p>
+        </details>
+        <details class="pergunta">
+          <summary>Fazem sob medida?<svg class="mais" viewBox="0 0 24 24" aria-hidden="true"><path class="mais__v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+          <p>Sim, para peças da coleção, com ajuste de até 6 cm em busto, cintura ou comprimento. Custa 25 % a mais sobre o preço da peça e leva de 15 a 20 dias, porque entra na fila depois das tiragens. Molde novo, fora da coleção, não fazemos: para isso indicamos duas ateliês parceiras em São Paulo. O pedido sob medida é fechado pelo WhatsApp, com suas medidas tiradas por vídeo com a Rosana.</p>
+        </details>
+        <details class="pergunta">
+          <summary>Quanto é o frete?<svg class="mais" viewBox="0 0 24 24" aria-hidden="true"><path class="mais__v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+          <p>R$ 32 para o Sudeste e R$ 48 para as outras regiões, com envio em até 3 dias úteis. Acima de R$ 900 o frete é grátis para todo o Brasil. O prazo de entrega é de 3 a 5 dias úteis no Sudeste e de 5 a 9 dias nas demais regiões, sempre depois da confirmação do pagamento. Trabalhamos com transportadora, não com Correios, e o código de rastreio chega por e-mail.</p>
+        </details>
+        <details class="pergunta">
+          <summary>Por que não tem promoção?<svg class="mais" viewBox="0 0 24 24" aria-hidden="true"><path class="mais__v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+          <p>Porque o preço já é o preço: tecido comprado à vista, costura paga por peça e tiragem pequena. Para dar 30 % de desconto no fim da estação, teríamos que embutir esses 30 % no preço de tabela durante o ano inteiro — e quem compra no primeiro dia pagaria a conta de quem espera a liquidação. Quando uma peça não vende, ela sai da loja e vira amostra do ateliê, não vira oferta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FECHO: lista da próxima tiragem ================= -->
+  <section class="fecho" id="avisar">
+    <div class="tela fecho__grade">
+      <div class="fecho__texto">
+        <h2>A próxima tiragem sai do ateliê em novembro.</h2>
+        <p>Deixe seu contato e o ateliê avisa quando a peça que você quer estiver de volta ao estoque — inclusive o Vestido Cais, que esgotou em nove dias. Um e-mail por tiragem, sem newsletter semanal e sem promoção.</p>
+        <p class="fecho__contato">Ateliê Trama · Rua Fradique Coutinho, 1180 · Pinheiros · São Paulo<br>WhatsApp (11) 90000-0000 · oi@trama.com.br · terças e quintas, das 14h às 18h</p>
+      </div>
+
+      <div class="fecho__form">
+        <p class="fecho__nota" id="nota-espera" role="status"></p>
+        <div class="recado-ok" id="recado" role="status" hidden></div>
+        <form id="form-aviso" novalidate>
+          <div class="campo" data-campo="nome">
+            <label for="nome">Seu nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Marina Salles" required>
+            <span class="campo__erro" data-erro="nome"></span>
+          </div>
+          <div class="campo" data-campo="email">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="marina@email.com.br" required>
+            <span class="campo__erro" data-erro="email"></span>
+          </div>
+          <div class="campo" data-campo="peca">
+            <label for="peca">Peça de interesse</label>
+            <select id="peca" name="peca" required>
+              <option value="">Escolha uma peça</option>
+              <option value="toda">Toda a coleção</option>
+              <option value="TR-041">TR-041 · Vestido Ramo</option>
+              <option value="TR-042">TR-042 · Camisa Areia</option>
+              <option value="TR-043">TR-043 · Calça Amplo</option>
+              <option value="TR-044">TR-044 · Casaco Neblina</option>
+              <option value="TR-045">TR-045 · Saia Dobra</option>
+              <option value="TR-046">TR-046 · Top Entrelinha</option>
+              <option value="TR-047">TR-047 · Blusa Ponto</option>
+              <option value="TR-048">TR-048 · Vestido Cais</option>
+            </select>
+            <span class="campo__erro" data-erro="peca"></span>
+          </div>
+          <div class="campo" data-campo="tamanho">
+            <label for="tamanho">Tamanho que você usa</label>
+            <select id="tamanho" name="tamanho" required>
+              <option value="">Escolha o tamanho</option>
+              <option value="P">P</option>
+              <option value="M">M</option>
+              <option value="G">G</option>
+              <option value="GG">GG</option>
+            </select>
+            <span class="campo__erro" data-erro="tamanho"></span>
+          </div>
+          <button class="botao" type="submit" id="btn-aviso">Avisar quando voltar</button>
+          <button class="botao botao--vazio" type="button" id="abrir-sacola-3">Ver a sacola</button>
+          <p class="miudo">Um e-mail por tiragem. Seus dados ficam com o ateliê e não vão para ninguém.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="tela rodape__grade">
+    <p><b>Trama</b> · roupa autoral em pequena tiragem · CNPJ 00.000.000/0001-00 · Rua Fradique Coutinho, 1180 · Pinheiros, São Paulo</p>
+    <p>Demonstração de catálogo. Marca, preços, endereço e textos são fictícios.</p>
+    <p><a href="../index.html">Voltar ao catálogo de modelos</a></p>
+  </div>
+</footer>
+
+<!-- ================= CONTROLE INTERATIVO (a): SACOLA ================= -->
+<div class="veu" id="veu" hidden></div>
+
+<aside class="sacola" id="sacola" role="dialog" aria-modal="true" aria-labelledby="sacola-titulo" hidden>
+  <div class="sacola__topo">
+    <h2 id="sacola-titulo">Sacola</h2>
+    <p class="sacola__reserva" id="reserva" hidden>Reservada por <b id="reserva-tempo">30:00</b></p>
+    <button class="botao botao--vazio botao--pequeno" type="button" id="fechar-sacola">Fechar</button>
+  </div>
+  <div class="sacola__corpo" id="sacola-corpo">
+    <p class="sacola__vazia">Sua sacola está vazia. As peças ficam reservadas por 30 minutos depois que você escolhe um tamanho.</p>
+    <a class="botao botao--vazio" href="#colecao" id="ir-colecao">Ver a coleção</a>
+  </div>
+  <div class="sacola__pe" id="sacola-pe" hidden>
+    <dl class="resumo">
+      <div><dt>Subtotal</dt><dd id="subtotal" aria-live="polite">R$ 0</dd></div>
+      <div><dt>Frete</dt><dd id="frete">—</dd></div>
+      <div><dt>Total</dt><dd id="total" aria-live="polite">R$ 0</dd></div>
+    </dl>
+    <p class="sacola__dica" id="dica-frete"></p>
+    <div class="campo">
+      <label for="regiao">Região de entrega</label>
+      <select id="regiao">
+        <option value="sudeste">Sudeste · SP, RJ, MG, ES</option>
+        <option value="sul">Sul · PR, SC, RS</option>
+        <option value="centro">Centro-Oeste · DF, GO, MT, MS</option>
+        <option value="nordeste">Nordeste · BA, PE, CE e demais</option>
+        <option value="norte">Norte · AM, PA, RO e demais</option>
+      </select>
+    </div>
+    <button class="botao botao--largo" type="button" id="finalizar">Finalizar pedido</button>
+    <p class="miudo">Pix à vista ou cartão em até 6x sem juros. Envio em até 3 dias úteis.</p>
+  </div>
+</aside>
+
+<p class="visualmente-oculto" id="aviso-sacola" role="status" aria-live="polite"></p>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reais = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+  var TAMANHOS = ['P', 'M', 'G', 'GG'];
+  var FRETE_SUDESTE = 32;
+  var FRETE_OUTRAS = 48;
+  var FRETE_GRATIS = 900;
+
+  /* =========================================================
+     1. O desenho se traça — o único momento de movimento do modelo.
+     A silhueta é desenhada como num papel de moldes; as costuras
+     aparecem depois, quando o traço fecha.
+     ========================================================= */
+  function tracar(svg, atraso) {
+    if (reduzido || !svg || svg.dataset.tracado) return;
+    svg.dataset.tracado = '1';
+
+    $$('.desenho__silhueta path', svg).forEach(function (p, i) {
+      var l = 0;
+      try { l = p.getTotalLength(); } catch (e) { l = 0; }
+      if (!l) return;
+      p.style.strokeDasharray = (l + 1) + ' ' + (l + 1);
+      p.style.strokeDashoffset = l + 1;
+      window.setTimeout(function () {
+        p.style.transition = 'stroke-dashoffset 1.15s cubic-bezier(.22,.72,.24,1)';
+        p.style.strokeDashoffset = '0';
+      }, atraso + i * 110);
+    });
+
+    var detalhes = $$('.desenho__costura path, .desenho__costura circle, .desenho__vinco path, .desenho__vinco circle', svg);
+    detalhes.forEach(function (p) { p.style.opacity = '0'; });
+    window.setTimeout(function () {
+      detalhes.forEach(function (p) {
+        p.style.transition = 'opacity .7s ease';
+        p.style.opacity = '1';
+      });
+    }, atraso + 620);
+  }
+
+  tracar($('.desenho--abertura'), 240);
+
+  if ('IntersectionObserver' in window && !reduzido) {
+    var olhoDesenho = new IntersectionObserver(function (entradas) {
+      var lote = 0;
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        tracar($('.desenho', e.target), lote * 90);
+        lote++;
+        olhoDesenho.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.2 });
+    $$('.peca').forEach(function (p) { olhoDesenho.observe(p); });
+  }
+
+  /* =========================================================
+     2. Filtros da coleção — a grade densa filtrada de verdade
+     ========================================================= */
+  var formFiltros = $('#filtros');
+  var grade = $('#grade');
+  var pecas = $$('.peca');
+  var contagem = $('#contagem');
+  var vazio = $('#vazio');
+
+  function escolhido(nome) {
+    var input = formFiltros.querySelector('input[name="' + nome + '"]:checked');
+    if (!input || !input.value) return null;
+    return { valor: input.value, rotulo: formFiltros.querySelector('label[for="' + input.id + '"]').textContent };
+  }
+
+  function estoqueDe(el, tam) {
+    if (TAMANHOS.indexOf(tam) < 0) return 0;
+    var b = el.querySelector('[data-tam="' + tam + '"]');
+    return b ? Number(b.dataset.estoque) : 0;
+  }
+
+  function naFaixa(preco, faixa) {
+    if (faixa === 'ate600') return preco <= 600;
+    if (faixa === '600a1000') return preco > 600 && preco <= 1000;
+    if (faixa === 'acima1000') return preco > 1000;
+    return true;
+  }
+
+  function aplicar() {
+    var cat = escolhido('categoria');
+    var tec = escolhido('tecido');
+    var tam = escolhido('tamanho');
+    var pre = escolhido('preco');
+    var visiveis = 0;
+    var partes = [];
+
+    pecas.forEach(function (el) {
+      var ok = true;
+      if (cat && el.dataset.categoria !== cat.valor) ok = false;
+      if (ok && tec && el.dataset.tecido !== tec.valor) ok = false;
+      if (ok && tam && estoqueDe(el, tam.valor) < 1) ok = false;
+      if (ok && pre && !naFaixa(Number(el.dataset.preco), pre.valor)) ok = false;
+      el.hidden = !ok;
+      if (ok) visiveis++;
+    });
+
+    if (cat) partes.push(cat.rotulo.toLowerCase());
+    if (tec) partes.push(tec.rotulo.toLowerCase());
+    if (tam) partes.push('tamanho ' + tam.valor);
+    if (pre) partes.push(pre.rotulo.toLowerCase());
+
+    contagem.textContent = visiveis + (visiveis === 1 ? ' peça' : ' peças')
+      + (partes.length ? ' · ' + partes.join(' · ') : ' na coleção');
+
+    vazio.hidden = visiveis > 0;
+    grade.hidden = visiveis === 0;
+  }
+
+  formFiltros.addEventListener('change', aplicar);
+  formFiltros.addEventListener('reset', function () { window.setTimeout(aplicar, 0); });
+  $$('[data-limpar]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      formFiltros.reset();
+      window.setTimeout(function () {
+        aplicar();
+        contagem.scrollIntoView({ block: 'center', behavior: reduzido ? 'auto' : 'smooth' });
+      }, 0);
+    });
+  });
+  aplicar();
+
+  /* =========================================================
+     3. Sacola lateral — estoque, frete e resumo do pedido
+     ========================================================= */
+  var sacola = [];
+  var regiao = 'sudeste';
+  var fimReserva = 0;
+  var relogio = null;
+
+  var painel = $('#sacola');
+  var veu = $('#veu');
+  var corpo = $('#sacola-corpo');
+  var pe = $('#sacola-pe');
+  var contador = $('#contador');
+  var aviso = $('#aviso-sacola');
+  var reserva = $('#reserva');
+  var reservaTempo = $('#reserva-tempo');
+  var campoRegiao = $('#regiao');
+  var ultimoFoco = null;
+
+  function pecasTxt(n) { return n === 1 ? '1 peça' : n + ' peças'; }
+  function totalPecas() { return sacola.reduce(function (s, i) { return s + i.qtd; }, 0); }
+  function subtotal() { return sacola.reduce(function (s, i) { return s + i.qtd * i.preco; }, 0); }
+
+  function freteAtual() {
+    if (!sacola.length) return 0;
+    if (subtotal() >= FRETE_GRATIS) return 0;
+    return regiao === 'sudeste' ? FRETE_SUDESTE : FRETE_OUTRAS;
+  }
+
+  function achar(chave) {
+    for (var i = 0; i < sacola.length; i++) { if (sacola[i].chave === chave) return sacola[i]; }
+    return null;
+  }
+
+  function anunciar(texto) { aviso.textContent = texto; }
+
+  function iniciarReserva() {
+    if (fimReserva) return;
+    fimReserva = Date.now() + 30 * 60 * 1000;
+    reserva.hidden = false;
+    if (relogio) window.clearInterval(relogio);
+    relogio = window.setInterval(ticar, 1000);
+    ticar();
+  }
+
+  function encerrarReserva() {
+    fimReserva = 0;
+    reserva.hidden = true;
+    if (relogio) { window.clearInterval(relogio); relogio = null; }
+  }
+
+  function ticar() {
+    var resta = fimReserva - Date.now();
+    if (resta <= 0) {
+      sacola = [];
+      encerrarReserva();
+      render();
+      anunciar('A reserva de 30 minutos terminou e a sacola foi liberada.');
+      return;
+    }
+    var m = Math.floor(resta / 60000);
+    var s = Math.floor((resta % 60000) / 1000);
+    reservaTempo.textContent = m + ':' + String(s).padStart(2, '0');
+  }
+
+  function abrirSacola() {
+    ultimoFoco = document.activeElement;
+    painel.hidden = false;
+    veu.hidden = false;
+    document.body.classList.add('travado');
+    $('#abrir-sacola').setAttribute('aria-expanded', 'true');
+    $('#fechar-sacola').focus();
+  }
+
+  function fecharSacola() {
+    painel.hidden = true;
+    veu.hidden = true;
+    document.body.classList.remove('travado');
+    $('#abrir-sacola').setAttribute('aria-expanded', 'false');
+    if (ultimoFoco && ultimoFoco.focus) ultimoFoco.focus();
+  }
+
+  /* Ícones do passo de quantidade: traço, não glifo */
+  var ICO_MENOS = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg>';
+  var ICO_MAIS = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12M12 6v12"/></svg>';
+
+  function itemHTML(it) {
+    return '<article class="item" data-chave="' + it.chave + '">'
+      + '<div class="item__amostra" aria-hidden="true"><span class="amostra"></span><b>' + it.cod + '</b></div>'
+      + '<div class="item__corpo">'
+      + '<h3 class="item__nome">' + it.nome + '</h3>'
+      + '<p class="item__ficha">Tamanho ' + it.tam + ' · ' + it.tecido + '</p>'
+      + '<div class="item__qtd">'
+      + '<button type="button" class="item__passo" data-acao="menos" aria-label="Diminuir a quantidade de ' + it.nome + ' tamanho ' + it.tam + '">' + ICO_MENOS + '</button>'
+      + '<input type="number" class="item__num" value="' + it.qtd + '" min="1" max="' + it.estoque + '" step="1" inputmode="numeric" aria-label="Quantidade de ' + it.nome + ' tamanho ' + it.tam + '">'
+      + '<button type="button" class="item__passo" data-acao="mais" aria-label="Aumentar a quantidade de ' + it.nome + ' tamanho ' + it.tam + '">' + ICO_MAIS + '</button>'
+      + '</div>'
+      + '<p class="item__erro" role="status"></p>'
+      + '</div>'
+      + '<div class="item__lado">'
+      + '<span class="item__preco">' + reais.format(it.preco * it.qtd) + '</span>'
+      + '<button type="button" class="item__remover" data-acao="remover">Remover</button>'
+      + '</div>'
+      + '</article>';
+  }
+
+  function render() {
+    var n = totalPecas();
+    contador.textContent = String(n);
+
+    if (!sacola.length) {
+      corpo.innerHTML = '<p class="sacola__vazia">Sua sacola está vazia. As peças ficam reservadas por 30 minutos depois que você escolhe um tamanho.</p>'
+        + '<a class="botao botao--vazio" href="#colecao" data-fechar>Ver a coleção</a>';
+      pe.hidden = true;
+      encerrarReserva();
+      return;
+    }
+
+    corpo.innerHTML = sacola.map(itemHTML).join('');
+    pe.hidden = false;
+    iniciarReserva();
+
+    var sub = subtotal();
+    var fre = freteAtual();
+    $('#subtotal').textContent = reais.format(sub);
+    $('#frete').textContent = fre === 0 ? 'Grátis' : reais.format(fre);
+    $('#total').textContent = reais.format(sub + fre);
+    $('#dica-frete').textContent = fre === 0
+      ? 'Frete grátis nesta compra.'
+      : 'Faltam ' + reais.format(FRETE_GRATIS - sub) + ' para o frete grátis.';
+  }
+
+  function erroDe(chave, texto) {
+    var item = corpo.querySelector('[data-chave="' + chave + '"]');
+    if (!item) return;
+    var caixa = $('.item__erro', item);
+    caixa.textContent = texto;
+    caixa.classList.add('item__erro--ativo');
+    window.setTimeout(function () { caixa.classList.remove('item__erro--ativo'); }, 400);
+  }
+
+  function mudar(chave, delta, absoluto) {
+    var it = achar(chave);
+    if (!it) return;
+    var novo = absoluto ? delta : it.qtd + delta;
+
+    if (novo < 1) {
+      sacola = sacola.filter(function (i) { return i.chave !== chave; });
+      anunciar(it.nome + ' tamanho ' + it.tam + ' saiu da sacola. ' + pecasTxt(totalPecas()) + ' na sacola.');
+      render();
+      return;
+    }
+    if (novo > it.estoque) {
+      /* Renderiza antes de escrever o erro: render() reconstrói a lista e
+         devolveria o campo ao estoque real, apagando o aviso. */
+      render();
+      erroDe(chave, 'Restam ' + pecasTxt(it.estoque) + ' no tamanho ' + it.tam + '.');
+      anunciar('Não foi possível aumentar: restam ' + pecasTxt(it.estoque) + ' no tamanho ' + it.tam + '.');
+      return;
+    }
+    it.qtd = novo;
+    render();
+    anunciar(pecasTxt(totalPecas()) + ' na sacola. Subtotal ' + reais.format(subtotal()) + '.');
+  }
+
+  corpo.addEventListener('click', function (e) {
+    var botao = e.target.closest('button[data-acao]');
+    if (botao) {
+      var item = botao.closest('.item');
+      var acao = botao.dataset.acao;
+      if (acao === 'remover') {
+        var it = achar(item.dataset.chave);
+        sacola = sacola.filter(function (i) { return i.chave !== item.dataset.chave; });
+        if (it) anunciar(it.nome + ' tamanho ' + it.tam + ' saiu da sacola.');
+        render();
+      } else {
+        mudar(item.dataset.chave, acao === 'mais' ? 1 : -1, false);
+      }
+      return;
+    }
+    if (e.target.closest('[data-fechar]')) fecharSacola();
+  });
+
+  corpo.addEventListener('change', function (e) {
+    if (!e.target.classList.contains('item__num')) return;
+    var item = e.target.closest('.item');
+    var it = achar(item.dataset.chave);
+    if (!it) return;
+    var valor = parseInt(e.target.value, 10);
+    if (!valor || valor < 1) { mudar(it.chave, 1, true); return; }
+    if (valor > it.estoque) {
+      erroDe(it.chave, 'Restam ' + pecasTxt(it.estoque) + ' no tamanho ' + it.tam + '.');
+      e.target.value = String(it.qtd);
+      anunciar('Restam ' + pecasTxt(it.estoque) + ' no tamanho ' + it.tam + '.');
+      return;
+    }
+    mudar(it.chave, valor, true);
+  });
+
+  /* Adicionar da grade, respeitando o estoque do tamanho escolhido */
+  function adicionar(el, tam) {
+    var est = estoqueDe(el, tam);
+    var cod = el.dataset.cod;
+    var chave = cod + '|' + tam;
+    var ja = achar(chave);
+    var naSacola = ja ? ja.qtd : 0;
+    var caixa = $('.peca__erro', el);
+
+    if (naSacola + 1 > est) {
+      caixa.textContent = est === 0
+        ? 'Tamanho ' + tam + ' esgotado.'
+        : 'Restam ' + pecasTxt(est) + ' no tamanho ' + tam + (naSacola ? ' — já estão na sua sacola.' : '.');
+      anunciar(caixa.textContent);
+      return;
+    }
+
+    caixa.textContent = '';
+    if (ja) {
+      ja.qtd += 1;
+    } else {
+      sacola.push({
+        chave: chave,
+        cod: cod,
+        nome: el.dataset.nome,
+        tam: tam,
+        preco: Number(el.dataset.preco),
+        estoque: est,
+        tecido: $('.peca__tecido b', el).textContent + ' · ' + $('.peca__comp', el).textContent
+      });
+    }
+    render();
+    anunciar(el.dataset.nome + ' tamanho ' + tam + ' entrou na sacola. ' + pecasTxt(totalPecas()) + ' na sacola.');
+  }
+
+  grade.addEventListener('click', function (e) {
+    var tam = e.target.closest('.tam');
+    if (tam && !tam.disabled) {
+      var grupo = tam.parentElement;
+      $$('.tam', grupo).forEach(function (b) {
+        if (!b.disabled) b.setAttribute('aria-pressed', String(b === tam));
+      });
+      var caixaErro = $('.peca__erro', tam.closest('.peca'));
+      if (caixaErro) caixaErro.textContent = '';
+      return;
+    }
+    var add = e.target.closest('.botao--add');
+    if (add) {
+      var peca = add.closest('.peca');
+      var escolhidoBtn = $('.tam[aria-pressed="true"]', peca);
+      var caixa = $('.peca__erro', peca);
+      if (!escolhidoBtn) {
+        caixa.textContent = 'Escolha um tamanho antes de adicionar.';
+        var primeiro = $('.tam:not(.tam--esgotado)', peca);
+        if (primeiro) primeiro.focus();
+        return;
+      }
+      adicionar(peca, escolhidoBtn.dataset.tam);
+      return;
+    }
+    var espera = e.target.closest('[data-espera]');
+    if (espera) {
+      var cod = espera.dataset.espera;
+      var alvo = $('#peca');
+      alvo.value = cod;
+      $$('#form-aviso .campo').forEach(function (c) { c.classList.remove('campo--erro'); });
+      $('#nota-espera').textContent = 'O ' + espera.closest('.peca').dataset.nome + ' está esgotado. Deixe seu contato e o ateliê avisa quando a próxima tiragem ficar pronta.';
+      $('#avisar').scrollIntoView({ block: 'start', behavior: reduzido ? 'auto' : 'smooth' });
+      window.setTimeout(function () { $('#nome').focus(); }, reduzido ? 0 : 420);
+    }
+  });
+
+  /* Finalizar: resumo do pedido em tela */
+  $('#finalizar').addEventListener('click', function () {
+    var sub = subtotal();
+    var fre = freteAtual();
+    var total = sub + fre;
+    /* Parcela mínima de R$ 120, como na seção Como comprar: 6x só quando cabe. */
+    var nParcelas = Math.min(6, Math.max(1, Math.floor(total / 120)));
+    var parcela = Math.round(total / nParcelas);
+    var numero = 'TR-' + String(new Date().getFullYear()).slice(2) + String(new Date().getMonth() + 1).padStart(2, '0') + '-'
+      + String(1000 + Math.floor(Math.random() * 8999));
+
+    corpo.innerHTML = '<div class="pedido">'
+      + '<p class="pedido__numero">Pedido ' + numero + '</p>'
+      + '<h3 class="pedido__titulo">Resumo do pedido</h3>'
+      + '<ul class="pedido__lista">' + sacola.map(function (it) {
+          return '<li><span>' + it.qtd + ' × ' + it.nome + ' · tamanho ' + it.tam + '</span><b>' + reais.format(it.preco * it.qtd) + '</b></li>';
+        }).join('') + '</ul>'
+      + '<dl class="resumo">'
+      + '<div><dt>Subtotal</dt><dd>' + reais.format(sub) + '</dd></div>'
+      + '<div><dt>Frete · ' + campoRegiao.options[campoRegiao.selectedIndex].text + '</dt><dd>' + (fre === 0 ? 'Grátis' : reais.format(fre)) + '</dd></div>'
+      + '<div class="resumo__total"><dt>Total</dt><dd>' + reais.format(total) + '</dd></div>'
+      + '</dl>'
+      + '<p class="pedido__linha"><b>Pagamento:</b> Pix à vista ou cartão em até ' + nParcelas + 'x de ' + reais.format(parcela) + ' sem juros.</p>'
+      + '<p class="pedido__linha"><b>Envio:</b> em até 3 dias úteis. Troca em 30 dias, primeira troca por conta do ateliê.</p>'
+      + '<p class="pedido__aviso">Em uma versão publicada, este botão seguiria para o pagamento no checkout da marca, com Pix e cartão. Aqui a demonstração termina: nada foi cobrado e nenhum dado saiu do seu navegador.</p>'
+      + '<div class="pedido__acoes">'
+      + '<button type="button" class="botao botao--vazio" id="voltar-sacola">Voltar para a sacola</button>'
+      + '<button type="button" class="botao" id="concluir">Concluir e esvaziar</button>'
+      + '</div></div>';
+    pe.hidden = true;
+    anunciar('Resumo do pedido ' + numero + ' na tela. Total ' + reais.format(total) + '.');
+    $('#voltar-sacola').focus();
+  });
+
+  corpo.addEventListener('click', function (e) {
+    if (e.target.id === 'voltar-sacola') { render(); $('#finalizar').focus(); }
+    if (e.target.id === 'concluir') {
+      sacola = [];
+      encerrarReserva();
+      render();
+      fecharSacola();
+      anunciar('Pedido concluído na demonstração. A sacola está vazia.');
+    }
+  });
+
+  campoRegiao.addEventListener('change', function () {
+    regiao = campoRegiao.value;
+    render();
+    anunciar('Frete recalculado para ' + campoRegiao.options[campoRegiao.selectedIndex].text + '.');
+  });
+
+  $('#abrir-sacola').addEventListener('click', abrirSacola);
+  $('#fechar-sacola').addEventListener('click', fecharSacola);
+  veu.addEventListener('click', fecharSacola);
+  $('#abrir-sacola-2').addEventListener('click', abrirSacola);
+  $('#abrir-sacola-3').addEventListener('click', abrirSacola);
+  $('#ir-colecao') && $('#ir-colecao').addEventListener('click', fecharSacola);
+
+  document.addEventListener('keydown', function (e) {
+    if (painel.hidden) return;
+    if (e.key === 'Escape') { fecharSacola(); return; }
+    if (e.key !== 'Tab') return;
+    var focaveis = $$('a[href], button:not([disabled]), input, select, textarea', painel)
+      .filter(function (el) { return el.getClientRects().length > 0; });
+    if (!focaveis.length) return;
+    var primeiro = focaveis[0];
+    var ultimo = focaveis[focaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+  });
+
+  window.addEventListener('pagehide', function () { if (relogio) window.clearInterval(relogio); });
+
+  render();
+
+  /* =========================================================
+     4. Lista da próxima tiragem — formulário validado
+     ========================================================= */
+  var regras = {
+    nome: function (v) { return v.trim().length >= 2 ? '' : 'Escreva como você quer ser chamada.'; },
+    email: function (v) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())) return 'Confira o e-mail: falta algo como nome@email.com.br.';
+      return '';
+    },
+    peca: function (v) { return v ? '' : 'Escolha a peça que você quer que volte ao estoque.'; },
+    tamanho: function (v) { return v ? '' : 'Escolha o tamanho que você usa.'; }
+  };
+
+  function validar(nome) {
+    var campo = $('[name="' + nome + '"]');
+    if (!campo) return true;
+    var msg = regras[nome](campo.value);
+    $('[data-campo="' + nome + '"]').classList.toggle('campo--erro', Boolean(msg));
+    $('[data-erro="' + nome + '"]').textContent = msg;
+    campo.setAttribute('aria-invalid', String(Boolean(msg)));
+    return !msg;
+  }
+
+  Object.keys(regras).forEach(function (nome) {
+    var campo = $('[name="' + nome + '"]');
+    campo.addEventListener('blur', function () { validar(nome); });
+    campo.addEventListener('input', function () {
+      if ($('[data-campo="' + nome + '"]').classList.contains('campo--erro')) validar(nome);
+    });
+    campo.addEventListener('change', function () {
+      if ($('[data-campo="' + nome + '"]').classList.contains('campo--erro')) validar(nome);
+    });
+  });
+
+  $('#form-aviso').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = Object.keys(regras).map(validar).every(Boolean);
+    if (!ok) {
+      var primeiro = $('.campo--erro input, .campo--erro select');
+      if (primeiro) primeiro.focus();
+      return;
+    }
+    var botao = $('#btn-aviso');
+    var nome = $('#nome').value.trim().split(' ')[0];
+    var rotulo = $('#peca').options[$('#peca').selectedIndex].text;
+    var tam = $('#tamanho').value;
+    var frase = $('#peca').value === 'toda'
+      ? 'quando a próxima tiragem ficar pronta, com aviso para o tamanho ' + tam
+      : 'assim que ' + rotulo + ' voltar ao estoque no tamanho ' + tam;
+    botao.disabled = true;
+    botao.textContent = 'Anotando…';
+    window.setTimeout(function () {
+      var recado = $('#recado');
+      recado.hidden = false;
+      recado.innerHTML = '<b>Pronto, ' + nome + '. Você está na lista.</b>'
+        + '<span>Avisamos em ' + $('#email').value.trim() + ' ' + frase
+        + '. Em uma versão publicada, o e-mail sairia de oi@trama.com.br na semana em que a tiragem ficasse pronta.</span>';
+      botao.disabled = false;
+      botao.textContent = 'Avisar quando voltar';
+      $('#nota-espera').textContent = '';
+      recado.scrollIntoView({ block: 'nearest', behavior: reduzido ? 'auto' : 'smooth' });
+    }, reduzido ? 120 : 600);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<a className="pular" href="#grade">Pular para a grade do curso</a>
+
+<header className="cabecalho">
+  <div className="tela cabecalho__interno">
+    <a className="grife" href="#topo">
+      <svg className="grife__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l3.4 5.6-3.4 11-3.4-11z" /><path d="M8.8 9.1h6.4" /><circle cx="12" cy="12.6" r="1.1" /></svg>
+      <span className="grife__nome">Oficina</span>
+      <span className="grife__desc">redação publicitária</span>
+    </a>
+    <nav className="nav" aria-label="Navegação principal">
+      <a href="#grade">Grade do curso</a>
+      <a href="#turmas">Como funcionam as turmas</a>
+      <a href="#instrutores">Instrutores</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#duvidas">Perguntas frequentes</a>
+    </nav>
+    <a className="botao botao--pequeno" href="#vaga">Garantir minha vaga</a>
+  </div>
+</header>
+
+<main id="topo">
+
+  {/* ================= ABERTURA ================= */}
+  <section className="abertura">
+    <div className="tela abertura__grade">
+      <div className="abertura__texto">
+        <h1 className="abertura__titulo">Aprender fazendo, com <span className="marca">prazo</span> e correção.</h1>
+        <p className="abertura__curso"><b>Oficina</b> — curso de redação publicitária, 6 semanas, com Bia Sarmento.</p>
+        <p className="abertura__linha">Seis semanas, seis exercícios corrigidos um por um. Sem aula gravada de 4 horas para você assistir depois.</p>
+        <div className="abertura__acoes">
+          <a className="botao" href="#grade">Ver a grade</a>
+          <a className="botao botao--vazio" href="#vaga">Garantir minha vaga</a>
+        </div>
+      </div>
+
+      <dl className="ficha">
+        <div className="ficha__item">
+          <dt>próxima turma</dt>
+          <dd><span className="marca">9 de março</span></dd>
+        </div>
+        <div className="ficha__item">
+          <dt>vagas</dt>
+          <dd>12</dd>
+        </div>
+        <div className="ficha__item">
+          <dt>duração</dt>
+          <dd>6 semanas</dd>
+        </div>
+        <div className="ficha__item">
+          <dt>encontros</dt>
+          <dd>1 ao vivo por semana <small>(90 min)</small></dd>
+        </div>
+        <div className="ficha__item">
+          <dt>carga total</dt>
+          <dd>42 horas</dd>
+        </div>
+      </dl>
+
+      {/* O momento autoral: uma correção sendo feita à caneta azul */}
+      <aside className="correcao" id="correcao" aria-label="Exemplo de correção de exercício da semana 1">
+        <div className="correcao__topo">
+          <span className="correcao__selo">correção · semana 1</span>
+          <span className="correcao__meta">exercício de manchete · Tintas Marajó</span>
+        </div>
+        <p className="correcao__antes" id="correcao-antes"><span className="risco">A gente tem</span> <span className="risco">a melhor</span> <span className="risco">qualidade do mercado</span> <span className="risco">com o melhor preço</span> <span className="risco">garantido</span> <span className="risco">para você</span></p>
+        <p className="correcao__depois">Chega de pagar caro para <span className="correcao__marca">pintar a sala</span>.</p>
+        <p className="correcao__nota"><b>15 palavras viraram 8.</b> O verbo foi para o começo, a promessa ficou concreta e a frase passou a caber num outdoor. Fica uma pergunta para a semana 2: caro comparado a quê? Responda isso no próximo exercício.</p>
+        <p className="correcao__pe">Bia Sarmento · 72 h depois da entrega</p>
+      </aside>
+    </div>
+  </section>
+
+  {/* ================= NÚMEROS ================= */}
+  <section className="numeros" aria-label="Números das turmas anteriores">
+    <div className="tela numeros__grade">
+      <div className="numero">
+        <b>1.240</b>
+        <span>alunos formados desde a primeira turma, em 2019</span>
+      </div>
+      <div className="numero">
+        <b>9,2</b>
+        <span>nota média das turmas de 2025, em 214 avaliações ao fim do curso</span>
+      </div>
+      <div className="numero">
+        <b>72 h</b>
+        <span>prazo máximo da correção escrita, contado da entrega do exercício</span>
+      </div>
+      <div className="numero">
+        <b>8 de 10</b>
+        <span>alunos que entregam os seis exercícios e fecham o portfólio</span>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= PRAZO ================= */}
+  <section className="prazo" aria-label="Prazo e vagas da próxima turma">
+    <div className="tela prazo__folha">
+      <div className="prazo__bloco">
+        <span className="prazo__rotulo">próxima turma</span>
+        <b className="prazo__dia"><span className="marca">9 de março</span></b>
+        <span className="prazo__obs" id="contagem">Turma de terça, 20h, por 6 semanas.</span>
+      </div>
+      <div className="prazo__bloco">
+        <span className="prazo__rotulo">vagas</span>
+        <b className="prazo__dia">8 de 12 disponíveis</b>
+        <span className="vagas" role="img" aria-label="8 das 12 vagas disponíveis">
+          <i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga vaga--livre"></i><i className="vaga"></i><i className="vaga"></i><i className="vaga"></i><i className="vaga"></i>
+        </span>
+      </div>
+      <div className="prazo__bloco">
+        <span className="prazo__rotulo">inscrições até</span>
+        <b className="prazo__dia"><span className="marca">6 de março, 23h59</span></b>
+        <span className="prazo__obs">Depois disso a turma fecha e a próxima abre em maio.</span>
+      </div>
+      <a className="botao prazo__acao" href="#vaga">Garantir minha vaga</a>
+    </div>
+  </section>
+
+  {/* ================= GRADE DO CURSO ================= */}
+  <section className="secao grade-secao" id="grade">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>A grade inteira, aula por aula, antes de você decidir.</h2>
+        <p>Seis módulos, 27 aulas, 42 horas. Abra um módulo para ver a ementa, o que você entrega no fim dele e qual exercício volta corrigido. O painel ao lado soma o que estiver aberto.</p>
+      </div>
+
+      <div className="grade">
+        <div className="grade__barra">
+          <p className="grade__contagem"><b>27 aulas</b> · <b>42 horas</b> · <b>6 encontros ao vivo</b> · material liberado 5 dias antes da abertura</p>
+          <div className="grade__botoes">
+            <button className="botao botao--vazio botao--pequeno" type="button" id="abrir-tudo">Abrir tudo</button>
+            <button className="botao botao--vazio botao--pequeno" type="button" id="fechar-tudo" disabled>Fechar tudo</button>
+          </div>
+        </div>
+
+        <aside className="painel" aria-label="Resumo do que está aberto na grade">
+          <h3 className="painel__titulo">O que está aberto agora</h3>
+          <dl className="painel__dados">
+            <div className="painel__linha">
+              <dt>módulos abertos</dt>
+              <dd><b id="p-modulos">0</b><span>de 6</span></dd>
+            </div>
+            <div className="painel__linha">
+              <dt>aulas visíveis</dt>
+              <dd><b id="p-aulas">0</b><span>de 27</span></dd>
+            </div>
+            <div className="painel__linha">
+              <dt>carga visível</dt>
+              <dd><b id="p-horas">0</b><span>de 42 h</span></dd>
+            </div>
+          </dl>
+          <div className="painel__barra" id="p-barra-caixa" role="img" aria-label="Nenhuma das 42 horas visível"><i id="p-barra"></i></div>
+          <p className="painel__nota" id="p-nota" aria-live="polite">Nenhum módulo aberto. Nada visível ainda: 0 de 27 aulas e 0 de 42 horas.</p>
+        </aside>
+
+        <div className="grade__modulos" id="modulos">
+          <article className="modulo" data-aulas="4" data-horas="7">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m1-botao" aria-expanded="false" aria-controls="m1">
+                <span className="modulo__n">1</span>
+                <span className="modulo__nome">A frase que vende: ritmo, corte e verbo</span>
+                <span className="modulo__meta"><b>4</b> aulas · <b>7 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m1" role="region" aria-labelledby="m1-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">Por que a frase publicitária é curta — e por que a sua não é</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">Verbo de ação: o motor da frase <em className="aula__tag">ao vivo</em></span><span className="aula__d">2 h</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">Ritmo: ler em voz alta, sílaba tônica, onde respirar</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">Oficina de corte: 15 palavras viram 8</span><span className="aula__d">2 h</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Dez manchetes para o mesmo produto, com a versão de 8 palavras destacada e a justificativa de uma linha para cada corte.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>Reescrever três manchetes de varejo com metade das palavras. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+
+          <article className="modulo" data-aulas="4" data-horas="6">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m2-botao" aria-expanded="false" aria-controls="m2">
+                <span className="modulo__n">2</span>
+                <span className="modulo__nome">Briefing: o que o cliente pediu e o que ele precisa</span>
+                <span className="modulo__meta"><b>4</b> aulas · <b>6 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m2" role="region" aria-labelledby="m2-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">Ler o pedido: o que está escrito e o que está implícito</span><span className="aula__d">1 h</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">As sete perguntas que mudam um briefing <em className="aula__tag">ao vivo</em></span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">Público, tensão e promessa: o quadro de uma página</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">Estudo de caso: um briefing de varejo desmontado peça por peça</span><span className="aula__d">2 h</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Um briefing de uma página no formato que a agência usa, com tensão e promessa escritas em uma frase cada.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>Transformar um pedido vago de cliente em briefing de uma página — e apontar as duas perguntas que faltavam. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+
+          <article className="modulo" data-aulas="5" data-horas="8">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m3-botao" aria-expanded="false" aria-controls="m3">
+                <span className="modulo__n">3</span>
+                <span className="modulo__nome">Do insight ao conceito</span>
+                <span className="modulo__meta"><b>5</b> aulas · <b>8 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m3" role="region" aria-labelledby="m3-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">Insight não é observação: o que sustenta uma campanha inteira</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">Onde procurar: repertório, cultura e o que o público já diz sozinho</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">Do insight ao conceito em três movimentos <em className="aula__tag">ao vivo</em></span><span className="aula__d">2 h</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">Conceito que aguenta desdobramento: as doze peças</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A5</span><span className="aula__t">Três conceitos da turma, triturados ao vivo sem piedade</span><span className="aula__d">1h30</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Um conceito escrito em uma frase, com três provas de que ele aguenta mais de uma peça e um parágrafo de defesa.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>Escrever um conceito para um produto que você não escolheria e defendê-lo em 150 palavras. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+
+          <article className="modulo" data-aulas="5" data-horas="8">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m4-botao" aria-expanded="false" aria-controls="m4">
+                <span className="modulo__n">4</span>
+                <span className="modulo__nome">Formatos: do outdoor ao roteiro de 6 segundos</span>
+                <span className="modulo__meta"><b>5</b> aulas · <b>8 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m4" role="region" aria-labelledby="m4-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">Outdoor: nove palavras e nenhuma desculpa</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">Anúncio impresso e digital: título, linha de apoio, assinatura</span><span className="aula__d">1 h</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">Roteiro de 30 e de 15 segundos: onde a ideia mora</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">Roteiro de 6 segundos: o que sobra quando não sobra tempo <em className="aula__tag">ao vivo</em></span><span className="aula__d">2 h</span></li>
+                <li className="aula"><span className="aula__n">A5</span><span className="aula__t">Social e e-mail: escrever para quem está rolando a tela</span><span className="aula__d">2 h</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Um kit de três formatos a partir do mesmo conceito: outdoor, roteiro de 6 segundos e anúncio de feed, com as contagens de palavra e de segundo.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>Adaptar o seu conceito para outdoor e para roteiro de 6 segundos, sem repetir o mesmo texto nos dois. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+
+          <article className="modulo" data-aulas="4" data-horas="6">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m5-botao" aria-expanded="false" aria-controls="m5">
+                <span className="modulo__n">5</span>
+                <span className="modulo__nome">Revisão: cortar 30 % sem perder a ideia</span>
+                <span className="modulo__meta"><b>4</b> aulas · <b>6 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m5" role="region" aria-labelledby="m5-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">Reler como leitor, não como autor</span><span className="aula__d">1 h</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">Os sete cortes que quase sempre funcionam <em className="aula__tag">ao vivo</em></span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">Precisão: concordância, vírgula, clichê, redundância e advérbio inútil</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">Revisão aberta: um texto por aluno, na tela, com a turma opinando</span><span className="aula__d">2 h</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Antes e depois de uma peça sua, com a contagem real de palavras nas duas versões e a lista do que foi cortado.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>A mesma peça em duas versões — original e cortada em 30 % — com a conta à mostra. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+
+          <article className="modulo" data-aulas="5" data-horas="7">
+            <h3 className="modulo__cabeca">
+              <button className="modulo__botao" type="button" id="m6-botao" aria-expanded="false" aria-controls="m6">
+                <span className="modulo__n">6</span>
+                <span className="modulo__nome">Portfólio: três peças que sustentam uma entrevista</span>
+                <span className="modulo__meta"><b>5</b> aulas · <b>7 h</b></span>
+                <span className="carga" aria-hidden="true"><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i><i className="cheio"></i></span>
+                <svg className="modulo__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6" /></svg>
+              </button>
+            </h3>
+            <div className="modulo__corpo" id="m6" role="region" aria-labelledby="m6-botao">
+              <div className="modulo__interno">
+              <ol className="ementa">
+                <li className="aula"><span className="aula__n">A1</span><span className="aula__t">O que um diretor de criação olha nos primeiros 90 segundos</span><span className="aula__d">1 h</span></li>
+                <li className="aula"><span className="aula__n">A2</span><span className="aula__t">Escolher três peças — e por que não quatro</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A3</span><span className="aula__t">A defesa de cada peça: problema, ideia, decisão <em className="aula__tag">ao vivo</em></span><span className="aula__d">2 h</span></li>
+                <li className="aula"><span className="aula__n">A4</span><span className="aula__t">PDF, site ou post: o formato que aguenta ser lido em 4 minutos</span><span className="aula__d">1h30</span></li>
+                <li className="aula"><span className="aula__n">A5</span><span className="aula__t">Simulação de entrevista com o Tomás, com correção ao vivo</span><span className="aula__d">1 h</span></li>
+              </ol>
+              <dl className="modulo__ficha">
+                <div><dt>Você entrega</dt><dd>Portfólio de três peças, cada uma com defesa escrita de 120 palavras, em PDF pronto para enviar.</dd></div>
+                <div><dt>Exercício corrigido</dt><dd>Fechar o portfólio e gravar um áudio de 2 minutos defendendo a peça principal, como se estivesse na entrevista. <span className="marca">entrega até domingo, 23h59</span></dd></div>
+              </dl>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p className="grade__nota">As 42 horas somam encontro ao vivo (9 h), leitura e exercício. É uma estimativa honesta: quem escreve devagar leva mais, e isso não é problema — desde que o exercício chegue até domingo. A barra de cada módulo é uma contagem de aulas: cinco casas, porque nenhum módulo passa de cinco.</p>
+    </div>
+  </section>
+
+  {/* ================= COMO FUNCIONAM AS TURMAS ================= */}
+  <section className="secao" id="turmas">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>Como as seis semanas funcionam, dia por dia.</h2>
+        <p>Não existe plataforma com 60 vídeos para assistir no seu ritmo. Existe uma turma de 12 pessoas, um encontro por semana e um exercício que volta com comentários no seu próprio texto.</p>
+      </div>
+
+      <ol className="etapas">
+        <li className="etapa">
+          <span className="etapa__n">1</span>
+          <div className="etapa__conteudo">
+            <h3>Inscrição e nivelamento</h3>
+            <p>Você responde o quiz de três perguntas e, se quiser, conversa 20 minutos com a Bia. A turma é montada por perfil: quem nunca escreveu para vender não fica no mesmo grupo de quem já escreve por profissão. São 12 vagas e a vaga só é sua depois do pagamento.</p>
+            <p className="etapa__quando">até <span className="marca">6 de março</span>, ou enquanto houver vaga</p>
+          </div>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n">2</span>
+          <div className="etapa__conteudo">
+            <h3>Encontro ao vivo, uma vez por semana</h3>
+            <p>Terças, 90 minutos, ao vivo. Cada encontro abre com a devolutiva geral da turma e fecha com o enunciado da semana. A gravação fica no ar em 12 horas, mas o encontro é feito para ser assistido junto — é onde o texto é discutido e onde as dúvidas aparecem.</p>
+            <p className="etapa__quando"><span className="marca">terças, 20h</span> · 90 min, com gravação liberada em 12 h</p>
+          </div>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n">3</span>
+          <div className="etapa__conteudo">
+            <h3>Exercício entregue até domingo</h3>
+            <p>O exercício sai no fim do encontro e é entregue até domingo. Dá entre 40 e 90 minutos de escrita, sobre um briefing de verdade. Todo exercício tem um entregável nomeado — aqui não existe "escreva um texto livre".</p>
+            <p className="etapa__quando"><span className="marca">domingo, 23h59</span> · entre 40 e 90 min de escrita</p>
+          </div>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n">4</span>
+          <div className="etapa__conteudo">
+            <h3>Correção individual por escrito</h3>
+            <p>A correção volta no seu próprio texto, com comentário linha por linha, em até 72 horas. Sem nota e sem "bom trabalho": o que fica escrito é o que cortar, o que mudar de lugar e o que você já acertou sem perceber.</p>
+            <p className="etapa__quando"><span className="marca">até quarta</span>, 72 h depois da entrega</p>
+          </div>
+        </li>
+        <li className="etapa">
+          <span className="etapa__n">5</span>
+          <div className="etapa__conteudo">
+            <h3>Plantão de dúvidas e fechamento</h3>
+            <p>Uma quinta por módulo, 30 minutos abertos, para o que não caberia no encontro. No fim das seis semanas você recebe o mapa do seu texto: o que melhorou, o que ainda trava e o que praticar nos próximos três meses.</p>
+            <p className="etapa__quando"><span className="marca">quinta, 30 min</span> · aberto, sem pauta fixa</p>
+          </div>
+        </li>
+      </ol>
+
+      <div className="politica">
+        <h3>Política de atraso, sem letra miúda</h3>
+        <p>Entregou depois de domingo, sem avisar? Você perde a correção individual daquela semana — e só dela. O exercício continua valendo para o fechamento, o material segue liberado, a gravação continua no ar e você pode trazer o texto para o plantão de quinta. Avisou antes, com um motivo real? A Bia combina outro prazo, uma vez por turma. O que não fazemos é entregar a mesma correção para quem escreveu e para quem não escreveu.</p>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= INSTRUTORES ================= */}
+  <section className="secao instrutores" id="instrutores">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>Quem corrige o seu texto.</h2>
+        <p>Duas pessoas escrevem e assinam o curso. Não há monitor no meio do caminho: quem corrige o seu exercício é quem escreveu a aula.</p>
+      </div>
+
+      <div className="instrutores__grade">
+        <article className="instrutor">
+          <div className="instrutor__topo">
+            <div className="carimbo" aria-hidden="true"><b>BS</b><span>redatora</span></div>
+            <div>
+              <h3>Bia Sarmento</h3>
+              <p className="instrutor__papel">redatora publicitária · 14 anos de agência · módulos 1 a 5</p>
+            </div>
+          </div>
+          <p>Começou escrevendo anúncio de classificados e passou os últimos oito anos em varejo, educação e saúde — de roteiro de 6 segundos a manifesto de marca. Assina campanhas para a Tintas Marajó, a Rede Bem Viver e a Coleção Primeira Casa. Escreve à mão o primeiro rascunho de tudo, o que explica o método do curso.</p>
+          <dl className="instrutor__dados">
+            <div><dt>correções por turma</dt><dd>72 exercícios, um por aluno por semana, todos lidos por ela</dd></div>
+            <div><dt>onde escreveu</dt><dd>varejo, educação, saúde e uma rede de 240 lojas</dd></div>
+            <div><dt>ensina desde</dt><dd>2019, com 1.240 alunos formados</dd></div>
+          </dl>
+          <svg className="assinatura" viewBox="0 0 200 44" aria-hidden="true"><path d="M6 32c13-2 21-13 25-23 2-6-3-8-6-3-5 8 2 22 12 26 8 3 13-2 14-8 1-6-5-8-8-3-3 6 4 11 12 11 6 0 9-3 11-7 4 8 15 11 26 7 8-3 13-10 11-16-1-4-6-4-8 0-3 6 3 13 13 14 11 1 19-6 24-13" /></svg>
+        </article>
+
+        <article className="instrutor">
+          <div className="instrutor__topo">
+            <div className="carimbo" aria-hidden="true"><b>TA</b><span>criação</span></div>
+            <div>
+              <h3>Tomás Aguiar</h3>
+              <p className="instrutor__papel">diretor de criação · 19 anos entre agência e estúdio · módulo 6</p>
+            </div>
+          </div>
+          <p>Dirige criação em uma casa de filmes publicitários e já assinou campanhas de bancos, montadoras e uma campanha de vacinação que rodou em três estados. Entra na turma no módulo 6 para a aula de portfólio e para a simulação de entrevista — ele já contratou 40 redatores e conta, sem cerimônia, o que olha nos primeiros 90 segundos.</p>
+          <dl className="instrutor__dados">
+            <div><dt>o que faz hoje</dt><dd>direção de criação em casa de filmes, em São Paulo</dd></div>
+            <div><dt>contratou</dt><dd>40 redatores e 12 duplas de criação</dd></div>
+            <div><dt>na turma</dt><dd>aula de portfólio e simulação de entrevista ao vivo</dd></div>
+          </dl>
+          <svg className="assinatura" viewBox="0 0 200 44" aria-hidden="true"><path d="M5 30c10-1 15-8 19-16 3-6-2-9-5-4-4 7 1 19 10 23 7 3 12-1 13-6 1-5-4-8-7-3-3 5 3 10 10 10 5 0 8-2 10-6 2 7 10 12 19 11 7-1 11-5 12-10 1-4-3-6-6-3-3 4-1 11 6 14 5 2 10 2 15 0" /></svg>
+        </article>
+      </div>
+
+      <p className="instrutores__nota">Cada um conduz ao vivo os encontros dos módulos que assina. A correção escrita de todos os exercícios é da Bia.</p>
+    </div>
+  </section>
+
+  {/* ================= QUIZ DE NIVELAMENTO ================= */}
+  <section className="secao" id="nivelamento">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>Três perguntas para saber se esta turma é a sua.</h2>
+        <p>As respostas mudam a recomendação de verdade. Se o curso padrão não servir para o seu caso, o resultado diz isso com todas as letras — inclusive quando a resposta honesta é não vender para você agora.</p>
+      </div>
+
+      <div className="quiz" id="quiz">
+        <div className="quiz__topo">
+          <span className="quiz__passo" id="quiz-passo">Pergunta 1 de 3</span>
+          <div className="quiz__trilha" id="quiz-barra-caixa" role="progressbar" aria-labelledby="quiz-passo" aria-valuemin={0} aria-valuemax={3} aria-valuenow={1}><i id="quiz-barra"></i></div>
+        </div>
+        <div className="quiz__palco" id="quiz-palco"></div>
+        <p className="quiz__erro" id="quiz-erro" role="alert" hidden></p>
+        <div className="quiz__acoes">
+          <button className="botao botao--vazio" type="button" id="quiz-voltar" disabled>Voltar</button>
+          <button className="botao" type="button" id="quiz-seguir">Continuar</button>
+        </div>
+      </div>
+
+      <div className="quiz__resultado" id="quiz-resultado" aria-live="polite"></div>
+    </div>
+  </section>
+
+  {/* ================= INVESTIMENTO ================= */}
+  <section className="secao" id="investimento">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>O preço inteiro, com o total do parcelamento.</h2>
+        <p>Sem "valor promocional" que volta ao preço cheio na semana seguinte. O parcelamento tem juros da operadora do cartão e o total está escrito na linha de baixo.</p>
+      </div>
+
+      <div className="investimento__grade">
+        <dl className="preco">
+          <div className="preco__linha preco__linha--principal">
+            <dt>Oficina · turma coletiva, 6 semanas
+              <span>27 aulas, 6 encontros ao vivo, 6 exercícios corrigidos por escrito e material liberado por 24 meses.</span>
+            </dt>
+            <dd><b>R$ 1.290</b><small>à vista, no PIX ou no boleto</small></dd>
+          </div>
+          <div className="preco__linha">
+            <dt>No cartão de crédito
+              <span>12 parcelas fixas, com os juros da operadora. Não é "sem juros" — nenhum parcelamento em 12 vezes é.</span>
+            </dt>
+            <dd><b>12x R$ 129</b><small>total de R$ 1.548</small></dd>
+          </div>
+          <div className="preco__linha">
+            <dt>Oficina + 4 mentorias individuais
+              <span>Quatro encontros de 1 hora sobre o seu texto e o seu portfólio, marcados por você. Seis vagas por turma.</span>
+            </dt>
+            <dd><b>R$ 2.480</b><small>à vista · 12x de R$ 248 (total R$ 2.976)</small></dd>
+          </div>
+          <div className="preco__linha">
+            <dt>Turma fechada para a sua equipe
+              <span>De 6 a 12 pessoas, ementa montada sobre os textos que a sua equipe já escreve, no seu horário.</span>
+            </dt>
+            <dd><b>Sob consulta</b><small>a partir de R$ 6.900 para até 12 pessoas</small></dd>
+          </div>
+        </dl>
+
+        <aside className="garantia">
+          <h3>Garantia de 7 dias</h3>
+          <p>Assista ao primeiro encontro e leia a primeira correção. Se achar que não é para você, escreva para a gente em até 7 dias corridos da inscrição e devolvemos o valor integral — sem formulário, sem perguntas sobre o motivo e sem reter nenhuma taxa.</p>
+          <ul className="garantia__lista">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" /></svg>Seis exercícios corrigidos por escrito, um por semana</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" /></svg>Material e gravações liberados por 24 meses</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" /></svg>Portfólio de três peças pronto para enviar</li>
+          </ul>
+          <a className="botao" href="#vaga">Garantir minha vaga</a>
+          <p className="miudo">Inscrições até <span className="marca">6 de março</span> · <span className="marca">8 de 12 vagas</span></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= PERGUNTAS FREQUENTES ================= */}
+  <section className="secao" id="duvidas">
+    <div className="tela">
+      <div className="secao__cabeca">
+        <h2>O que perguntam antes de se inscrever.</h2>
+      </div>
+      <div className="perguntas">
+        <details className="pergunta" open>
+          <summary>Preciso ter experiência para acompanhar?</summary>
+          <p>Não. Dois terços das turmas nunca escreveram para vender nada — são pessoas que escrevem e-mail, proposta e apresentação no trabalho e querem escrever melhor. O nivelamento serve justamente para isso: quem já escreve por profissão fica num grupo com um ritmo mais duro, e quem está começando tem o módulo 1 inteiro para firmar a base. O que não dá para acompanhar é sem escrever: o exercício da semana é obrigatório para receber a correção.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Quanto tempo por semana o curso pede?</summary>
+          <p>Cerca de 7 horas: 1h30 de encontro ao vivo, 1h30 de leitura e vídeo curto, e umas 4 horas de escrita e revisão. Somando as seis semanas, dá as 42 horas da grade. Se você tem menos de 5 horas por semana, a turma estendida espalha a mesma ementa em 9 semanas, por cerca de 4h40 por semana — mesmo preço. O quiz de nivelamento indica isso quando é o seu caso.</p>
+        </details>
+        <details className="pergunta">
+          <summary>E se eu perder um encontro ao vivo?</summary>
+          <p>A gravação fica no ar em até 12 horas e o material da semana é liberado do mesmo jeito. Você continua devendo o exercício e continua recebendo a correção individual — perder o encontro não tira nada além da conversa ao vivo. Quem perde três encontros seguidos costuma travar, e aí a gente conversa: já aconteceu de aluno migrar para a turma seguinte sem pagar de novo, quando avisou antes.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Tem certificado no final?</summary>
+          <p>Tem, com carga horária de 42 horas e a nota de participação, emitido em PDF depois da entrega do portfólio. Mas seja honesto consigo: ninguém foi contratado por causa de um certificado de curso livre. O que a entrevista olha é o portfólio de três peças com defesa escrita — e é isso que você sai levando.</p>
+        </details>
+        <details className="pergunta">
+          <summary>O acesso ao material é vitalício?</summary>
+          <p>Não, e desconfie de quem promete isso. O acesso é de 24 meses, contados da inscrição: tempo de sobra para refazer os exercícios, rever os encontros e usar o material numa segunda turma. Antes de fechar, você recebe tudo em PDF e pode baixar as gravações que quiser — o material é seu, a hospedagem é nossa.</p>
+        </details>
+        <details className="pergunta">
+          <summary>Como funciona a garantia de 7 dias?</summary>
+          <p>Vale do dia da inscrição, não do primeiro encontro: você tem 7 dias corridos para assistir à aula de abertura, ler a primeira correção e desistir. O pedido é por e-mail, sem formulário e sem justificativa, e a devolução é integral, no mesmo meio de pagamento, em até 5 dias úteis. Depois desse prazo, o que existe é a política de atraso descrita acima — e a possibilidade de migrar para a turma seguinte uma vez.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= GARANTIR MINHA VAGA ================= */}
+  <section className="fecho" id="vaga">
+    <div className="tela fecho__grade">
+      <div className="fecho__texto">
+        <h2>Garantir minha vaga na turma de <span className="marca">9 de março</span>.</h2>
+        <p>São 12 vagas e a turma fecha em <span className="marca">6 de março</span>. Você preenche, a gente reserva a vaga por 48 horas e envia o link de pagamento com o contrato.</p>
+        <ul className="fecho__lista">
+          <li>Link de pagamento e contrato em até 1 dia útil</li>
+          <li>Nivelamento no mesmo e-mail: quiz respondido + 20 min de conversa, se você quiser</li>
+          <li>Lista de leitura e primeiro exercício liberados 5 dias antes da abertura</li>
+        </ul>
+        <p className="fecho__contato">Dúvida antes de decidir? <a href="mailto:turmas@oficinaestudio.com.br">turmas@oficinaestudio.com.br</a> · (11) 94000-0000, de segunda a sexta, das 10h às 18h.</p>
+      </div>
+
+      <form className="formulario" id="form-vaga" noValidate>
+        <div className="campo" data-campo="nome">
+          <label htmlFor="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" autoComplete="name" placeholder="Marina Sarmento" required />
+          <span className="campo__erro" data-erro="nome"></span>
+        </div>
+        <div className="campo" data-campo="email">
+          <label htmlFor="email">E-mail</label>
+          <input id="email" name="email" type="email" autoComplete="email" placeholder="marina@empresa.com.br" required />
+          <span className="campo__erro" data-erro="email"></span>
+        </div>
+        <div className="campo" data-campo="whatsapp">
+          <label htmlFor="whatsapp">WhatsApp com DDD</label>
+          <input id="whatsapp" name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(11) 90000-0000" required />
+          <span className="campo__erro" data-erro="whatsapp"></span>
+        </div>
+        <div className="campo" data-campo="trilha">
+          <label htmlFor="trilha">Qual turma você quer</label>
+          <select id="trilha" name="trilha" required>
+            <option value="">Escolha uma opção</option>
+            <option value="coletiva">Turma coletiva · 9 de março · R$ 1.290</option>
+            <option value="estendida">Turma estendida de 9 semanas · 16 de março · R$ 1.290</option>
+            <option value="mentoria">Oficina + mentoria individual · R$ 2.480</option>
+            <option value="corporativa">Turma fechada para a minha equipe · sob consulta</option>
+          </select>
+          <span className="campo__erro" data-erro="trilha"></span>
+        </div>
+        <div className="campo" data-campo="recado">
+          <label htmlFor="recado">O que você escreve hoje <small>(opcional)</small></label>
+          <textarea id="recado" name="recado" rows={3} placeholder="Ex.: escrevo e-mail de cobrança e post de rede social para uma loja de tintas."></textarea>
+          <span className="campo__erro" data-erro="recado"></span>
+        </div>
+        <button className="botao botao--largo" type="submit" id="btn-vaga">Reservar minha vaga</button>
+        <p className="miudo">Ao enviar, você concorda em receber o contato sobre a turma. Nada de lista de e-mail e nada compartilhado com terceiros.</p>
+      </form>
+
+      <div className="recado" id="recado-ok" role="status" hidden></div>
+    </div>
+  </section>
+</main>
+
+<footer className="rodape">
+  <div className="tela rodape__grade">
+    <div>
+      <p><b>Oficina</b> · curso de redação publicitária · São Paulo · turmas@oficinaestudio.com.br · (11) 94000-0000</p>
+      <p>CNPJ 00.000.000/0001-00 · termos e política de privacidade em versão de demonstração</p>
+    </div>
+    <p>Demonstração de catálogo. Escola, professores, alunos, marcas citadas, preços e números são fictícios — os 1.240 alunos formados, a nota 9,2 e os 8 de cada 10 fazem parte do exemplo, não de um levantamento real.</p>
+    <p><a href="../index.html">Voltar ao catálogo de modelos</a></p>
+  </div>
+</footer>

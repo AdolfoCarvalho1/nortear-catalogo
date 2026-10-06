@@ -1,0 +1,734 @@
+import Interacoes from './Interacoes';
+
+/**
+ * 05-fitness — markup convertido do modelo estático.
+ *
+ * As classes e a estrutura são as originais: o desenho não mudou na migração
+ * para Next. O CSS do modelo é importado no layout da rota.
+ */
+export default function PaginaForja() {
+  return (
+    <>
+      <Interacoes />
+      <a className="pular" href="#abertura">Pular para o conteúdo</a>
+
+      <header className="cabecalho">
+        <div className="tela cabecalho__interno">
+          <a className="marca" href="#topo" aria-label="Forja, studio de treino — ir para o topo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="14" width="4" height="7" rx="1"></rect>
+              <rect x="10" y="9" width="4" height="12" rx="1"></rect>
+              <rect x="17" y="4" width="4" height="17" rx="1"></rect>
+            </svg>
+            <b>Forja</b><span>· studio de treino, Batel</span>
+          </a>
+          <nav className="nav" aria-label="Navegação principal">
+            <a href="#acompanhamento">Acompanhamento</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#valores">Valores</a>
+            <a href="#duvidas">Dúvidas</a>
+          </nav>
+          <a className="botao botao--pequeno" href="#agendar">Agendar avaliação</a>
+        </div>
+      </header>
+
+      <main id="topo">
+
+        {/* ================= ABERTURA: a promessa e uma ficha já anotada ================= */}
+        <section className="abertura" id="abertura">
+          <div className="tela abertura__grade">
+            <div>
+              <p className="abertura__quem">Forja · studio do personal Rafa Muniz · Batel, Curitiba</p>
+              <h1>Treino medido.<br />Resultado anotado.</h1>
+              <p className="abertura__linha">Cada série é registrada. O que não é medido não melhora.</p>
+              <p className="abertura__texto">Quatro alunos por horário, no máximo. O plano sai do seu teste, não de um modelo pronto — e os mesmos seis testes voltam a cada 6 semanas, para comparar número com número. Presencial no studio do Batel ou online, com planilha e vídeo.</p>
+              <div className="abertura__acoes">
+                <a className="botao" href="#calculadora">Montar meu plano</a>
+                <a className="botao botao--vazio" href="#agendar">Agendar avaliação</a>
+              </div>
+              <ul className="ficha">
+                <li><span>Alunos por horário</span><b>4</b><small>no máximo, no studio do Batel</small></li>
+                <li><span>Reavaliação</span><b>a cada 6 semanas</b><small>com os mesmos 6 testes</small></li>
+                <li><span>Quem conduz</span><b>Rafa Muniz</b><small>CREF 000000-G/PR</small></li>
+                <li><span>Onde atende</span><b>presencial e online</b><small>studio em Curitiba, planilha para o resto do Brasil</small></li>
+              </ul>
+            </div>
+
+            <figure className="quadro">
+              <div className="quadro__topo">
+                <span>ficha 014</span>
+                <span>agachamento livre</span>
+                <span>14 semanas</span>
+              </div>
+              <p className="quadro__valor"><b>+38</b><span>kg</span></p>
+              <p className="quadro__contexto">de carga no agachamento da M. Andrade, da semana 1 (42 kg) até a semana 14 (80 kg), treinando 3x por semana.</p>
+              <div className="grafico" role="img" aria-label="Carga no agachamento livre, semana a semana: 42, 45, 48, 52, 55, 58, 62, 66, 68, 70, 72, 74, 77 e 80 quilos entre a semana 1 e a semana 14. A última barra é a semana que está sendo lida.">
+                <span className="grafico__barra" style={{ "--i": "0", height: "52.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "1", height: "56.3%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "2", height: "60%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "3", height: "65%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "4", height: "68.8%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "5", height: "72.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "6", height: "77.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "7", height: "82.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "8", height: "85%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "9", height: "87.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "10", height: "90%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "11", height: "92.5%" } as React.CSSProperties}></span>
+                <span className="grafico__barra" style={{ "--i": "12", height: "96.3%" } as React.CSSProperties}></span>
+                <span className="grafico__barra grafico__barra--lida" style={{ "--i": "13", height: "100%" } as React.CSSProperties}></span>
+                <span className="grafico__marca" style={{ left: "39.3%" }}></span>
+                <span className="grafico__marca" style={{ left: "82.1%" }}></span>
+              </div>
+              <div className="quadro__eixo"><span>semana 1 · 42 kg</span><span>semana 14 · 80 kg</span></div>
+              <figcaption className="quadro__nota">A carga é anotada no fim de cada sessão, série por série. As duas linhas verticais marcam as avaliações das semanas 6 e 12, quando os testes foram refeitos.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* ================= FAIXA DE MEDIDAS: três anotações do quadro ================= */}
+        <section className="medidas" aria-labelledby="medidas-titulo">
+          <div className="tela">
+            <h2 className="medidas__titulo" id="medidas-titulo">Anotações do quadro deste mês</h2>
+            <ul className="medidas__grade">
+              <li className="medida">
+                <p className="medida__ficha">ficha 014 · M. Andrade · 14 semanas</p>
+                <p className="medida__valor"><b>+38</b><span>kg</span></p>
+                <p className="medida__contexto">de carga no agachamento livre, de 42 kg na primeira avaliação para 80 kg na semana 14. Três sessões por semana, sem falta no período.</p>
+              </li>
+              <li className="medida">
+                <p className="medida__ficha">diário do studio · último ciclo de 6 semanas</p>
+                <p className="medida__valor"><b>1.284</b><span>séries</span></p>
+                <p className="medida__contexto">registradas com carga e repetição pelos 22 alunos, das 1.352 prescritas no ciclo. As 68 sem registro entram como falha no fechamento — e o Rafa cobra na semana seguinte.</p>
+              </li>
+              <li className="medida">
+                <p className="medida__ficha">média de 11 alunos · 3x por semana há 6 meses</p>
+                <p className="medida__valor"><b>−7,4</b><span>cm</span></p>
+                <p className="medida__contexto">de cintura, sempre com a mesma fita e no mesmo ponto da avaliação anterior. Não é meta de ninguém: é o que saiu da média de quem não faltou.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ================= COMO FUNCIONA (a passagem quieta) ================= */}
+        <section className="secao secao--quieta" id="acompanhamento">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Como funciona o acompanhamento</h2>
+              <p>Quatro etapas, sempre na mesma ordem. A cada 6 semanas o ciclo fecha e recomeça com os mesmos testes — é o que permite comparar o número de hoje com o de três meses atrás.</p>
+            </div>
+            <ol className="etapas">
+              <li className="etapa">
+                <p className="etapa__quando">Etapa 1 · 60 min</p>
+                <div className="etapa__corpo">
+                  <h3>Avaliação inicial</h3>
+                  <p>Seis testes na primeira visita: mobilidade de ombro e quadril, agachamento com barra vazia, prancha isométrica, subida de degrau por 3 minutos, bioimpedância e cintura. O teste serve para achar o ponto de partida, não para aprovar ninguém.</p>
+                  <p className="etapa__recebe"><span>Você recebe</span> a ficha com os seis resultados anotados, a comparação com a faixa de referência da sua idade e a lista do que precisa melhorar primeiro.</p>
+                </div>
+              </li>
+              <li className="etapa">
+                <p className="etapa__quando">Etapa 2 · antes da 1ª sessão</p>
+                <div className="etapa__corpo">
+                  <h3>Plano de 6 semanas</h3>
+                  <p>Montado a partir do seu teste. Cada exercício vem com carga de entrada, repetições, tempo de descanso e o que fazer quando a série fica difícil — inclusive a instrução de parar duas repetições antes da falha, nas primeiras semanas.</p>
+                  <p className="etapa__recebe"><span>Você recebe</span> a planilha impressa e digital do ciclo, com vídeo de execução de cada exercício e a ordem em que eles entram na sessão.</p>
+                </div>
+              </li>
+              <li className="etapa">
+                <p className="etapa__quando">Etapa 3 · no studio ou online</p>
+                <div className="etapa__corpo">
+                  <h3>Treino presencial ou planilha com vídeo</h3>
+                  <p>No studio são 4 alunos por horário e o Rafa corrige execução série por série. No online, você grava uma série de cada exercício e recebe a correção em áudio, com o ajuste de carga do próximo treino.</p>
+                  <p className="etapa__recebe"><span>Você recebe</span> as sessões do ciclo, o diário de série para registrar carga e repetição, e resposta em até 1 dia útil em qualquer um dos formatos.</p>
+                </div>
+              </li>
+              <li className="etapa">
+                <p className="etapa__quando">Etapa 4 · semana 6</p>
+                <div className="etapa__corpo">
+                  <h3>Reavaliação e ajuste</h3>
+                  <p>Os mesmos seis testes, repetidos na mesma ordem e no mesmo horário do dia. Carga que subiu fica registrada e o exercício continua; exercício que travou muda de estratégia ou sai do plano, com o motivo escrito na ficha.</p>
+                  <p className="etapa__recebe"><span>Você recebe</span> a comparação lado a lado das duas avaliações, o plano do próximo ciclo e a lista do que ficou pendente para as próximas 6 semanas.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* ================= RESULTADOS ANOTADOS (a passagem densa) ================= */}
+        <section className="secao" id="resultados">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Resultados anotados</h2>
+              <p>Seis fichas do studio, com o tempo de acompanhamento e as três medidas que a gente repete em toda reavaliação. Nada de antes e depois: número de entrada, número de hoje e a diferença.</p>
+            </div>
+
+            <table className="tabela">
+                <caption>Fichas de alunos do Forja · ciclo encerrado em fevereiro de 2026</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Aluno</th>
+                    <th scope="col">Acompanhamento</th>
+                    <th scope="col">Agachamento livre</th>
+                    <th scope="col">Levantamento terra</th>
+                    <th scope="col">Gordura corporal</th>
+                    <th scope="col">Observação do Rafa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" className="aluno"><b>M. Andrade</b><span>3x por semana, no studio</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">14 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">80 kg</b><span className="delta">+38 kg desde 42 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">95 kg</b><span className="delta">+40 kg desde 55 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">21,4 %</b><span className="delta">−6,1 pontos</span></span></td>
+                    <td data-rotulo="Observação" className="obs">Fechou os dois ciclos sem faltar. É a ficha que eu mostro quando perguntam se o método funciona.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="aluno"><b>J. Prado</b><span>3x por semana, no studio</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">22 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">102 kg</b><span className="delta">+42 kg desde 60 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">140 kg</b><span className="delta">+60 kg desde 80 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">18,9 %</b><span className="delta">−9,3 pontos</span></span></td>
+                    <td data-rotulo="Observação" className="obs">Entrou na consultoria de corrida no meio do segundo ciclo. Hoje faz 10 km em 52 minutos.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="aluno"><b>A. Bittencourt</b><span>2 presenciais + 1 online</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">18 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">94 kg</b><span className="delta">+18 kg desde 76 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">132 kg</b><span className="delta">+32 kg desde 100 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">19,6 %</b><span className="delta">−5,7 pontos</span></span></td>
+                    <td data-rotulo="Observação" className="obs">Viaja toda semana a trabalho. Faz duas no studio e a terceira pela planilha, com vídeo.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="aluno"><b>T. Meireles</b><span>3x por semana, no studio</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">31 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">88 kg</b><span className="delta">+30 kg desde 58 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">118 kg</b><span className="delta">+46 kg desde 72 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">23,7 %</b><span className="delta">−11,4 pontos</span></span></td>
+                    <td data-rotulo="Observação" className="obs">Voltou depois de dois anos parada. As quatro primeiras semanas foram só mobilidade e barra vazia.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="aluno"><b>R. Salgado</b><span>3x por semana, no studio</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">6 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">70 kg</b><span className="delta">+16 kg desde 54 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">84 kg</b><span className="delta">+12 kg desde 72 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">24,8 %</b><span className="delta">−1,9 ponto</span></span></td>
+                    <td data-rotulo="Observação" className="obs">Primeiro ciclo, nunca tinha pegado barra. Começou com 8 kg de cada lado e chegou aqui em 6 semanas.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="aluno"><b>C. Bonfim</b><span>3x por semana, com faltas</span></th>
+                    <td data-rotulo="Acompanhamento" className="num">8 semanas</td>
+                    <td data-rotulo="Agachamento"><span className="celula"><b className="num">66 kg</b><span className="delta">+4 kg desde 62 kg</span></span></td>
+                    <td data-rotulo="Levantamento terra"><span className="celula"><b className="num">78 kg</b><span className="delta">+6 kg desde 72 kg</span></span></td>
+                    <td data-rotulo="Gordura corporal"><span className="celula"><b className="num">29,1 %</b><span className="delta">−2,2 pontos</span></span></td>
+                    <td data-rotulo="Observação" className="obs">O menor ganho da tabela e o maior número de faltas: três semanas fora em maio. A ficha não esconde isso.</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row">Média das seis fichas</th>
+                    <td data-rotulo="Acompanhamento" className="num">16,5 semanas</td>
+                    <td data-rotulo="Agachamento" className="num">+24,7 kg</td>
+                    <td data-rotulo="Levantamento terra" className="num">+32,7 kg</td>
+                    <td data-rotulo="Gordura corporal" className="num">−6,1 pontos</td>
+                    <td data-rotulo="Leitura da média" className="obs">Quem ficou abaixo da média faltou ou parou no meio do ciclo. Nenhuma ficha foi excluída para o número ficar melhor.</td>
+                  </tr>
+                </tfoot>
+            </table>
+
+            <div className="tabela__notas">
+              <p className="tabela__honestidade">Quem não treina 3x por semana não entra nesta tabela. <b>Faltar aparece no número</b>: o C. Bonfim tem o menor ganho das seis fichas e é quem mais faltou.</p>
+              <p className="tabela__proximo">O diário abaixo é o mesmo que os alunos preenchem. Lance três séries e veja o volume ser calculado, como acontece no fim de cada sessão.</p>
+              <p className="miudo">Dados fictícios de demonstração, criados para este catálogo. Gordura corporal por bioimpedância, sempre em jejum e no mesmo horário do dia.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CONTROLE 1: DIÁRIO DE SÉRIE ================= */}
+        <section className="secao" id="diario">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Diário de série</h2>
+              <p>É assim que o acompanhamento acontece na prática: carga e repetição anotadas no fim de cada série, e o volume da sessão comparado com o da última. Lance as três séries de hoje.</p>
+            </div>
+
+            <div className="oficina">
+              <div className="painel">
+                <div className="painel__topo">
+                  <h3>Lançar a sessão de hoje</h3>
+                  <span className="rotulo">3 séries</span>
+                </div>
+                <form className="diario__form" id="form-diario" noValidate>
+                  <div className="campo">
+                    <label htmlFor="exercicio">Exercício</label>
+                    <select id="exercicio" name="exercicio">
+                      <option value="agachamento">Agachamento livre</option>
+                      <option value="terra">Levantamento terra</option>
+                      <option value="supino">Supino reto</option>
+                    </select>
+                  </div>
+                  <p className="diario__ref" id="diario-ref">Última sessão registrada: há 3 dias · 3 séries · 1.826 kg de volume.</p>
+
+                  <fieldset className="series">
+                    <legend>Séries de hoje</legend>
+
+                    <div className="serie">
+                      <div className="serie__topo">
+                        <span className="serie__n">Série 1</span>
+                        <span className="serie__sub" id="sub-1" aria-live="off">—</span>
+                      </div>
+                      <div className="serie__campos">
+                        <div className="campo" data-campo="carga-1">
+                          <label htmlFor="carga-1">Carga (kg)</label>
+                          <input id="carga-1" name="carga-1" type="number" inputMode="decimal" min="1" max="500" step="0.5" placeholder="80" aria-describedby="erro-carga-1" />
+                          <span className="campo__erro" id="erro-carga-1" data-erro="carga-1"></span>
+                        </div>
+                        <div className="campo" data-campo="reps-1">
+                          <label htmlFor="reps-1">Repetições</label>
+                          <input id="reps-1" name="reps-1" type="number" inputMode="numeric" min="1" max="50" step="1" placeholder="8" aria-describedby="erro-reps-1" />
+                          <span className="campo__erro" id="erro-reps-1" data-erro="reps-1"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="serie">
+                      <div className="serie__topo">
+                        <span className="serie__n">Série 2</span>
+                        <span className="serie__sub" id="sub-2">—</span>
+                      </div>
+                      <div className="serie__campos">
+                        <div className="campo" data-campo="carga-2">
+                          <label htmlFor="carga-2">Carga (kg)</label>
+                          <input id="carga-2" name="carga-2" type="number" inputMode="decimal" min="1" max="500" step="0.5" placeholder="80" aria-describedby="erro-carga-2" />
+                          <span className="campo__erro" id="erro-carga-2" data-erro="carga-2"></span>
+                        </div>
+                        <div className="campo" data-campo="reps-2">
+                          <label htmlFor="reps-2">Repetições</label>
+                          <input id="reps-2" name="reps-2" type="number" inputMode="numeric" min="1" max="50" step="1" placeholder="8" aria-describedby="erro-reps-2" />
+                          <span className="campo__erro" id="erro-reps-2" data-erro="reps-2"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="serie">
+                      <div className="serie__topo">
+                        <span className="serie__n">Série 3</span>
+                        <span className="serie__sub" id="sub-3">—</span>
+                      </div>
+                      <div className="serie__campos">
+                        <div className="campo" data-campo="carga-3">
+                          <label htmlFor="carga-3">Carga (kg)</label>
+                          <input id="carga-3" name="carga-3" type="number" inputMode="decimal" min="1" max="500" step="0.5" placeholder="78" aria-describedby="erro-carga-3" />
+                          <span className="campo__erro" id="erro-carga-3" data-erro="carga-3"></span>
+                        </div>
+                        <div className="campo" data-campo="reps-3">
+                          <label htmlFor="reps-3">Repetições</label>
+                          <input id="reps-3" name="reps-3" type="number" inputMode="numeric" min="1" max="50" step="1" placeholder="7" aria-describedby="erro-reps-3" />
+                          <span className="campo__erro" id="erro-reps-3" data-erro="reps-3"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div className="diario__acoes">
+                    <button className="botao" type="submit" id="btn-diario">Calcular volume</button>
+                    <button className="botao botao--vazio" type="button" id="btn-limpar">Limpar</button>
+                  </div>
+                </form>
+              </div>
+
+              <div className="painel">
+                <div className="painel__topo">
+                  <h3>Volume da sessão</h3>
+                  <span className="rotulo">Carga × repetição</span>
+                </div>
+                <div id="saida-diario" aria-live="polite">
+                  <p className="vazio"><b>Ainda sem número</b>Lance as três séries ao lado. O volume é a soma de carga × repetição de cada série, e ele só aparece depois que as seis informações estiverem dentro da faixa aceita: carga de 1 a 500 kg e repetições de 1 a 50.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CONTROLE 2: MONTADOR DE PLANO ================= */}
+        <section className="secao" id="calculadora">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Calculadora de plano</h2>
+              <p>Cinco respostas e a proposta fica pronta, com o valor do mês, o que está incluso e o ciclo recomendado. A conta aparece linha por linha — é a mesma que o Rafa faz na avaliação, sem número escondido.</p>
+            </div>
+
+            <div className="oficina">
+              <form className="painel montador__form" id="form-plano" noValidate>
+                <div className="painel__topo">
+                  <h3>Seu treino, sua rotina</h3>
+                  <span className="rotulo">5 respostas</span>
+                </div>
+
+                <fieldset className="grupo" data-grupo="objetivo" aria-describedby="erro-objetivo">
+                  <legend>Objetivo principal</legend>
+                  <div className="opcoes">
+                    <label className="opcao"><input type="radio" name="objetivo" value="emagrecer" required /><span>Emagrecer</span></label>
+                    <label className="opcao"><input type="radio" name="objetivo" value="forca" required /><span>Ganhar força</span></label>
+                    <label className="opcao"><input type="radio" name="objetivo" value="condicionamento" required /><span>Melhorar o condicionamento</span></label>
+                    <label className="opcao"><input type="radio" name="objetivo" value="correr" required /><span>Correr 10 km</span></label>
+                  </div>
+                  <p className="grupo__erro" id="erro-objetivo" data-erro-grupo="objetivo"></p>
+                </fieldset>
+
+                <fieldset className="grupo" data-grupo="onde" aria-describedby="erro-onde">
+                  <legend>Onde você vai treinar</legend>
+                  <div className="opcoes">
+                    <label className="opcao"><input type="radio" name="onde" value="presencial" required /><span>Presencial no studio</span></label>
+                    <label className="opcao"><input type="radio" name="onde" value="online" required /><span>Online</span></label>
+                    <label className="opcao"><input type="radio" name="onde" value="hibrido" required /><span>Híbrido</span></label>
+                  </div>
+                  <p className="grupo__erro" id="erro-onde" data-erro-grupo="onde"></p>
+                </fieldset>
+
+                <fieldset className="grupo" data-grupo="frequencia">
+                  <legend id="legenda-frequencia">Frequência por semana</legend>
+                  <div className="controle-freq">
+                    <input type="range" id="frequencia" name="frequencia" min="2" max="4" step="1" value="3" list="marcas-freq" aria-labelledby="legenda-frequencia" aria-describedby="freq-saida" />
+                    <datalist id="marcas-freq">
+                      <option value="2"></option>
+                      <option value="3"></option>
+                      <option value="4"></option>
+                    </datalist>
+                    <div className="marcas" aria-hidden="true">
+                      <span data-freq="2">2x</span>
+                      <span data-freq="3" data-ativa="true">3x</span>
+                      <span data-freq="4">4x</span>
+                    </div>
+                    <p className="freq-saida" id="freq-saida"><b>3x</b> por semana — o formato mais comum no studio, com 48 h de descanso entre as sessões.</p>
+                  </div>
+                </fieldset>
+
+                <fieldset className="grupo" data-grupo="tempo" aria-describedby="erro-tempo">
+                  <legend>Tempo por sessão</legend>
+                  <div className="opcoes">
+                    <label className="opcao"><input type="radio" name="tempo" value="30" required /><span>30 min</span></label>
+                    <label className="opcao"><input type="radio" name="tempo" value="45" required /><span>45 min</span></label>
+                    <label className="opcao"><input type="radio" name="tempo" value="60" required /><span>60 min</span></label>
+                  </div>
+                  <p className="grupo__erro" id="erro-tempo" data-erro-grupo="tempo"></p>
+                </fieldset>
+
+                <fieldset className="grupo" data-grupo="nivel" aria-describedby="erro-nivel">
+                  <legend>Seu nível hoje</legend>
+                  <div className="opcoes">
+                    <label className="opcao"><input type="radio" name="nivel" value="nunca" required /><span>Nunca treinei</span></label>
+                    <label className="opcao"><input type="radio" name="nivel" value="asvezes" required /><span>Treino às vezes</span></label>
+                    <label className="opcao"><input type="radio" name="nivel" value="veterano" required /><span>Treino há mais de um ano</span></label>
+                  </div>
+                  <p className="grupo__erro" id="erro-nivel" data-erro-grupo="nivel"></p>
+                </fieldset>
+
+                <div className="diario__acoes">
+                  <button className="botao" type="submit" id="btn-plano">Montar meu plano</button>
+                </div>
+              </form>
+
+              <div className="painel">
+                <div className="painel__topo">
+                  <h3>Proposta</h3>
+                  <span className="rotulo">Memória do cálculo</span>
+                </div>
+                <div id="saida-plano" aria-live="polite">
+                  <p className="vazio"><b>Proposta em branco</b>Escolha objetivo, onde, frequência, tempo e nível. A proposta aparece aqui com o valor do mês, o que está incluso, o ciclo recomendado e a conta aberta linha por linha.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= PLANOS E VALORES ================= */}
+        <section className="secao" id="valores">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>Planos e valores</h2>
+              <p>Quatro formatos, com o que entra e o que não entra em cada um. Sem taxa de matrícula e sem fidelidade: o compromisso é com o ciclo de 6 semanas, e você cancela no fim de qualquer um deles.</p>
+            </div>
+
+            <div className="valores">
+              <article className="valor">
+                <div className="valor__quem">
+                  <h3>Presencial 2x por semana</h3>
+                  <p className="valor__para">Para quem consegue manter dois dias fixos e já treinou alguma vez na vida.</p>
+                </div>
+                <div className="valor__preco">
+                  <p className="valor__numero"><b>R$ 620</b><span>/mês</span></p>
+                  <p className="valor__obs">Sessões de 45 min; a de 60 min sai R$ 680/mês.</p>
+                  <a className="botao botao--vazio botao--pequeno" href="#agendar" data-plano="presencial-2">Agendar no presencial 2x</a>
+                </div>
+                <div className="valor__detalhe">
+                  <ul className="lista">
+                    <li className="lista__titulo">O que inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>2 sessões por semana no studio, com 4 alunos por horário</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Avaliação inicial de 60 min com os 6 testes</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Plano do ciclo impresso e em planilha, com vídeo de execução</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Reavaliação a cada 6 semanas, com os mesmos testes</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Diário de série e resposta no WhatsApp em até 1 dia útil</li>
+                  </ul>
+                  <ul className="lista lista--nao">
+                    <li className="lista__titulo">O que não inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Sessão extra na semana (avulsa: R$ 90 para aluno)</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Acompanhamento de corrida</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Plano para viagem, quando você passa a semana fora</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article className="valor">
+                <div className="valor__quem">
+                  <span className="valor__selo">Formato mais escolhido</span>
+                  <h3>Presencial 3x por semana</h3>
+                  <p className="valor__para">Três estímulos por semana é o que faz a carga subir a cada ciclo.</p>
+                </div>
+                <div className="valor__preco">
+                  <p className="valor__numero"><b>R$ 820</b><span>/mês</span></p>
+                  <p className="valor__obs">Sessões de 45 min; a de 60 min sai R$ 900/mês.</p>
+                  <a className="botao botao--vazio botao--pequeno" href="#agendar" data-plano="presencial-3">Agendar no presencial 3x</a>
+                </div>
+                <div className="valor__detalhe">
+                  <ul className="lista">
+                    <li className="lista__titulo">O que inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>3 sessões por semana no studio, com 4 alunos por horário</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Tudo do presencial 2x, com avaliação e reavaliação</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Prioridade na remarcação de horário</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Revisão do seu diário de série pelo Rafa a cada 2 semanas</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>15 min de condicionamento no fim de uma das sessões</li>
+                  </ul>
+                  <ul className="lista lista--nao">
+                    <li className="lista__titulo">O que não inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Sessão avulsa de sábado (R$ 110)</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Acompanhamento de corrida</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Plano online no mesmo mês, para quem viaja</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article className="valor">
+                <div className="valor__quem">
+                  <h3>Online com planilha e vídeo</h3>
+                  <p className="valor__para">Para quem treina em academia de bairro, em casa ou viaja toda semana.</p>
+                </div>
+                <div className="valor__preco">
+                  <p className="valor__numero"><b>R$ 240</b><span>/mês</span></p>
+                  <p className="valor__obs">Plano e correção a distância, sem horário fixo.</p>
+                  <a className="botao botao--vazio botao--pequeno" href="#agendar" data-plano="online">Agendar no online</a>
+                </div>
+                <div className="valor__detalhe">
+                  <ul className="lista">
+                    <li className="lista__titulo">O que inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Avaliação inicial por chamada de vídeo, 45 min</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Plano de 6 semanas com vídeo de execução de cada exercício</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Correção em áudio do vídeo que você manda, em até 1 dia útil</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Ajuste no meio do ciclo se a academia não tiver o equipamento</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Reavaliação por vídeo a cada 6 semanas, com os testes que dão para fazer em casa</li>
+                  </ul>
+                  <ul className="lista lista--nao">
+                    <li className="lista__titulo">O que não inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Sessão ao vivo por vídeo, com horário marcado</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Treino presencial no studio do Batel</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Bioimpedância: a gordura corporal fica por conta da sua academia ou farmácia</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article className="valor">
+                <div className="valor__quem">
+                  <h3>Consultoria de corrida</h3>
+                  <p className="valor__para">Para terminar os 10 km ou baixar o tempo dos 10 que você já corre.</p>
+                </div>
+                <div className="valor__preco">
+                  <p className="valor__numero"><b>R$ 320</b><span>/mês</span></p>
+                  <p className="valor__obs">Planilha de corrida ajustada toda semana.</p>
+                  <a className="botao botao--vazio botao--pequeno" href="#agendar" data-plano="corrida">Agendar na consultoria</a>
+                </div>
+                <div className="valor__detalhe">
+                  <ul className="lista">
+                    <li className="lista__titulo">O que inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Avaliação inicial com teste de 3 km, cadência e pisada</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Planilha de corrida por semana, ajustada pelo pace que você registra</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Duas sessões de força complementar por semana, no mesmo plano</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 6.6" /></svg>Uma chamada de vídeo de 30 min por mês, para técnica de corrida</li>
+                  </ul>
+                  <ul className="lista lista--nao">
+                    <li className="lista__titulo">O que não inclui</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Musculação completa com progressão de carga</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Sessões presenciais no studio</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /></svg>Nutrição esportiva: indicamos quem faz, não fazemos</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div className="valores__nota">
+              <p><b>Sem taxa de matrícula e sem fidelidade.</b> Você cancela no fim de qualquer ciclo de 6 semanas, sem multa e sem aviso prévio: uma mensagem no WhatsApp basta. Parando no meio do ciclo, o mês corrente não volta — e nada fica preso depois dele.</p>
+              <p>A avaliação inicial custa R$ 180 e é abatida da primeira mensalidade. Quem faz a avaliação e decide não fechar leva a ficha completa, com os seis testes anotados, do mesmo jeito.</p>
+              <p>Sessão avulsa: R$ 90 para aluno do studio, R$ 120 para visitante. Feriado não é cobrado: a sessão é reposta na mesma semana, em horário combinado.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= PERGUNTAS FREQUENTES ================= */}
+        <section className="secao" id="duvidas">
+          <div className="tela">
+            <div className="secao__cabeca">
+              <h2>O que perguntam antes de começar</h2>
+            </div>
+            <div className="perguntas">
+              <details className="pergunta" open>
+                <summary>Preciso ter experiência para começar?
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p>Não. Metade dos alunos chegou sem nunca ter pegado barra. A primeira sessão é com a barra vazia, 20 kg, e a carga só sobe quando a execução estiver certa — isso é decidido olhando você treinar, não pelo calendário. Se o agachamento com barra vazia já for difícil, o plano começa no banco e vai subindo.</p>
+              </details>
+              <details className="pergunta">
+                <summary>E se eu faltar uma semana?
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p>O ciclo continua e o seu horário fica guardado. Falta não é reposta fora do horário, mas semana de viagem vira plano online sem custo, desde que avisada com um dia de antecedência. Faltar muito aparece no número: é só olhar a ficha do C. Bonfim na tabela de resultados.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Tem fidelidade ou multa para cancelar?
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p>Não tem fidelidade nem multa. O compromisso é com o ciclo de 6 semanas, que é o tempo mínimo para o primeiro resultado aparecer, e você cancela no fim de qualquer ciclo. Sem aviso prévio, sem taxa de cancelamento e sem cobrança do mês seguinte.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Quem nunca treinou aguenta dividir o horário com mais três pessoas?
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p>Aguenta, porque ninguém faz o mesmo treino. São quatro pessoas no mesmo horário, cada uma com a sua planilha e a sua carga: o que é igual é o relógio, não o exercício. O Rafa passa de um para o outro corrigindo execução, e quem está no primeiro ciclo tem prioridade nas correções.</p>
+              </details>
+              <details className="pergunta">
+                <summary>Como funciona o acompanhamento online?
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p>Você recebe o plano na planilha, com vídeo de execução de cada exercício. Treina onde quiser, registra carga e repetição no diário e manda o vídeo de uma série por exercício. O Rafa devolve a correção em áudio em até 1 dia útil, com a carga do próximo treino já ajustada. A cada 6 semanas tem reavaliação por chamada de vídeo, com os testes que dá para fazer em casa — prancha, subida de degrau e cintura com fita — e a orientação para medir o resto na academia ou na farmácia.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= AGENDAR AVALIAÇÃO (a única faixa de limão) ================= */}
+        <section id="agendar">
+          <div className="faixa-limao">
+            <div className="tela faixa-limao__interno">
+              <p className="rotulo">Avaliação inicial · 60 min</p>
+              <h2>Agende a avaliação de 60 minutos.</h2>
+              <p>Seis testes, bioimpedância, cintura e uma conversa sobre a sua rotina. A avaliação custa R$ 180 e o valor é abatido da primeira mensalidade. Se você decidir não fechar, a ficha fica com você do mesmo jeito — com o ponto de partida anotado para quando quiser voltar.</p>
+            </div>
+          </div>
+
+          <div className="tela agendar">
+            <div className="agendar__grade">
+              <div>
+                <div className="recado-ok" id="recado-ok" role="status" hidden></div>
+                <form id="form-agenda" noValidate>
+                  <div className="linha">
+                    <div className="campo" data-campo="nome">
+                      <label htmlFor="nome">Seu nome</label>
+                      <input id="nome" name="nome" type="text" autoComplete="name" placeholder="Marina Andrade" aria-describedby="erro-nome" />
+                      <span className="campo__erro" id="erro-nome" data-erro="nome"></span>
+                    </div>
+                    <div className="campo" data-campo="whatsapp">
+                      <label htmlFor="whatsapp">WhatsApp com DDD</label>
+                      <input id="whatsapp" name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(41) 90000-0000" aria-describedby="erro-whatsapp" />
+                      <span className="campo__erro" id="erro-whatsapp" data-erro="whatsapp"></span>
+                    </div>
+                  </div>
+                  <div className="campo" data-campo="email">
+                    <label htmlFor="email">E-mail</label>
+                    <input id="email" name="email" type="email" autoComplete="email" placeholder="marina@email.com.br" aria-describedby="erro-email" />
+                    <span className="campo__erro" id="erro-email" data-erro="email"></span>
+                  </div>
+                  <div className="linha">
+                    <div className="campo" data-campo="objetivo">
+                      <label htmlFor="objetivo">Objetivo</label>
+                      <select id="objetivo" name="objetivo" aria-describedby="erro-objetivo-form">
+                        <option value="">Escolha o principal</option>
+                        <option value="emagrecer">Emagrecer</option>
+                        <option value="forca">Ganhar força</option>
+                        <option value="condicionamento">Melhorar o condicionamento</option>
+                        <option value="correr">Correr 10 km</option>
+                        <option value="voltar">Voltar a treinar depois de uma pausa</option>
+                      </select>
+                      <span className="campo__erro" id="erro-objetivo-form" data-erro="objetivo"></span>
+                    </div>
+                    <div className="campo" data-campo="onde">
+                      <label htmlFor="onde">Onde prefere treinar</label>
+                      <select id="onde" name="onde" aria-describedby="erro-onde-form">
+                        <option value="">Escolha uma opção</option>
+                        <option value="presencial">Presencial, no studio do Batel</option>
+                        <option value="online">Online, com planilha e vídeo</option>
+                        <option value="hibrido">Híbrido: studio e planilha</option>
+                      </select>
+                      <span className="campo__erro" id="erro-onde-form" data-erro="onde"></span>
+                    </div>
+                  </div>
+                  <div className="campo" data-campo="plano">
+                    <label htmlFor="plano">Plano de interesse (opcional)</label>
+                    <select id="plano" name="plano">
+                      <option value="">Ainda não sei — quero a avaliação primeiro</option>
+                      <option value="presencial-2">Presencial 2x por semana · R$ 620/mês</option>
+                      <option value="presencial-3">Presencial 3x por semana · R$ 820/mês</option>
+                      <option value="presencial-4">Presencial 4x por semana · R$ 1.020/mês</option>
+                      <option value="online">Online com planilha e vídeo · R$ 240/mês</option>
+                      <option value="hibrido">Híbrido · a partir de R$ 420/mês</option>
+                      <option value="corrida">Consultoria de corrida · R$ 320/mês</option>
+                    </select>
+                  </div>
+                  <div className="campo" data-campo="disponibilidade">
+                    <label htmlFor="disponibilidade">Dias e horários que funcionam</label>
+                    <input id="disponibilidade" name="disponibilidade" type="text" placeholder="terça e quinta de manhã, ou sábado cedo" aria-describedby="erro-disponibilidade" />
+                    <span className="campo__erro" id="erro-disponibilidade" data-erro="disponibilidade"></span>
+                  </div>
+                  <div className="campo" data-campo="recado">
+                    <label htmlFor="recado">Recado para o Rafa (opcional)</label>
+                    <textarea id="recado" name="recado" rows={3} maxLength={400} placeholder="Lesão antiga, cirurgia, remédio contínuo, tempo parado."></textarea>
+                  </div>
+                  <label className="aceite" htmlFor="aceite">
+                    <input id="aceite" name="aceite" type="checkbox" aria-describedby="erro-aceite" />
+                    <span>Pode me chamar no WhatsApp (41) 90000-0000 para combinar a avaliação.</span>
+                  </label>
+                  <span className="campo__erro" id="erro-aceite" data-erro="aceite"></span>
+                  <div>
+                    <button className="botao" type="submit" id="btn-agenda">Agendar avaliação</button>
+                  </div>
+                  <p className="miudo">Avaliação de 60 min, R$ 180, abatidos da primeira mensalidade. Seus dados ficam só com o studio: não há lista de transmissão nem envio para terceiros.</p>
+                </form>
+              </div>
+
+              <aside className="agendar__info" aria-labelledby="info-titulo">
+                <h3 id="info-titulo">Onde e quando</h3>
+                <ul className="info-lista">
+                  <li><b>Studio</b>Rua Comendador Araújo, 480 · Batel · Curitiba-PR · 80420-000</li>
+                  <li><b>Horários</b>segunda a sexta, 6h às 21h · sábado, 7h às 12h</li>
+                  <li><b>WhatsApp</b>(41) 90000-0000</li>
+                  <li><b>E-mail</b>rafa@forjatreino.com.br</li>
+                  <li><b>No prédio</b>estacionamento na garagem e bicicletário na porta</li>
+                  <li><b>Quem responde</b>o Rafa, em até 1 dia útil, com três horários</li>
+                </ul>
+                <p className="miudo">Quatro alunos por horário. Se o seu horário estiver cheio, entra numa lista de espera que costuma andar em 3 semanas — e a gente te avisa antes de você pagar qualquer coisa.</p>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="rodape">
+        <div className="tela rodape__grade">
+          <p><strong>Forja</strong> · studio de treino · Rafa Muniz · CREF 000000-G/PR · Rua Comendador Araújo, 480 · Batel · Curitiba-PR</p>
+          <p className="rodape__nota">Demonstração de catálogo. Nome, preços e textos são fictícios.</p>
+          <p className="rodape__volta"><a className="link" href="/">Voltar ao catálogo de modelos</a></p>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+

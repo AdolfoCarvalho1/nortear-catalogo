@@ -1,0 +1,16 @@
+{
+  "id": "curso",
+  "numero": "08",
+  "nome": "Oficina",
+  "nicho": "Curso online",
+  "promessa": "Aprender fazendo, com prazo e correção.",
+  "preco": 300,
+  "pacote": "Essencial",
+  "paleta": ["#FBF8F2", "#14161B", "#3B4FD8", "#E9B32C"],
+  "tipografia": "Candara · Lato",
+  "mundo": "Caderno de oficina: papel morno, caneta azul para o que é conteúdo, amarelo marca-texto para o prazo.",
+  "destaque": "Grade do curso com módulos que abrem a ementa e a carga horária real.",
+  "arquivo": "modelos/08-curso/index.html",
+  "melhorPara": ["Curso online e mentoria", "Escola de idiomas ou técnica", "Comunidade paga"],
+  "secoes": ["Grade do curso", "Como funcionam as turmas", "Instrutores", "Perguntas frequentes", "Garantir minha vaga"]
+}

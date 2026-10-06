@@ -1,0 +1,16 @@
+{
+  "id": "estudio",
+  "numero": "10",
+  "nome": "Ruído",
+  "nicho": "Estúdio criativo",
+  "promessa": "Marca não se explica. Se reconhece.",
+  "preco": 1500,
+  "pacote": "Sob medida",
+  "paleta": ["#0A0A0A", "#F2F0EB", "#E8541F", "#3D3D3D"],
+  "tipografia": "Arial Black · Segoe UI",
+  "mundo": "Cartaz colado na parede do ateliê: preto absoluto, papel branco, laranja de fita crepe e nada de meia-tinta.",
+  "destaque": "Manifesto em cartaz que se monta conforme a rolagem, letra por letra.",
+  "arquivo": "modelos/10-estudio/index.html",
+  "melhorPara": ["Agência de branding", "Estúdio de design ou motion", "Fotógrafo e diretor de arte"],
+  "secoes": ["Manifesto", "Projetos", "Como trabalhamos", "Serviços e prazos", "Chamar para um projeto"]
+}

@@ -1,0 +1,10 @@
+/* ============================================================
+   Estilos globais do catálogo.
+
+   Os dois arquivos vivem em assets/ porque os scripts de captura e a
+   versão estática também os usam. O caminho é relativo de propósito:
+   `@import` em CSS não passa pelo resolvedor de alias do bundler.
+   ============================================================ */
+
+@import '../../assets/fonts.css';
+@import '../../assets/catalogo.css';

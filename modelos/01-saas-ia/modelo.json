@@ -1,0 +1,16 @@
+{
+  "id": "saas-ia",
+  "numero": "01",
+  "nome": "Copiloto",
+  "nicho": "SaaS de IA",
+  "promessa": "A IA que responde com o contexto da sua empresa.",
+  "preco": 1500,
+  "pacote": "Sob medida",
+  "paleta": ["#08090C", "#12141A", "#E8EAF0", "#3A5BE0"],
+  "tipografia": "Cascadia Mono · Segoe UI",
+  "mundo": "Sala de controle à meia-noite: superfície obsidiana, um único azul de sinal e o produto funcionando na tela em vez de uma promessa.",
+  "destaque": "Terminal vivo: o visitante digita uma pergunta e a resposta é montada com fontes citadas.",
+  "arquivo": "modelos/01-saas-ia/index.html",
+  "melhorPara": ["Startup vendendo para empresas", "Produto com demo técnica", "Time que precisa parecer maduro"],
+  "secoes": ["Prova social em números", "Como funciona em 3 passos", "Console do produto", "Planos em R$", "Segurança e LGPD"]
+}
